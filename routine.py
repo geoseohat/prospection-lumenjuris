@@ -417,8 +417,69 @@ def afficher_etat(cx):
     print()
 
 
+def verifier():
+    """
+    Controle complet avant le premier lancement : secrets, acces au Sheet,
+    memoire des leads. N'envoie aucun email et n'ecrit rien.
+    """
+    ok = True
+    print("=== Verification de la configuration ===\n")
+
+    print("1. Comptes expediteurs")
+    prets, manquants = comptes_configures()
+    for compte in prets:
+        print(f"   [ok]      {compte['adresse']}")
+    for compte in manquants:
+        print(f"   [ABSENT]  {compte['adresse']} : pas de mot de passe")
+    if not prets:
+        print("   -> aucun compte utilisable, aucun email ne pourrait partir.")
+        ok = False
+
+    print("\n2. Connexion au serveur d'envoi")
+    for compte in prets:
+        try:
+            with se_connecter(compte):
+                print(f"   [ok]      {compte['adresse']} : identifiants acceptes")
+        except Exception as e:
+            print(f"   [ECHEC]   {compte['adresse']} : {str(e)[:120]}")
+            ok = False
+
+    print("\n3. Google Sheets")
+    try:
+        config = sheets.lire_config()
+        print(f"   [ok]      configuration lue : ACTIF={config['ACTIF']}, "
+              f"{config['MAX_PAR_BOITE']} emails par boite, "
+              f"{config['MAX_PAR_DOMAINE']} maximum par site")
+        leads = sheets.lire_leads()
+        envoyes = sum(1 for l in leads if l.get("etat") == "envoye")
+        print(f"   [ok]      {len(leads)} lead(s) dans l'onglet Leads, "
+              f"dont {envoyes} deja contacte(s)")
+        if not leads:
+            print("   -> onglet Leads vide : la memoire anti-doublon serait perdue.")
+            ok = False
+    except Exception as e:
+        print(f"   [ECHEC]   {str(e)[:200]}")
+        ok = False
+
+    print("\n4. Recherche de nouveaux prospects")
+    for nom, variable in (("SerpApi", "SERPAPI_API_KEY"), ("Scrape.do", "SCRAPEDO_API_KEY")):
+        import os
+        presente = bool(os.environ.get(variable)) or (SCRAPING / ".env").exists()
+        print(f"   [{'ok' if presente else 'ABSENT'}]      {nom}")
+    q = quotas()
+    print(f"             SerpApi {q['serpapi']}/{PLAFOND_SERPAPI}, "
+          f"Scrape.do {q['scrapedo']}/{PLAFOND_SCRAPEDO}")
+
+    print("\n" + ("=== TOUT EST PRET ===" if ok else "=== CONFIGURATION INCOMPLETE ==="))
+    if ok:
+        print("Aucun email n'a ete envoye. Lancez `python routine.py` pour demarrer.")
+    return ok
+
+
 def main():
     p = argparse.ArgumentParser(description="Routine quotidienne de prospection.")
+    p.add_argument("--verifier", action="store_true",
+                   help="controle la configuration sans rien envoyer")
     p.add_argument("--etat", action="store_true", help="affiche l'etat sans rien envoyer")
     p.add_argument("--recolte", action="store_true", help="constitue le stock seulement")
     p.add_argument("--envoi", action="store_true", help="envoie seulement")
@@ -429,6 +490,9 @@ def main():
     p.add_argument("--compte", type=str, default=None,
                    help="expediteur a utiliser pour le test : geoffrey ou lumen")
     a = p.parse_args()
+
+    if a.verifier:
+        sys.exit(0 if verifier() else 1)
 
     cx = base.ouvrir()
 

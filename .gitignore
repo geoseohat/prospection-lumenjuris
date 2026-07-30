@@ -14,5 +14,6 @@ scraping/node_modules/
 scraping/dist/
 __pycache__/
 *.pyc
+.venv/
 service-account.json
 service-account.b64

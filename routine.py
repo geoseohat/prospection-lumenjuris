@@ -43,8 +43,10 @@ RENDEMENT_EMAIL = 0.8
 
 def npm(commande, silencieux=False):
     """Lance une commande npm du projet de scraping."""
+    # npm.cmd sous Windows, npm sous Linux : la routine tourne sur les deux.
+    executable = "npm.cmd" if sys.platform == "win32" else "npm"
     resultat = subprocess.run(
-        ["npm.cmd", "run", commande],
+        [executable, "run", commande],
         cwd=SCRAPING, capture_output=True, text=True, encoding="utf-8", errors="replace",
     )
     if not silencieux:

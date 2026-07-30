@@ -1,0 +1,17 @@
+mdp.txt
+envois.db
+liste.csv
+
+# secrets et jetons
+.env
+scraping/.env
+credentials.json
+token.json
+tokens/
+
+# artefacts
+scraping/node_modules/
+scraping/dist/
+__pycache__/
+*.pyc
+service-account.json

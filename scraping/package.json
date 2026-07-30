@@ -1,0 +1,25 @@
+{
+  "name": "prospection-avocats-lumen-juris",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "search": "npm run build --silent && node dist/src/search.js",
+    "refilter": "npm run build --silent && node dist/src/refilter.js",
+    "crawl": "npm run build --silent && node dist/src/crawl.js",
+    "extract": "npm run build --silent && node dist/src/extract.js",
+    "test": "npm run build --silent && node --test dist/tests/*.test.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.2.1",
+    "googleapis": "^173.0.0",
+    "openai": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  }
+}

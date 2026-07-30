@@ -16,3 +16,6 @@ __pycache__/
 *.pyc
 service-account.json
 service-account.b64
+variables-a-coller.txt
+.venv/
+logs/

@@ -65,6 +65,12 @@ def _service():
     depuis_env = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON", "").strip()
     if depuis_env:
         import json
+        import base64
+        # Le JSON contient des guillemets doubles, qui cassent le format .env.
+        # On accepte donc aussi une valeur encodee en base64 : une seule ligne,
+        # aucun caractere a echapper.
+        if not depuis_env.lstrip().startswith("{"):
+            depuis_env = base64.b64decode(depuis_env).decode("utf-8")
         identifiants = service_account.Credentials.from_service_account_info(
             json.loads(depuis_env), scopes=PORTEE
         )

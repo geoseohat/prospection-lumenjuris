@@ -96,6 +96,57 @@ intéresse, il suffit de répondre à ce message avec vos tarifs.</p>
 </table>
 </body></html>"""
 
+SIGNATURE_HTML = f"""<table cellpadding="0" cellspacing="0" style="border-top:1px solid #ddd;padding-top:10px;margin-top:14px">
+<tr>
+  <td style="padding-right:16px;border-right:1px solid #ddd;vertical-align:top">
+    <strong style="font-size:16px;color:#1a56b0">Lumen Juris</strong>
+  </td>
+  <td style="padding-left:16px;vertical-align:top;font-size:13px;color:#444">
+    {TELEPHONE}<br>
+    <a href="{CALENDLY}" style="color:#1a56b0">Réserver un créneau</a><br>
+    {ADRESSE}<br>
+    <a href="https://{SITE}" style="color:#1a56b0">{SITE}</a>
+  </td>
+</tr>
+</table>"""
+
+
+def html_depuis_texte(texte):
+    """
+    Met en forme un corps ecrit en texte brut, sans signature.
+
+    Sert aux messages rediges au cas par cas plutot que produits par le
+    gabarit : on ne sait pas d'avance combien de paragraphes ils auront. Les
+    lignes commencant par « - » deviennent une liste a puces, le reste des
+    paragraphes. La signature est ajoutee a la fin, identique pour tous.
+    """
+    blocs = []
+    puces = []
+
+    def vider_puces():
+        if puces:
+            blocs.append("<ul>" + "".join(f"<li>{escape(p)}</li>" for p in puces) + "</ul>")
+            puces.clear()
+
+    for ligne in (texte or "").strip().splitlines():
+        nettoyee = ligne.strip()
+        if not nettoyee:
+            vider_puces()
+            continue
+        if nettoyee.startswith(("- ", "• ", "* ")):
+            puces.append(nettoyee[2:].strip())
+        else:
+            vider_puces()
+            blocs.append(f"<p>{escape(nettoyee)}</p>")
+    vider_puces()
+
+    return (
+        '<html><body style="font-family:Arial,Helvetica,sans-serif;'
+        'font-size:14px;color:#222;line-height:1.5">'
+        + "".join(blocs) + SIGNATURE_HTML + "</body></html>"
+    )
+
+
 # Un titre de page comme « Avocat droit des affaires à Lille » n'est pas un nom
 # de cabinet : l'employer tel quel donne « la pratique de Avocat droit des
 # affaires à Lille », qui ne veut rien dire.

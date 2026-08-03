@@ -27,7 +27,9 @@ from datetime import datetime
 import base
 import sheets
 import requetes as generateur
-from personnalisation import construire
+from personnalisation import (
+    construire, nettoyer_cabinet, specialite_principale, ville_depuis,
+)
 from envoi import COMPTES, comptes_configures, expedier, voie, jeton_api, se_connecter
 
 DOSSIER = Path(__file__).parent
@@ -151,13 +153,21 @@ def recolter(cx, cible_stock):
     return ajoutes, len(combinaisons)
 
 
-def envoyer(cx, max_par_boite, pause_min, pause_max, max_par_domaine=3, simulation=False):
+def planifier(cx, max_par_boite, max_par_domaine=3, plafond=None):
+    """
+    Decide qui sera contacte, et par quelle boite. Ne touche a rien.
+
+    Renvoie (destinataires, expediteurs, plan) ou expediteurs[i] est la boite
+    qui ecrira a destinataires[i]. C'est ici que vivent les garde-fous :
+    jamais deux fois la meme adresse, jamais plus de max_par_domaine messages
+    vers un meme site, jamais plus de max_par_boite envois par boite en 24 h.
+    """
     prets, manquants = comptes_configures()
     for compte in manquants:
         print(f"[ignore] {compte['adresse']} : ni autorisation Gmail, ni mot de passe")
     if not prets:
         print("Aucun compte expediteur configure.")
-        return 0, 0
+        return [], [], []
 
     plan = []
     for compte in prets:
@@ -167,9 +177,12 @@ def envoyer(cx, max_par_boite, pause_min, pause_max, max_par_domaine=3, simulati
             continue
         plan.append((compte, restant))
     if not plan:
-        return 0, 0
+        return [], [], []
 
     total = sum(restant for _, restant in plan)
+    if plafond is not None:
+        total = min(total, plafond)
+
     candidats = cx.execute("""
         SELECT * FROM destinataires
         WHERE etat = 'a_envoyer'
@@ -201,26 +214,30 @@ def envoyer(cx, max_par_boite, pause_min, pause_max, max_par_domaine=3, simulati
         print(f"{ignores} adresse(s) mise(s) de cote : limite de {max_par_domaine} "
               f"message(s) par site atteinte.")
 
-    if not lignes:
-        print("Aucun lead a contacter.")
-        return 0, 0
-
-    print(f"\n{len(lignes)} email(s) a envoyer, espaces de {pause_min} a {pause_max} min.")
-    print(f"Repartition : " + ", ".join(f"{c['adresse']} x{n}" for c, n in plan))
-
     # Alternance stricte entre les boites, dans la limite de chacune.
     file_comptes = []
     for compte, restant in plan:
         file_comptes.extend([compte] * restant)
     file_comptes.sort(key=lambda c: c["cle"])
     melange = []
-    index = {c["cle"]: 0 for c, _ in plan}
     while file_comptes:
         for compte, _ in plan:
-            candidats = [c for c in file_comptes if c["cle"] == compte["cle"]]
-            if candidats:
-                melange.append(candidats[0])
-                file_comptes.remove(candidats[0])
+            candidats_boite = [c for c in file_comptes if c["cle"] == compte["cle"]]
+            if candidats_boite:
+                melange.append(candidats_boite[0])
+                file_comptes.remove(candidats_boite[0])
+
+    return lignes[:len(melange)], melange[:len(lignes)], plan
+
+
+def envoyer(cx, max_par_boite, pause_min, pause_max, max_par_domaine=3, simulation=False):
+    lignes, melange, plan = planifier(cx, max_par_boite, max_par_domaine)
+    if not lignes:
+        print("Aucun lead a contacter.")
+        return 0, 0
+
+    print(f"\n{len(lignes)} email(s) a envoyer, espaces de {pause_min} a {pause_max} min.")
+    print(f"Repartition : " + ", ".join(f"{c['adresse']} x{n}" for c, n in plan))
 
     envoyes, erreurs = 0, 0
     for i, destinataire in enumerate(lignes):
@@ -276,6 +293,142 @@ def envoyer(cx, max_par_boite, pause_min, pause_max, max_par_domaine=3, simulati
         if i < len(lignes) - 1:
             # Tirage au sort a chaque envoi, sur toute la plage : 1 min, puis 4,
             # puis 2... Un intervalle regulier est la signature d'un robot.
+            attente = random.uniform(pause_min * 60, pause_max * 60)
+            print(f"       attente de {attente / 60:.1f} min")
+            time.sleep(attente)
+
+    return envoyes, erreurs
+
+
+A_REDIGER = DOSSIER / "a_rediger.json"
+REDIGES = DOSSIER / "rediges.json"
+
+
+def preparer_redaction(cx, config, nombre=None):
+    """
+    Ecrit a_rediger.json : la liste des cabinets a contacter aujourd'hui, avec
+    les seules informations reellement relevees sur leur site.
+
+    Premiere moitie de l'envoi en ligne. C'est Claude qui rédige ensuite chaque
+    message a partir de ce fichier, puis --envoyer-rediges les expedie. On
+    separe les deux pour que la redaction, rapide, ne soit pas melangee a
+    l'envoi, lent par construction.
+    """
+    import json
+
+    lignes, melange, _ = planifier(
+        cx, config["MAX_PAR_BOITE"], config["MAX_PAR_DOMAINE"], plafond=nombre
+    )
+    if not lignes:
+        A_REDIGER.write_text("[]", encoding="utf-8")
+        print("Aucun lead a contacter. a_rediger.json est vide.")
+        return 0
+
+    sortie = []
+    for destinataire, compte in zip(lignes, melange):
+        # Uniquement des faits releves sur le site du cabinet : rien ici ne
+        # doit permettre d'inventer quoi que ce soit sur lui.
+        sortie.append({
+            "email": destinataire["email"],
+            "prenom": destinataire["nom"] or "",
+            "cabinet": nettoyer_cabinet(destinataire["cabinet"]),
+            "specialite": specialite_principale(destinataire["specialite"]),
+            "ville": ville_depuis(destinataire["cabinet"]),
+            "site": destinataire["site"] or "",
+            "expediteur_cle": compte["cle"],
+            "expediteur_nom": compte["nom"],
+            "expediteur_adresse": compte["adresse"],
+        })
+
+    A_REDIGER.write_text(
+        json.dumps(sortie, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(f"{len(sortie)} message(s) a rediger, ecrits dans {A_REDIGER.name}.")
+    return len(sortie)
+
+
+def envoyer_rediges(cx, config, simulation=False):
+    """
+    Lit rediges.json et expedie chaque message, espace de PAUSE_MIN a PAUSE_MAX.
+
+    Seconde moitie de l'envoi en ligne. Chaque message doit correspondre a une
+    adresse encore a contacter : un destinataire absent de la base, ou deja
+    contacte, est refuse plutot qu'envoye.
+    """
+    import json
+    from envoi import composer
+    from personnalisation import html_depuis_texte, SIGNATURE_TEXTE
+
+    if not REDIGES.exists():
+        print(f"Fichier absent : {REDIGES.name}. Lancez d'abord --preparer.")
+        return 0, 0
+
+    messages = json.loads(REDIGES.read_text(encoding="utf-8"))
+    pause_min, pause_max = config["PAUSE_MIN"], config["PAUSE_MAX"]
+    par_cle = {c["cle"]: c for c in COMPTES}
+
+    print(f"\n{len(messages)} message(s) redige(s), espaces de "
+          f"{pause_min} a {pause_max} min.")
+
+    envoyes, erreurs = 0, 0
+    for i, m in enumerate(messages):
+        adresse = (m.get("email") or "").strip().lower()
+        objet = (m.get("objet") or "").strip()
+        corps = (m.get("corps") or "").strip()
+        compte = par_cle.get(m.get("expediteur_cle"))
+
+        if not (adresse and objet and corps and compte):
+            print(f"[nok]  {adresse or '?'} : message incomplet, ignore")
+            erreurs += 1
+            continue
+
+        # Garde-fou : on ne fait confiance ni au fichier, ni a ce qui l'a ecrit.
+        ligne = cx.execute(
+            "SELECT etat FROM destinataires WHERE email = ?", (adresse,)
+        ).fetchone()
+        if ligne is None:
+            print(f"[nok]  {adresse} : inconnu en base, ignore")
+            erreurs += 1
+            continue
+        if ligne["etat"] != "a_envoyer":
+            print(f"[nok]  {adresse} : etat '{ligne['etat']}', deja traite, ignore")
+            erreurs += 1
+            continue
+
+        corps_complet = f"{corps}\n\n{SIGNATURE_TEXTE}"
+
+        if simulation:
+            print(f"\n--- [{i + 1}] {adresse}  <- {compte['adresse']}")
+            print(f"Objet : {objet}")
+            print(corps_complet)
+            continue
+
+        try:
+            message = composer(
+                compte, {"email": adresse, "nom": ""},
+                objet, corps_complet, html_depuis_texte(corps),
+            )
+            expedier(compte, message)
+            cx.execute(
+                "UPDATE destinataires SET etat='envoye', compte=?, envoye_le=?, sujet=? "
+                "WHERE email=?",
+                (compte["cle"], base.maintenant(), objet, adresse),
+            )
+            cx.commit()
+            envoyes += 1
+            print(f"[ok]   {adresse}  <- {compte['adresse']}")
+            sheets.journal_envoi(
+                datetime.now().strftime("%Y-%m-%d %H:%M"), adresse,
+                m.get("cabinet", ""), compte["adresse"], objet, "envoye",
+            )
+        except Exception as e:
+            cx.execute("UPDATE destinataires SET etat='echec', erreur=? WHERE email=?",
+                       (str(e)[:300], adresse))
+            cx.commit()
+            erreurs += 1
+            print(f"[nok]  {adresse} : {e}")
+
+        if not simulation and i < len(messages) - 1:
             attente = random.uniform(pause_min * 60, pause_max * 60)
             print(f"       attente de {attente / 60:.1f} min")
             time.sleep(attente)
@@ -497,6 +650,12 @@ def main():
     p.add_argument("--recolte", action="store_true", help="constitue le stock seulement")
     p.add_argument("--envoi", action="store_true", help="envoie seulement")
     p.add_argument("--simule", action="store_true", help="affiche les messages sans envoyer")
+    p.add_argument("--preparer", action="store_true",
+                   help="ecrit a_rediger.json : les cabinets a contacter aujourd'hui")
+    p.add_argument("--envoyer-rediges", action="store_true", dest="envoyer_rediges",
+                   help="expedie les messages de rediges.json, espaces au hasard")
+    p.add_argument("--nombre", type=int, default=None,
+                   help="limite le nombre de messages prepares (tournee d'essai)")
     p.add_argument("--sans-sheet", action="store_true", help="ignore Google Sheets")
     p.add_argument("--test-vers", type=str, default=None,
                    help="envoie un seul message reel, personnalise, a cette adresse")
@@ -538,6 +697,34 @@ def main():
             print(f"[STOP] base vide et Sheet illisible ({e}). "
                   f"Arret pour ne pas risquer de recontacter des adresses.")
             return
+
+    # Les deux moities de l'envoi en ligne : preparer s'arrete apres avoir
+    # ecrit la liste a rediger ; envoyer-rediges expedie ce qui a ete redige,
+    # puis fait la synchronisation habituelle du Sheet.
+    if a.preparer:
+        preparer_redaction(cx, config, a.nombre)
+        cx.close()
+        return
+
+    if a.envoyer_rediges:
+        debut = datetime.now()
+        print(f"=== Envoi des messages rediges, {debut:%d/%m/%Y %H:%M} ===")
+        envoyes, erreurs = envoyer_rediges(cx, config, simulation=a.simule)
+        base.ajouter_journal(cx, "routine", "messages rediges", 0, envoyes, 0, erreurs)
+        if not a.simule:
+            synchroniser_sheet(cx)
+            try:
+                sheets.ajouter_journal([
+                    debut.strftime("%Y-%m-%d %H:%M"), "resume", "", "", "", "",
+                    f"{envoyes} envoye(s)",
+                    f"messages rediges | {erreurs} erreur(s)",
+                ])
+            except Exception as e:
+                print(f"[sheet] resume non ecrit ({e})")
+            synchroniser_routine(cx, config, debut.strftime("%d/%m/%Y %H:%M"))
+        print(f"\nEmails envoyes : {envoyes} | Erreurs : {erreurs}")
+        cx.close()
+        return
 
     debut = datetime.now()
     print(f"=== Routine du {debut:%d/%m/%Y %H:%M} ===")

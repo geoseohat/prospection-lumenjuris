@@ -21,3 +21,7 @@ service-account.b64
 variables-a-coller.txt
 .venv/
 logs/
+
+# fichiers de travail de la redaction en ligne
+a_rediger.json
+rediges.json

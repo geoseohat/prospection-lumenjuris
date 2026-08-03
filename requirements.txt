@@ -2,3 +2,7 @@ google-api-python-client>=2.140
 google-auth>=2.33
 google-auth-httplib2>=0.2
 google-auth-oauthlib>=1.2
+# Requis par cryptography, qui plante sans lui dans l'environnement en ligne
+# (ModuleNotFoundError: _cffi_backend). Present d'office sous Windows, absent
+# du conteneur cloud : constate le 03/08/2026.
+cffi>=1.16

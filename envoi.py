@@ -41,6 +41,7 @@ COMPTES = [
         "adresse": "geoffreypin@gmail.com",
         "nom": "Geoffrey Pin",
         "plafond_jour": 30,
+        "jeton": "geoffrey",
     },
     {
         "cle": "lumen",
@@ -51,6 +52,10 @@ COMPTES = [
         # « Je suis LumenJuris, de Lumen Juris » dans le corps du message.
         "nom": "Geoffrey Pin",
         "plafond_jour": 30,
+        # Cette adresse n'est pas un compte Google : elle part par l'API Gmail
+        # sous le jeton de geoffrey, ou elle est declaree comme adresse d'envoi
+        # verifiee. Verifie le 03/08/2026 : Gmail ne reecrit pas l'expediteur.
+        "jeton": "geoffrey",
     },
     {
         "cle": "edouard",
@@ -59,6 +64,7 @@ COMPTES = [
         "adresse": "edouardlopro@gmail.com",
         "nom": "Edouard Lopro",
         "plafond_jour": 30,
+        "jeton": "edouard",
     },
 ]
 
@@ -174,11 +180,54 @@ def mot_de_passe(compte):
     return _MDP_FICHIER.get(compte["cle"])
 
 
+def jeton_api(compte):
+    """Cle d'autorisation Gmail utilisable par ce compte, ou None."""
+    cle = compte.get("jeton")
+    if not cle:
+        return None
+    try:
+        import envoi_gmail
+        envoi_gmail.charger_identifiants(cle)
+        return cle
+    except Exception:
+        return None
+
+
+def voie(compte):
+    """Chemin d'envoi qui sera reellement emprunte : 'api', 'smtp' ou None."""
+    if jeton_api(compte):
+        return "api"
+    return "smtp" if mot_de_passe(compte) else None
+
+
 def comptes_configures():
     prets, manquants = [], []
     for c in COMPTES:
-        (prets if mot_de_passe(c) else manquants).append(c)
+        (prets if voie(c) else manquants).append(c)
     return prets, manquants
+
+
+def expedier(compte, message):
+    """
+    Envoie un message deja compose. Renvoie le chemin emprunte, pour le journal.
+
+    L'API Gmail passe en premier : c'est le seul chemin qui fonctionne depuis
+    l'environnement en ligne, ou les ports SMTP sont bloques. Le repli SMTP ne
+    sert qu'en local, si l'autorisation Google manque ou a expire.
+    """
+    cle = jeton_api(compte)
+    if cle:
+        import envoi_gmail
+        try:
+            return f"api:{envoi_gmail.envoyer_message(cle, message)}"
+        except Exception as e:
+            if not mot_de_passe(compte):
+                raise
+            print(f"[api] {compte['adresse']} : {str(e)[:150]}")
+            print("[api] repli sur SMTP.")
+    with se_connecter(compte) as serveur:
+        serveur.send_message(message)
+    return "smtp"
 
 
 def se_connecter(compte):

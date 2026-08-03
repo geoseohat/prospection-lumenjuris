@@ -41,7 +41,8 @@ CONFIG_DEFAUT = [
     ["ACTIF", "oui", "Mettre non pour arreter la routine des demain"],
     ["MAX_PAR_BOITE", "20", "Nombre d'emails par adresse expeditrice et par jour"],
     ["MAX_PAR_DOMAINE", "3", "Nombre maximum d'emails par site internet, au total"],
-    ["PAUSE_MINUTES", "5", "Minutes entre deux envois"],
+    ["PAUSE_MIN", "1", "Attente minimum entre deux envois, en minutes"],
+    ["PAUSE_MAX", "5", "Attente maximum entre deux envois, en minutes"],
     ["STOCK_CIBLE", "40", "Leads a constituer chaque matin avant d'envoyer"],
 ]
 
@@ -175,7 +176,7 @@ def journal_envoi(date, email, cabinet, expediteur, objet, statut, detail=""):
 def lire_config():
     """Renvoie le contenu de l'onglet Config. Valeurs par defaut si injoignable."""
     defauts = {"ACTIF": "oui", "MAX_PAR_BOITE": 20, "MAX_PAR_DOMAINE": 3,
-               "PAUSE_MINUTES": 5, "STOCK_CIBLE": 40}
+               "PAUSE_MIN": 1, "PAUSE_MAX": 5, "STOCK_CIBLE": 40}
     try:
         api = preparer()
         lignes = api.values().get(
@@ -192,11 +193,18 @@ def lire_config():
         cle, valeur = ligne[0].strip().upper(), ligne[1].strip()
         if cle == "ACTIF":
             config["ACTIF"] = valeur.lower()
-        elif cle in ("MAX_PAR_BOITE", "MAX_PAR_DOMAINE", "PAUSE_MINUTES", "STOCK_CIBLE"):
+        elif cle in ("MAX_PAR_BOITE", "MAX_PAR_DOMAINE", "PAUSE_MIN", "PAUSE_MAX",
+                     "STOCK_CIBLE"):
             try:
                 config[cle] = int(valeur)
             except ValueError:
                 pass
+        # PAUSE_MINUTES, l'ancien reglage unique, est volontairement ignore :
+        # il est remplace par PAUSE_MIN et PAUSE_MAX.
+
+    # Une inversion des deux bornes ferait planter le tirage au sort.
+    if config["PAUSE_MAX"] < config["PAUSE_MIN"]:
+        config["PAUSE_MAX"] = config["PAUSE_MIN"]
     return config
 
 

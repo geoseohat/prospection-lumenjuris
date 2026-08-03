@@ -1,7 +1,11 @@
 {
   "months": {
     "2026-07": {
-      "serpapi": 7,
+      "serpapi": 13,
+      "scrapedo": 0
+    },
+    "2026-08": {
+      "serpapi": 16,
       "scrapedo": 0
     }
   }

@@ -8,6 +8,8 @@ scraping/.env
 credentials.json
 token.json
 tokens/
+client_secret*.json
+gmail-*.json
 
 # artefacts
 scraping/node_modules/

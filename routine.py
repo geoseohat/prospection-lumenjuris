@@ -28,7 +28,7 @@ import base
 import sheets
 import requetes as generateur
 from personnalisation import construire
-from envoi import COMPTES, comptes_configures, se_connecter, mot_de_passe
+from envoi import COMPTES, comptes_configures, expedier, voie, jeton_api, se_connecter
 
 DOSSIER = Path(__file__).parent
 SCRAPING = DOSSIER / "scraping"
@@ -151,10 +151,10 @@ def recolter(cx, cible_stock):
     return ajoutes, len(combinaisons)
 
 
-def envoyer(cx, max_par_boite, pause_minutes, max_par_domaine=3, simulation=False):
+def envoyer(cx, max_par_boite, pause_min, pause_max, max_par_domaine=3, simulation=False):
     prets, manquants = comptes_configures()
     for compte in manquants:
-        print(f"[ignore] {compte['adresse']} : pas de mot de passe")
+        print(f"[ignore] {compte['adresse']} : ni autorisation Gmail, ni mot de passe")
     if not prets:
         print("Aucun compte expediteur configure.")
         return 0, 0
@@ -205,7 +205,7 @@ def envoyer(cx, max_par_boite, pause_minutes, max_par_domaine=3, simulation=Fals
         print("Aucun lead a contacter.")
         return 0, 0
 
-    print(f"\n{len(lignes)} email(s) a envoyer, un toutes les ~{pause_minutes} min.")
+    print(f"\n{len(lignes)} email(s) a envoyer, espaces de {pause_min} a {pause_max} min.")
     print(f"Repartition : " + ", ".join(f"{c['adresse']} x{n}" for c, n in plan))
 
     # Alternance stricte entre les boites, dans la limite de chacune.
@@ -239,8 +239,7 @@ def envoyer(cx, max_par_boite, pause_minutes, max_par_domaine=3, simulation=Fals
             from envoi import composer
             faux = {"email": destinataire["email"], "nom": destinataire["nom"] or ""}
             message = composer(compte, faux, objet, corps, html)
-            with se_connecter(compte) as serveur:
-                serveur.send_message(message)
+            expedier(compte, message)
             cx.execute(
                 "UPDATE destinataires SET etat='envoye', compte=?, envoye_le=?, sujet=? "
                 "WHERE email=?",
@@ -275,7 +274,10 @@ def envoyer(cx, max_par_boite, pause_minutes, max_par_domaine=3, simulation=Fals
 
         cx.commit()
         if i < len(lignes) - 1:
-            attente = max(30, pause_minutes * 60 + random.randint(-60, 60))
+            # Tirage au sort a chaque envoi, sur toute la plage : 1 min, puis 4,
+            # puis 2... Un intervalle regulier est la signature d'un robot.
+            attente = random.uniform(pause_min * 60, pause_max * 60)
+            print(f"       attente de {attente / 60:.1f} min")
             time.sleep(attente)
 
     return envoyes, erreurs
@@ -310,9 +312,8 @@ def envoyer_test_reel(cx, adresse, cle_compte=None):
     print(f"Modele : {modele['email']} ({modele['cabinet']})")
     print(f"Objet  : [TEST] {objet}")
     try:
-        with se_connecter(compte) as serveur:
-            serveur.send_message(message)
-        print(f"[ok]   envoye depuis {compte['adresse']} vers {adresse}")
+        chemin = expedier(compte, message)
+        print(f"[ok]   envoye depuis {compte['adresse']} vers {adresse} ({chemin})")
     except Exception as e:
         print(f"[nok]  {compte['adresse']} : {e}")
 
@@ -354,7 +355,8 @@ def synchroniser_routine(cx, config, derniere_execution=None):
     lignes.append(["ACTIF", config.get("ACTIF", "oui")])
     lignes.append(["Emails par boite et par jour", config.get("MAX_PAR_BOITE")])
     lignes.append(["Emails maximum par site", config.get("MAX_PAR_DOMAINE")])
-    lignes.append(["Minutes entre deux envois", config.get("PAUSE_MINUTES")])
+    lignes.append(["Minutes entre deux envois",
+                   f"{config.get('PAUSE_MIN')} a {config.get('PAUSE_MAX')}"])
     lignes.append(["Stock cible", config.get("STOCK_CIBLE")])
     lignes.append(["", ""])
     lignes.append(["Stock disponible", base.stock_disponible(cx)])
@@ -414,7 +416,8 @@ def afficher_etat(cx):
     print("-" * 46)
     for compte in COMPTES:
         restant = base.quota_restant(cx, compte["cle"], 20)
-        etat = "pret" if mot_de_passe(compte) else "PAS DE MOT DE PASSE"
+        chemin = voie(compte)
+        etat = f"pret, par {chemin}" if chemin else "AUCUN MOYEN D'ENVOI"
         print(f"  {compte['adresse']:<28} {20 - restant}/20  ({etat})")
     print()
 
@@ -430,18 +433,26 @@ def verifier():
     print("1. Comptes expediteurs")
     prets, manquants = comptes_configures()
     for compte in prets:
-        print(f"   [ok]      {compte['adresse']}")
+        print(f"   [ok]      {compte['adresse']} : envoi par {voie(compte)}")
     for compte in manquants:
-        print(f"   [ABSENT]  {compte['adresse']} : pas de mot de passe")
+        print(f"   [ABSENT]  {compte['adresse']} : ni autorisation Gmail, ni mot de passe")
     if not prets:
         print("   -> aucun compte utilisable, aucun email ne pourrait partir.")
         ok = False
 
-    print("\n2. Connexion au serveur d'envoi")
+    print("\n2. Acces au chemin d'envoi")
     for compte in prets:
+        cle = jeton_api(compte)
         try:
-            with se_connecter(compte):
-                print(f"   [ok]      {compte['adresse']} : identifiants acceptes")
+            if cle:
+                # On demande un jeton d'acces sans rien envoyer : c'est
+                # l'equivalent exact d'une connexion au serveur SMTP.
+                import envoi_gmail
+                envoi_gmail.jeton_acces(envoi_gmail.charger_identifiants(cle))
+                print(f"   [ok]      {compte['adresse']} : autorisation Gmail valide")
+            else:
+                with se_connecter(compte):
+                    print(f"   [ok]      {compte['adresse']} : identifiants SMTP acceptes")
         except Exception as e:
             print(f"   [ECHEC]   {compte['adresse']} : {str(e)[:120]}")
             ok = False
@@ -508,7 +519,7 @@ def main():
 
     if a.sans_sheet:
         config = {"ACTIF": "oui", "MAX_PAR_BOITE": 20, "MAX_PAR_DOMAINE": 3,
-                  "PAUSE_MINUTES": 5, "STOCK_CIBLE": 40}
+                  "PAUSE_MIN": 1, "PAUSE_MAX": 5, "STOCK_CIBLE": 40}
     else:
         config = sheets.lire_config()
 
@@ -543,7 +554,7 @@ def main():
 
     if not a.recolte:
         envoyes, erreurs_envoi = envoyer(
-            cx, config["MAX_PAR_BOITE"], config["PAUSE_MINUTES"],
+            cx, config["MAX_PAR_BOITE"], config["PAUSE_MIN"], config["PAUSE_MAX"],
             config["MAX_PAR_DOMAINE"], simulation=a.simule
         )
         erreurs += erreurs_envoi

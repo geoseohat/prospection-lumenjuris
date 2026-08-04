@@ -122,23 +122,35 @@ def html_depuis_texte(texte):
     """
     blocs = []
     puces = []
+    paragraphe = []
 
     def vider_puces():
         if puces:
             blocs.append("<ul>" + "".join(f"<li>{escape(p)}</li>" for p in puces) + "</ul>")
             puces.clear()
 
+    def vider_paragraphe():
+        if paragraphe:
+            # Les retours a la ligne a l'interieur d'un paragraphe ne sont que
+            # du repliage du texte : recolles, sinon chaque morceau de phrase
+            # devient un paragraphe et le message parait hache.
+            blocs.append(f"<p>{escape(' '.join(paragraphe))}</p>")
+            paragraphe.clear()
+
     for ligne in (texte or "").strip().splitlines():
         nettoyee = ligne.strip()
         if not nettoyee:
             vider_puces()
+            vider_paragraphe()
             continue
         if nettoyee.startswith(("- ", "• ", "* ")):
+            vider_paragraphe()
             puces.append(nettoyee[2:].strip())
         else:
             vider_puces()
-            blocs.append(f"<p>{escape(nettoyee)}</p>")
+            paragraphe.append(nettoyee)
     vider_puces()
+    vider_paragraphe()
 
     return (
         '<html><body style="font-family:Arial,Helvetica,sans-serif;'

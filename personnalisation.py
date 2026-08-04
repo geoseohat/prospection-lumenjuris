@@ -31,15 +31,35 @@ def specialite_principale(specialites):
     return trouvees[0] if trouvees else ""
 
 
+# Titres de page qui ne nomment aucun cabinet. Un site dont la page d'accueil
+# s'intitule « Accueil » a produit le message « la pratique de Accueil en
+# contentieux contractuel », parti chez un vrai cabinet le 04/08/2026.
+TITRES_SANS_NOM = (
+    "accueil", "page accueil", "page d'accueil", "home", "homepage",
+    "bienvenue", "contact", "nous contacter", "a propos", "à propos",
+    "presentation", "présentation", "site officiel", "mentions legales",
+    "mentions légales", "index", "untitled", "sans titre", "menu",
+    "honoraires", "cabinet", "le cabinet", "notre cabinet", "equipe",
+    "équipe", "notre equipe", "notre équipe", "actualites", "actualités",
+)
+
+
 def nettoyer_cabinet(cabinet):
     """
     Le nom vient du titre de la page d'accueil : souvent deja lisible, parfois
-    charge de mots-cles. On coupe ce qui suit un separateur.
+    charge de mots-cles, parfois pas un nom du tout.
+
+    Renvoie une chaine vide quand le titre ne nomme personne : les messages
+    basculent alors sur leur formulation neutre, au lieu d'ecrire une phrase
+    absurde. Vaut pour le gabarit comme pour les messages rediges au cas par
+    cas, qui recoivent ce nom par a_rediger.json.
     """
     nom = (cabinet or "").strip()
     for separateur in (" : ", " | ", " - ", " – "):
         if separateur in nom:
             nom = nom.split(separateur)[0].strip()
+    if nom.lower().strip(" .-") in TITRES_SANS_NOM:
+        return ""
     return nom[:60]
 
 

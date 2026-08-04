@@ -38,11 +38,20 @@ export async function searchProvider(
 ): Promise<OrganicResult[]> {
   if (!apiKey) throw new Error(`Clé API manquante pour ${provider}.`);
   if (provider === "serpapi") {
+    // Un seul moteur renvoie toujours les mêmes premiers résultats : les gros
+    // cabinets bien référencés. Alterner Google et Bing fait remonter des
+    // structures différentes — Bing classe autrement, et favorise des sites
+    // plus modestes.
+    const moteur = Math.random() < 0.5 ? "google" : "bing";
     const url = new URL("https://serpapi.com/search");
-    url.search = new URLSearchParams({
-      engine: "google", q: query, api_key: apiKey, output: "json",
-      google_domain: "google.fr", gl: "fr", hl: "fr"
-    }).toString();
+    const parametres: Record<string, string> =
+      moteur === "google"
+        ? { engine: "google", q: query, api_key: apiKey, output: "json",
+            google_domain: "google.fr", gl: "fr", hl: "fr" }
+        : { engine: "bing", q: query, api_key: apiKey, output: "json",
+            cc: "FR", mkt: "fr-FR" };
+    url.search = new URLSearchParams(parametres).toString();
+    console.log(`  moteur : ${moteur}`);
     return normalizeOrganicResults(await requestJson(url));
   }
 

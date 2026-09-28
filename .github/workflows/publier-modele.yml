@@ -1,0 +1,139 @@
+name: Publier modèle Lumen Juris
+
+on:
+  push:
+    branches:
+      - wordpress-vitrine
+    paths:
+      - 'wordpress-vitrine/modeles-contrat/a-publier.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    env:
+      WP_SITE: ${{ secrets.WP_SITE }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+
+    steps:
+      - name: Récupérer la branche WordPress
+        uses: actions/checkout@v4
+        with:
+          ref: wordpress-vitrine
+          fetch-depth: 0
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-docx playwright
+          python -m playwright install chromium --with-deps
+          echo "NAVIGATEUR_PDF=$(python -c \"from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()\")" >> "$GITHUB_ENV"
+
+      - name: Lire le modèle à publier
+        id: slug
+        working-directory: wordpress-vitrine
+        run: |
+          if [ ! -f modeles-contrat/a-publier.txt ]; then
+            echo "Aucun modèle à publier."
+            exit 0
+          fi
+          SLUG=$(tr -d '\r\n ' < modeles-contrat/a-publier.txt)
+          if [ -z "$SLUG" ]; then
+            echo "Aucun modèle à publier."
+            exit 0
+          fi
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+
+      - name: Construire le modèle
+        if: steps.slug.outputs.slug != ''
+        working-directory: wordpress-vitrine
+        run: python outils/modeles_contrat.py construire "${{ steps.slug.outputs.slug }}"
+
+      - name: Publier sur WordPress
+        if: steps.slug.outputs.slug != ''
+        working-directory: wordpress-vitrine
+        shell: bash
+        run: |
+          set +e
+          python outils/modeles_contrat.py publier "${{ steps.slug.outputs.slug }}" --en-ligne --sans-relecture 2>&1 | tee /tmp/publication.log
+          CODE=${PIPESTATUS[0]}
+          if [ "$CODE" -ne 0 ] && grep -q "429" /tmp/publication.log; then
+            sleep 120
+            python outils/modeles_contrat.py publier "${{ steps.slug.outputs.slug }}" --en-ligne --sans-relecture
+            exit $?
+          fi
+          exit "$CODE"
+
+      - name: Vérifier la page et le plan du site
+        if: steps.slug.outputs.slug != ''
+        working-directory: wordpress-vitrine
+        shell: bash
+        run: |
+          SLUG="${{ steps.slug.outputs.slug }}"
+          URL="https://www.lumenjuris.com/outil-generation-contrat-ia/modele-contrat/$SLUG/"
+          CODE=$(curl -L -s -o /tmp/page.html -w "%{http_code}" "$URL")
+          test "$CODE" = "200"
+          grep -q 'application/ld+json' /tmp/page.html
+          curl -L -s https://www.lumenjuris.com/page-sitemap.xml -o /tmp/sitemap.xml
+          grep -q "$URL" /tmp/sitemap.xml
+          echo "URL=$URL" >> "$GITHUB_ENV"
+
+      - name: Mettre à jour la liste et le journal
+        if: steps.slug.outputs.slug != ''
+        working-directory: wordpress-vitrine
+        env:
+          SLUG: ${{ steps.slug.outputs.slug }}
+        run: |
+          python - <<'PY'
+          import json, os, re, unicodedata
+          from datetime import date
+          from pathlib import Path
+
+          slug = os.environ['SLUG']
+          url = f"https://www.lumenjuris.com/outil-generation-contrat-ia/modele-contrat/{slug}/"
+          base = Path('modeles-contrat')
+          fiche = json.loads((base / slug / 'fiche.json').read_text(encoding='utf-8'))
+          nom = fiche.get('nom', slug)
+
+          def slugify(s):
+              s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+              s = re.sub(r'[^a-z0-9]+', '-', s).strip('-')
+              return s
+
+          p = base / 'mots-cles.txt'
+          lines = p.read_text(encoding='utf-8').splitlines()
+          for i, line in enumerate(lines):
+              stripped = line.strip()
+              if not stripped or stripped.startswith('#') or stripped.startswith('[x]'):
+                  continue
+              if slugify(stripped) == slug:
+                  lines[i] = f"[x] {date.today().isoformat()} {stripped} -> {url}"
+                  break
+          p.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+          journal = base / 'journal-routine.txt'
+          with journal.open('a', encoding='utf-8') as f:
+              f.write(f"{date.today().isoformat()} | {nom} | {url} | page en ligne, HTTP 200, micro-données présentes, plan du site : page présente\n")
+
+          (base / 'a-publier.txt').write_text('', encoding='utf-8')
+          PY
+
+      - name: Enregistrer les changements dans GitHub
+        if: steps.slug.outputs.slug != ''
+        run: |
+          git config user.name "Lumen Juris Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add wordpress-vitrine/modeles-contrat
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Publie le modèle ${{ steps.slug.outputs.slug }}"
+          git push origin HEAD:wordpress-vitrine

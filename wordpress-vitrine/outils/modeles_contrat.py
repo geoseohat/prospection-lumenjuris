@@ -46,6 +46,12 @@ BIBLIO_URL = f"{PARENT_URL}{BIBLIO_SLUG}/"
 BIBLIO_TITRE = "Modèles juridiques gratuits"
 ORG = {"@id": f"{SITE}/#organization"}
 EDGE = os.environ.get("NAVIGATEUR_PDF") or r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+# Routine cloud (Linux) : pas d'Edge, on prend le Chromium installé sur le serveur.
+CHROMIUM = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+if os.name != "nt" and not os.environ.get("NAVIGATEUR_PDF") and Path(CHROMIUM).exists():
+    EDGE = CHROMIUM
+# Sous Linux en tant que root, Chromium refuse de démarrer sans cette option.
+OPTIONS_NAV = ["--no-sandbox"] if os.name != "nt" else []
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
         "septembre", "octobre", "novembre", "décembre"]
 
@@ -227,7 +233,7 @@ mark {{ background: #FFF3A3; }}
     # fenêtre existante et ne produit aucun fichier.
     import tempfile
     profil = Path(tempfile.mkdtemp(prefix="lj-edge-"))
-    subprocess.run([EDGE, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+    subprocess.run([EDGE, *OPTIONS_NAV, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
                     f"--user-data-dir={profil}", f"--print-to-pdf={chemin}", source.as_uri()],
                    check=True, capture_output=True, timeout=120)
     source.unlink()
@@ -574,7 +580,7 @@ h1{{font-size:58px;line-height:1.1;margin:0 0 26px}}
     source.write_text(page, encoding="utf-8")
     chemin.unlink(missing_ok=True)
     profil = Path(tempfile.mkdtemp(prefix="lj-edge-"))
-    subprocess.run([EDGE, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--window-size=1200,630",
+    subprocess.run([EDGE, *OPTIONS_NAV, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--window-size=1200,630",
                     f"--user-data-dir={profil}", f"--screenshot={chemin}", source.as_uri()],
                    check=True, capture_output=True, timeout=120)
     import time

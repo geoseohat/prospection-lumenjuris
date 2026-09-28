@@ -1,0 +1,103 @@
+name: Publier modèle Lumen Juris
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/triggers/publier-modele.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    env:
+      WP_SITE: ${{ secrets.WP_SITE }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+
+    steps:
+      - name: Vérifier les secrets WordPress
+        run: |
+          if [ -z "$WP_SITE" ] || [ -z "$WP_APP_PASSWORD" ]; then
+            echo "Les secrets WP_SITE et/ou WP_APP_PASSWORD ne sont pas configurés dans GitHub Actions."
+            exit 2
+          fi
+
+      - name: Récupérer la branche WordPress
+        uses: actions/checkout@v4
+        with:
+          ref: wordpress-vitrine
+          fetch-depth: 0
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-docx playwright
+          python -m playwright install chromium --with-deps
+          echo "NAVIGATEUR_PDF=$(python -c \"from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()\")" >> "$GITHUB_ENV"
+
+      - name: Lire le modèle à publier
+        id: slug
+        working-directory: wordpress-vitrine
+        run: |
+          if [ ! -f modeles-contrat/a-publier.txt ]; then
+            echo "Aucun modèle à publier."
+            exit 3
+          fi
+          SLUG=$(tr -d '\r\n ' < modeles-contrat/a-publier.txt)
+          if [ -z "$SLUG" ]; then
+            echo "Aucun modèle à publier."
+            exit 3
+          fi
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+
+      - name: Construire le modèle
+        working-directory: wordpress-vitrine
+        run: python outils/modeles_contrat.py construire "${{ steps.slug.outputs.slug }}"
+
+      - name: Publier sur WordPress
+        working-directory: wordpress-vitrine
+        shell: bash
+        run: |
+          set +e
+          python outils/modeles_contrat.py publier "${{ steps.slug.outputs.slug }}" --en-ligne --sans-relecture 2>&1 | tee /tmp/publication.log
+          CODE=${PIPESTATUS[0]}
+          if [ "$CODE" -ne 0 ] && grep -q "429" /tmp/publication.log; then
+            sleep 120
+            python outils/modeles_contrat.py publier "${{ steps.slug.outputs.slug }}" --en-ligne --sans-relecture
+            exit $?
+          fi
+          exit "$CODE"
+
+      - name: Vérifier la page et le plan du site
+        working-directory: wordpress-vitrine
+        shell: bash
+        run: |
+          SLUG="${{ steps.slug.outputs.slug }}"
+          URL="https://www.lumenjuris.com/outil-generation-contrat-ia/modele-contrat/$SLUG/"
+          CODE=$(curl -L -s -o /tmp/page.html -w "%{http_code}" "$URL")
+          test "$CODE" = "200"
+          grep -q 'application/ld+json' /tmp/page.html
+          curl -L -s https://www.lumenjuris.com/page-sitemap.xml -o /tmp/sitemap.xml
+          grep -q "$URL" /tmp/sitemap.xml
+
+      - name: Enregistrer les fichiers générés et vider le déclencheur
+        working-directory: wordpress-vitrine
+        shell: bash
+        run: |
+          printf '' > modeles-contrat/a-publier.txt
+          git config user.name "Lumen Juris Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add modeles-contrat
+          if ! git diff --cached --quiet; then
+            git commit -m "Publication cloud ${{ steps.slug.outputs.slug }}"
+            git push origin HEAD:wordpress-vitrine
+          fi

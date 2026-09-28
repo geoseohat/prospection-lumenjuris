@@ -14,6 +14,7 @@ Usage :
 import base64
 import io
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -23,9 +24,15 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 def creds():
-    lines = (ROOT / "config.txt").read_text(encoding="utf-8").splitlines()
-    site = lines[0].strip().rstrip("/")
-    app_password = lines[2].strip()
+    # En ligne (routine cloud) : variables WP_SITE et WP_APP_PASSWORD.
+    # Sur le PC : config.txt a la racine du depot.
+    app_password = os.environ.get("WP_APP_PASSWORD")
+    if app_password:
+        site = os.environ.get("WP_SITE", "https://www.lumenjuris.com").rstrip("/")
+    else:
+        lines = (ROOT / "config.txt").read_text(encoding="utf-8").splitlines()
+        site = lines[0].strip().rstrip("/")
+        app_password = lines[2].strip()
     token = base64.b64encode(f"admin:{app_password}".encode()).decode()
     return site, token
 

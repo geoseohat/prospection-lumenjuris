@@ -44,3 +44,34 @@ jobs:
             -D - -o /tmp/post-media-body.txt \
             "$WP_SITE/wp-json/wp/v2/media" | grep -iE '^(HTTP/|location:|server:)' || true
           echo "BODY_PREVIEW=$(head -c 180 /tmp/post-media-body.txt | tr '\n' ' ')"
+
+      - name: Reproduire urllib avec un fichier invalide
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, os, urllib.request, urllib.error
+          site = os.environ['WP_SITE'].rstrip('/')
+          pwd = os.environ['WP_APP_PASSWORD']
+          token = base64.b64encode(f'admin:{pwd}'.encode()).decode()
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+          req = urllib.request.Request(
+              f'{site}/wp-json/wp/v2/media',
+              data=b'x', method='POST',
+              headers={
+                  'Authorization': f'Basic {token}',
+                  'User-Agent': 'Mozilla/5.0 (LumenJuris maintenance script)',
+                  'Content-Type': 'application/octet-stream',
+                  'Content-Disposition': 'attachment; filename="diagnostic.invalid"'
+              })
+          try:
+              with urllib.request.build_opener(NoRedirect).open(req, timeout=30) as r:
+                  print('PY_STATUS=', r.status)
+                  print('PY_LOCATION=', r.headers.get('Location'))
+                  print('PY_BODY=', r.read(180).decode('utf-8', 'replace'))
+          except urllib.error.HTTPError as e:
+              print('PY_STATUS=', e.code)
+              print('PY_LOCATION=', e.headers.get('Location'))
+              print('PY_BODY=', e.read(180).decode('utf-8', 'replace'))
+          PY

@@ -49,6 +49,20 @@ jobs:
           fi
           echo "NAVIGATEUR_PDF=$CHROMIUM_PATH" >> "$GITHUB_ENV"
 
+      - name: Adapter les redirects WordPress
+        working-directory: wordpress-vitrine
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('outils/modeles_contrat.py')
+          s = p.read_text(encoding='utf-8')
+          old = '''    with urllib.request.urlopen(r, timeout=120) as resp:\n        j = json.loads(resp.read().decode("utf-8"))'''
+          new = '''    class _PreservePostRedirect(urllib.request.HTTPRedirectHandler):\n        def redirect_request(self, req, fp, code, msg, headers, newurl):\n            if code in (307, 308):\n                return urllib.request.Request(newurl, data=req.data, headers=dict(req.header_items()), method=req.get_method())\n            return super().redirect_request(req, fp, code, msg, headers, newurl)\n    opener = urllib.request.build_opener(_PreservePostRedirect)\n    with opener.open(r, timeout=120) as resp:\n        j = json.loads(resp.read().decode("utf-8"))'''
+          if old not in s:
+              raise SystemExit('Bloc envoyer_media introuvable')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
+
       - name: Lire le modèle à publier
         id: slug
         working-directory: wordpress-vitrine

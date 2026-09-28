@@ -1,0 +1,41 @@
+name: Diagnostic SSH o2switch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/triggers/diagnostic-ssh-o2switch.txt'
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      SSH_KEY_PASSPHRASE: ${{ secrets.SSH_KEY_PASSPHRASE }}
+    steps:
+      - name: Vérifier les secrets SSH
+        shell: bash
+        run: |
+          for V in SSH_HOST SSH_USER SSH_PRIVATE_KEY SSH_KEY_PASSPHRASE; do
+            if [ -z "${!V}" ]; then
+              echo "$V manquant"
+              exit 2
+            fi
+          done
+
+      - name: Préparer la clé SSH
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/lumenjuris_github
+          chmod 600 ~/.ssh/lumenjuris_github
+          ssh-keygen -p -P "$SSH_KEY_PASSPHRASE" -N "" -f ~/.ssh/lumenjuris_github >/dev/null
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Tester la connexion sans modification
+        shell: bash
+        run: |
+          ssh -o BatchMode=yes -o ConnectTimeout=15 -i ~/.ssh/lumenjuris_github "$SSH_USER@$SSH_HOST" 'echo SSH_OK; echo USER=$(whoami); echo HOME=$HOME; echo PWD=$(pwd); python3 --version 2>/dev/null || true; printf "HOME_CONTENTS="; ls -1 "$HOME" 2>/dev/null | head -n 20 | tr "\n" " "; echo'

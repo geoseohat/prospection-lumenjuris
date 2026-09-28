@@ -31,11 +31,13 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/lumenjuris_github
           chmod 600 ~/.ssh/lumenjuris_github
+          echo "KEY_WRITTEN=true"
+          ssh-keygen -y -P "$SSH_KEY_PASSPHRASE" -f ~/.ssh/lumenjuris_github >/dev/null
+          echo "KEY_AND_PASSPHRASE_OK=true"
           ssh-keygen -p -P "$SSH_KEY_PASSPHRASE" -N "" -f ~/.ssh/lumenjuris_github >/dev/null
-          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
-          chmod 600 ~/.ssh/known_hosts
+          echo "KEY_READY=true"
 
       - name: Tester la connexion sans modification
         shell: bash
         run: |
-          ssh -o BatchMode=yes -o ConnectTimeout=15 -i ~/.ssh/lumenjuris_github "$SSH_USER@$SSH_HOST" 'echo SSH_OK; echo USER=$(whoami); echo HOME=$HOME; echo PWD=$(pwd); python3 --version 2>/dev/null || true; printf "HOME_CONTENTS="; ls -1 "$HOME" 2>/dev/null | head -n 20 | tr "\n" " "; echo'
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15 -i ~/.ssh/lumenjuris_github "$SSH_USER@$SSH_HOST" 'echo SSH_OK; echo USER=$(whoami); echo HOME=$HOME; echo PWD=$(pwd); python3 --version 2>/dev/null || true; printf "HOME_CONTENTS="; ls -1 "$HOME" 2>/dev/null | head -n 20 | tr "\n" " "; echo'

@@ -1,0 +1,34 @@
+name: Diagnostic WordPress Lumen Juris
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/triggers/diagnostic-wordpress.txt'
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    env:
+      WP_SITE: ${{ secrets.WP_SITE }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+    steps:
+      - name: Vérifier les URLs REST sans modification
+        shell: bash
+        run: |
+          set +e
+          for URL in "$WP_SITE/wp-json/" "$WP_SITE/wp-json/wp/v2/pages?per_page=1" "$WP_SITE/wp-json/wp/v2/media?per_page=1"; do
+            echo "===== $URL ====="
+            curl -sS --max-redirs 0 -D - -o /dev/null "$URL" | grep -iE '^(HTTP/|location:|server:)' || true
+          done
+
+      - name: Tester authentification REST en lecture seule
+        shell: bash
+        run: |
+          CODE=$(curl -sS --max-redirs 0 -u "admin:$WP_APP_PASSWORD" -o /tmp/auth.json -w '%{http_code}' "$WP_SITE/wp-json/wp/v2/users/me?context=edit")
+          echo "HTTP_AUTH=$CODE"
+          if [ "$CODE" = "200" ]; then
+            echo "AUTH_OK=true"
+          else
+            echo "AUTH_OK=false"
+          fi

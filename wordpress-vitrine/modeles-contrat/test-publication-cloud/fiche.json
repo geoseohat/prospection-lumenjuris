@@ -1,0 +1,45 @@
+{
+  "slug": "test-publication-cloud",
+  "nom": "Test publication cloud",
+  "nom_court": "test publication cloud",
+  "categorie": "Test technique",
+  "mot_cle": "test publication cloud",
+  "mots_cles_secondaires": ["test cloud Lumen Juris"],
+  "titre_h1": "Test publication cloud Lumen Juris",
+  "titre_seo": "Test publication cloud | Lumen Juris",
+  "meta_description": "Page technique temporaire utilisée pour vérifier la publication cloud de Lumen Juris.",
+  "chapo": "Cette page est un test technique temporaire destiné à vérifier la publication cloud automatique de Lumen Juris.",
+  "gratuit": true,
+  "fichier_base": "test-publication-cloud-lumen-juris",
+  "date_publication": "2026-09-28",
+  "date_mise_a_jour": "2026-09-28",
+  "relecture": {
+    "nom": "L'équipe juridique de Lumen Juris",
+    "fonction": "Rédaction et relecture des modèles de contrat",
+    "presentation": "Page technique de test. Aucun contenu juridique n'est fourni sur cette page.",
+    "url_profil": "https://www.lumenjuris.com/qui-sommes-nous/",
+    "domaines": ["Test technique"],
+    "valide": false,
+    "date_validation": null
+  },
+  "etapes": [
+    ["Déclencher", "Lancer la publication cloud."],
+    ["Construire", "Générer les fichiers associés."],
+    ["Publier", "Créer la page WordPress."],
+    ["Vérifier", "Contrôler la réponse HTTP et les micro-données."],
+    ["Retirer", "Supprimer la page de test de l'affichage public après validation."]
+  ],
+  "faq": [
+    ["Cette page contient-elle un modèle juridique ?", "Non. Il s'agit uniquement d'un test technique temporaire."],
+    ["Cette page est-elle destinée au référencement ?", "Non. Elle sera retirée après le test."],
+    ["Le test utilise-t-il le même système que les futurs modèles ?", "Oui. Il utilise le même script de construction et de publication."],
+    ["Le PC de Geoff doit-il être allumé ?", "Non. Le test est exécuté dans le cloud."],
+    ["La page sera-t-elle conservée ?", "Non. Elle sera retirée après vérification."],
+    ["Le site applicatif est-il modifié ?", "Non. Seul le site vitrine www.lumenjuris.com est concerné."]
+  ],
+  "sources": [],
+  "personnaliser": {
+    "doc": "test-publication-cloud",
+    "accroche": "Test technique temporaire."
+  }
+}

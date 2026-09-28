@@ -1,0 +1,25 @@
+# TEST PUBLICATION CLOUD
+
+> PAGE TECHNIQUE TEMPORAIRE — aucun contenu juridique.
+
+## ARTICLE 1 – OBJET DU TEST
+
+Cette page sert uniquement à vérifier que la chaîne de publication cloud de Lumen Juris fonctionne sans ordinateur local.
+
+## ARTICLE 2 – PÉRIMÈTRE
+
+Le test concerne uniquement le site vitrine www.lumenjuris.com.
+
+- Aucun réglage global du site n'est modifié.
+- L'application app.lumenjuris.com n'est pas modifiée.
+- La page sera retirée après vérification.
+
+## ARTICLE 3 – VÉRIFICATIONS
+
+Les contrôles attendus sont :
+
+- construction des fichiers ;
+- publication WordPress ;
+- réponse HTTP 200 ;
+- présence des micro-données ;
+- présence dans le plan du site.

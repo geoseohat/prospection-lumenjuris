@@ -1,0 +1,58 @@
+{
+  "slug": "contrat-de-travail-cdi",
+  "nom": "Contrat de travail CDI",
+  "nom_court": "contrat de travail CDI",
+  "categorie": "Droit du travail",
+  "mot_cle": "modèle contrat de travail CDI",
+  "mots_cles_secondaires": [
+    "contrat CDI",
+    "modèle CDI",
+    "contrat de travail CDI gratuit",
+    "exemple contrat CDI",
+    "CDI temps plein"
+  ],
+  "titre_h1": "Modèle de contrat de travail CDI gratuit (Word et PDF)",
+  "titre_seo": "Modèle contrat de travail CDI gratuit 2026 | Lumen Juris",
+  "meta_description": "Téléchargez un modèle de contrat de travail CDI à temps plein en droit français : poste, salaire, horaires, période d'essai et clauses essentielles.",
+  "chapo": "Ce modèle permet de formaliser un CDI à temps plein en droit français. Il prévoit les informations essentielles sur le poste, la rémunération, le temps de travail, le lieu de travail, la période d'essai éventuelle et la convention collective.",
+  "gratuit": true,
+  "fichier_base": "modele-contrat-de-travail-cdi-lumen-juris",
+  "date_publication": "2026-09-28",
+  "date_mise_a_jour": "2026-09-28",
+  "relecture": {
+    "nom": "L'équipe juridique de Lumen Juris",
+    "fonction": "Rédaction et relecture des modèles de contrat",
+    "presentation": "Les modèles de contrat publiés par Lumen Juris sont rédigés par notre équipe juridique afin de faciliter leur adaptation au droit français en vigueur. Une vérification de la convention collective et de la situation concrète reste nécessaire avant signature.",
+    "url_profil": "https://www.lumenjuris.com/qui-sommes-nous/",
+    "domaines": ["Droit du travail", "Droit des contrats"],
+    "valide": false,
+    "date_validation": null
+  },
+  "etapes": [
+    ["Identifiez l'employeur et le salarié", "Complétez l'identité des parties, l'adresse de l'établissement et la date d'embauche."],
+    ["Décrivez précisément le poste", "Indiquez l'emploi, la qualification, la classification conventionnelle, les principales missions et le lieu de travail."],
+    ["Fixez le salaire et le temps de travail", "Renseignez la rémunération brute, sa périodicité et la durée du travail applicable."],
+    ["Vérifiez la période d'essai et la convention collective", "Conservez une période d'essai uniquement si elle est adaptée à la catégorie du salarié et vérifiez les règles conventionnelles applicables."],
+    ["Relisez et signez", "Supprimez les options inutiles, vérifiez les informations obligatoires et faites signer un exemplaire à chaque partie."]
+  ],
+  "faq": [
+    ["Un CDI doit-il obligatoirement être écrit ?", "Un CDI à temps plein n'est pas toujours soumis, par le seul Code du travail, à une exigence générale d'écrit. Toutefois, l'employeur doit remettre au salarié les informations essentielles sur la relation de travail dans les délais prévus par le Code du travail. Une convention collective peut aussi imposer un contrat écrit. En pratique, un écrit signé est fortement recommandé."],
+    ["Quelles informations faut-il prévoir dans un CDI ?", "Le salarié doit notamment être informé de l'identité des parties, du lieu de travail, du poste, de la date d'embauche, de la période d'essai éventuelle, de la rémunération, du temps de travail, des congés, des règles applicables à la rupture, de la convention collective et des régimes de protection sociale."],
+    ["Quelle est la durée maximale d'une période d'essai en CDI ?", "Le Code du travail prévoit au maximum deux mois pour les ouvriers et employés, trois mois pour les agents de maîtrise et techniciens, et quatre mois pour les cadres. Des règles conventionnelles plus favorables peuvent s'appliquer."],
+    ["La période d'essai peut-elle être renouvelée ?", "Oui, une seule fois, mais uniquement si un accord de branche étendu le prévoit et si le renouvellement est expressément prévu dans le contrat ou la lettre d'engagement. Il faut aussi respecter les durées maximales légales et obtenir l'accord du salarié selon les règles applicables."],
+    ["Ce modèle convient-il à un CDI à temps partiel ?", "Non. Le travail à temps partiel est soumis à des mentions écrites spécifiques, notamment sur la durée et la répartition du travail. Il faut utiliser un modèle dédié."],
+    ["Peut-on prévoir une clause de non-concurrence dans un CDI ?", "Oui, mais elle doit être justifiée par les intérêts légitimes de l'entreprise, proportionnée, limitée dans le temps et l'espace, tenir compte des fonctions du salarié et prévoir une contrepartie financière. Une clause générique mal calibrée peut être inapplicable."],
+    ["Faut-il indiquer la convention collective dans le contrat ?", "La convention collective applicable doit être portée à la connaissance du salarié. Le modèle prévoit un champ à compléter, mais il faut identifier la convention réellement applicable à l'activité de l'entreprise et au poste."],
+    ["Peut-on modifier le salaire ou le poste après la signature ?", "Une modification d'un élément essentiel du contrat, comme la rémunération contractuelle, nécessite l'accord du salarié. Certains changements relevant des conditions de travail peuvent, selon les circonstances, être décidés dans le cadre du pouvoir de direction de l'employeur."]
+  ],
+  "sources": [
+    ["Code du travail, articles L. 1221-1 à L. 1221-5-1 et R. 1221-34 à R. 1221-41 (formation du contrat et informations dues au salarié)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"],
+    ["Code du travail, articles L. 1221-19 à L. 1221-26 (période d'essai)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"],
+    ["Code du travail, articles L. 3121-18 et suivants (durée du travail)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"],
+    ["Code du travail, article L. 3141-3 et suivants (congés payés)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"]
+  ],
+  "personnaliser": {
+    "doc": "contrat-travail-cdi",
+    "accroche": "Répondez à quelques questions pour adapter le CDI au poste, au salaire et aux conditions de travail prévues."
+  }
+}

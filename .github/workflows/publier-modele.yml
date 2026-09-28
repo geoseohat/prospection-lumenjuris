@@ -42,7 +42,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install python-docx playwright
           python -m playwright install chromium --with-deps
-          CHROMIUM_PATH=$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')
+          CHROMIUM_PATH=$(find "$HOME/.cache/ms-playwright" -type f -path '*chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell' | head -n 1)
+          if [ -z "$CHROMIUM_PATH" ]; then
+            echo "Chrome Headless Shell introuvable"
+            exit 4
+          fi
           echo "NAVIGATEUR_PDF=$CHROMIUM_PATH" >> "$GITHUB_ENV"
 
       - name: Lire le modèle à publier

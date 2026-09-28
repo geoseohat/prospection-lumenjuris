@@ -1,0 +1,282 @@
+<style>
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous = CTA */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:#1B2A4A!important;color:#fff!important;box-shadow:0 6px 16px rgba(27,42,74,.22)}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:#24365C!important;transform:translateY(-1px);box-shadow:0 10px 22px rgba(27,42,74,.28)}
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+</style>					<style>
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+/* ===== video : meme cadre que les images ===== */
+.elementor-widget-video{background:#fff;padding:8px;border-radius:16px;
+  border:1px solid rgba(27,42,74,.08);box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0}
+.elementor-widget-video iframe,.elementor-widget-video video{border-radius:10px}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+</style>
+					<h1>Suivi des contrats et alertes d’échéances</h1>					<h2>Tacite reconduction, préavis, jalons : soyez alerté avant, pas après</h2>										<a href="https://calendly.com/meetingreunion/reunion">
+									Essayer gratuitement
+					</a>
+									<figure><img width="300" height="300" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/Role-dun-referent-RGPD-removebg-preview-300x300.png" alt="" /></figure><p>Conforme RGPD</p><p>Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.</p>					<figure><img width="300" height="194" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/logo-Marianne-removebg-preview-300x194.png" alt="" /></figure><p>IA française</p><p>Notre IA est entraînée sur le droit français et branchée avec Légifrance.</p>					<figure><img width="300" height="300" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/flag-1-300x300.png" alt="" /></figure><p>Hébergé en France</p><p>Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.</p>					<figure><img width="300" height="300" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/41UJVoRP1RL._AC_UF1000_1000_QL80_-removebg-preview-300x300.png" alt="" /></figure><p>Confidentialité</p><p>Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.</p>															<img width="900" height="560" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/tableau-de-bord-suivi-contrats-echeances.svg" alt="" />																<h2>Comment fonctionne le suivi des contrats dans Lumen Juris ?</h2>		<p>Le <strong>suivi des contrats</strong> de Lumen Juris commence là où les tableurs s’arrêtent : dès la signature, l’outil extrait automatiquement les dates clés et les obligations du contrat — date d’effet, date de fin, tacite reconduction, préavis de dénonciation, jalons de livraison, révision de prix. Votre <strong>gestion des échéances contractuelles</strong> repose alors sur un tableau de bord unique : chaque alerte part en amont, vers la bonne personne, et renvoie à la clause concernée.</p>					<ul>
+							<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Extraction automatique des métadonnées</strong> : dates d’effet et de fin, reconduction, préavis, obligations : les données sont lues dans le contrat lui-même, sans ressaisie manuelle.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Tableau de bord contractuel</strong> : vue liste ou calendrier de tout le portefeuille : préavis sous 30 jours, échéances sous 90 jours, alertes Chatel, retards.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Alertes en amont, paramétrables</strong> : seuils ajustables (30, 60, 90 jours…), responsable désigné par contrat, historique des actions pour la traçabilité.
+									</li>
+						</ul>
+							<h2>Des alertes d’échéance contrat qui renvoient à la clause</h2>		<p>Une alerte utile ne dit pas seulement « une échéance approche » : elle dit laquelle, sur quel contrat, en vertu de quelle clause, et qui doit agir. Chaque notification de Lumen Juris cite la clause concernée — celle-là même qui a été vérifiée lors de la <a href="https://www.lumenjuris.com/revision-contractuelle-ia/">révision contractuelle par IA</a> — et arrive par les canaux que vous choisissez : notification dans l’application, e-mail, et synchronisation avec votre agenda Outlook ou Google. Tant que l’échéance n’est pas traitée, la relance se répète : le filet de sécurité ne s’endort pas.</p>					<ul>
+							<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Multi-canal</strong> : notification in-app, e-mail aux personnes concernées, intégration agenda Outlook et Google.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Responsable désigné</strong> : chaque contrat a son responsable : l’alerte arrive à la bonne personne, pas dans une boîte générique.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Relances automatiques</strong> : l’alerte se répète jusqu’au traitement, et l’historique des actions garde la trace de qui a fait quoi, quand.
+									</li>
+						</ul>
+																	<img width="640" height="480" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/alerte-echeance-contrat-notification.svg" alt="" />																<h2>Tacite reconduction, loi Chatel : le coût de l’inaction</h2>															<img width="1545" height="778" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/logiciel-suivi-contractuel-echeancier-calendrier.png" alt="" srcset="https://www.lumenjuris.com/wp-content/uploads/2026/07/logiciel-suivi-contractuel-echeancier-calendrier.png 1545w, https://www.lumenjuris.com/wp-content/uploads/2026/07/logiciel-suivi-contractuel-echeancier-calendrier-300x151.png 300w, https://www.lumenjuris.com/wp-content/uploads/2026/07/logiciel-suivi-contractuel-echeancier-calendrier-1024x516.png 1024w, https://www.lumenjuris.com/wp-content/uploads/2026/07/logiciel-suivi-contractuel-echeancier-calendrier-768x387.png 768w, https://www.lumenjuris.com/wp-content/uploads/2026/07/logiciel-suivi-contractuel-echeancier-calendrier-1536x773.png 1536w" sizes="(max-width: 1545px) 100vw, 1545px" />													<p>Un préavis manqué ne pardonne pas : le contrat se renouvelle par tacite reconduction, et vous voilà engagé un an de plus aux mêmes conditions — ou exposé à des pénalités de retard sur un jalon oublié. Côté consommateurs, la <strong>loi Chatel</strong> (article <strong>L. 215-1 du Code de la consommation</strong>) impose au professionnel d’informer le client de sa faculté de ne pas reconduire : Lumen Juris intègre une alerte Chatel dédiée pour vos contrats B2C. Pour le reste du portefeuille — baux, maintenance, prestations, abonnements — l’échéancier surveille préavis, renouvellements et révisions de prix. L’alerte est un filet de sécurité : elle ne remplace pas la vigilance du juriste, elle garantit qu’aucune date ne passe sans qu’il l’ait vue.</p>			<h2>Vos échéances contractuelles sous contrôle en 3 étapes</h2>					<h3>01</h3>					<h4>Signez et classez</h4>		<p>Le contrat signé rejoint la contrathèque : dates et obligations sont extraites automatiquement du document.</p>			<h3>02</h3>					<h4>Paramétrez seuils et responsables</h4>		<p>Choisissez les délais d’alerte (30, 60, 90 jours…), désignez un responsable par contrat, ajustez selon vos préavis.</p>			<h3>03</h3>					<h4>Recevez l’alerte, agissez à temps</h4>		<p>Notification, e-mail, agenda : l’alerte arrive en amont, cite la clause, et se répète jusqu’à son traitement.</p>			<h2>Que surveille le suivi des obligations contractuelles ?</h2>		<p>Chaque famille d’échéances porte son propre risque. Voici ce que l’échéancier de Lumen Juris surveille sur votre portefeuille de contrats — et ce qu’il vous évite.</p><p>Un professionnel du droit ne choisit pas une e-signature comme un outil bureautique : il choisit un régime de preuve. Signer un NDA avec le même niveau qu’un compromis de vente n’a pas de sens — ni juridiquement, ni économiquement. La signature simple, gratuite dans Lumen Juris, couvre l’immense majorité des actes courants de la vie des affaires : sa validité est admise, et le dossier de preuve horodaté que nous générons pèse dans l’appréciation du juge. La signature avancée se justifie dès que l’enjeu financier ou le risque de contestation augmente : contrat de travail, bail, engagement significatif. Quant à la signature qualifiée, réservée à des actes spécifiques, elle suppose une vérification d’identité renforcée que peu de transactions exigent réellement. En cas de doute sur une clause avant signature, l’<a href="https://www.lumenjuris.com/">analyse de contrat par IA</a> intégrée vous signale les risques — avant que le document ne parte à la signature.</p><p>Le pilotage du portefeuille de contrats ne se joue pas à l’échéance, mais en amont : un préavis de trois mois se dénonce au plus tard trois mois avant le terme, pas la veille. C’est pourquoi les seuils d’alerte de Lumen Juris se calent sur vos préavis réels, extraits des clauses elles-mêmes. Là où un tableur exige une ressaisie manuelle — avec ses erreurs, ses oublis et ses fichiers obsolètes —, le référentiel contractuel se met à jour tout seul : chaque contrat signé via la <a href="https://www.lumenjuris.com/signature-electronique-en-ligne/">signature électronique en ligne</a> entre dans l’échéancier sans intervention, avec ses métadonnées, son responsable et sa piste d’audit.</p>			<style>
+.lj-table-wrap{overflow-x:auto}
+.lj-cmp{width:100%;border-collapse:separate;border-spacing:0;background:#fff;
+  border:1px solid rgba(27,42,74,.10);border-radius:16px;overflow:hidden;
+  font-family:Roboto,sans-serif;font-size:14.5px;color:#39445A;line-height:1.55;min-width:640px}
+.lj-cmp th{background:#1B2A4A;color:#fff;font-family:'Roboto Slab',serif;font-weight:600;
+  padding:14px 16px;text-align:left;font-size:14px}
+.lj-cmp td{padding:13px 16px;border-top:1px solid rgba(27,42,74,.08);vertical-align:top}
+.lj-cmp tr td:first-child{font-weight:600;color:#1C1C1C;white-space:nowrap}
+</style>
+<table>
+<thead><tr><th>Échéance surveillée</th><th>Risque si elle passe</th><th>Ce que fait Lumen Juris</th></tr></thead>
+<tbody>
+<tr><td>Tacite reconduction</td>
+<td>Renouvellement subi d’un an aux mêmes conditions, budget engagé sans arbitrage.</td>
+<td>Alerte calée sur le préavis de dénonciation réel de la clause, relances jusqu’au traitement.</td></tr>
+<tr><td>Information loi Chatel (B2C)</td>
+<td>Manquement à l’obligation d’information de l’article L. 215-1 du Code de la consommation.</td>
+<td>Alerte Chatel dédiée sur les contrats consommateurs, dans la fenêtre légale d’information.</td></tr>
+<tr><td>Jalons et livrables</td>
+<td>Pénalités de retard, mise en demeure, dégradation de la relation contractuelle.</td>
+<td>Suivi des jalons avec responsable désigné et historique des actions menées.</td></tr>
+<tr><td>Révision et indexation de prix</td>
+<td>Révision non appliquée : marge rognée ou hausse subie sans négociation.</td>
+<td>Rappel à la date d’indexation, avec renvoi à la clause d’échelle mobile concernée.</td></tr>
+<tr><td>Obligations récurrentes</td>
+<td>Reporting contractuel oublié, assurances non renouvelées, garanties expirées.</td>
+<td>Échéancier des obligations périodiques, réparti entre les responsables concernés.</td></tr>
+</tbody></table>										<a href="https://www.lumenjuris.com/contactez-nous/">
+									Essayer le suivi gratuitement
+					</a>
+									<h2>Un logiciel de suivi contractuel pour chaque équipe</h2>		<p>Le suivi des contrats concerne autant la direction juridique que les achats, la finance ou les RH : chacun voit ses échéances, ses responsabilités et ses contrats — et le portefeuille entier reste piloté d’un seul endroit.</p>					
+			<svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg>			
+							<h3>Directions juridiques</h3>		<p>Le référentiel contractuel remplace le tableur : portefeuille consolidé, KPI juridiques, piste d’audit complète. Vous savez à tout moment ce qui expire, ce qui se reconduit et qui en a la charge.</p>					
+			<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M320 336c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h416c25.6 0 48-22.4 48-48V288H320v48zm144-208h-80V80c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h512v-80c0-25.6-22.4-48-48-48zm-144 0H192V96h128v32z"></path></svg>			
+							<h3>Achats &amp; finance</h3>		<p>Renouvellements fournisseurs arbitrés à temps, indexations appliquées, engagements budgétaires anticipés : les échéances contractuelles cessent d’être des surprises comptables.</p>					
+			<svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path></svg>			
+							<h3>RH &amp; opérationnels</h3>		<p>Périodes d’essai, avenants, contrats de prestation : chaque équipe reçoit ses alertes, sans dépendre d’un fichier partagé que plus personne ne met à jour.</p>			<h2>Votre portefeuille contractuel reste confidentiel</h2>		<p>Un échéancier contractuel révèle tout de votre activité : fournisseurs, clients, montants, durées. Lumen Juris applique au suivi les mêmes engagements qu’au reste de la plateforme : hébergement en France, conformité RGPD — y compris sur les durées de conservation —, échanges chiffrés, et <strong>aucune exploitation de vos documents pour entraîner des modèles d’IA</strong>. Les métadonnées extraites de vos contrats servent vos alertes, rien d’autre. Du premier brouillon généré avec <a href="https://www.lumenjuris.com/outil-generation-contrat-ia/">le générateur de contrats par IA</a> jusqu’à l’alerte de renouvellement, le contrat vit dans un seul outil souverain, opéré en France par l’équipe Lumen Juris.</p>					<ul>
+							<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Hébergement en France</strong> : contrats, métadonnées et historiques restent sur le territoire.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>RGPD et durées de conservation</strong> : finalités limitées, suppression maîtrisée de bout en bout.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Aucun entraînement sur vos documents</strong> : vos contrats alimentent vos alertes, pas nos modèles.
+									</li>
+						</ul>
+							<h2>Suivi des contrats : vos questions</h2>							
+						<details id="e-n-accordion-item-4000" open>
+				<summary data-accordion-index="1" tabindex="0" aria-expanded="true" aria-controls="e-n-accordion-item-4000" >
+					<h3> Comment ne pas rater une tacite reconduction ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>La seule méthode fiable consiste à caler l’alerte sur le préavis de dénonciation réel de la clause, pas sur la date de fin du contrat. Lumen Juris extrait ces deux dates du document dès la signature et déclenche l’alerte en amont du préavis avec relances automatiques jusqu’au traitement. Vous arbitrez le renouvellement au lieu de le subir.</p>								
+					</details>
+						<details id="e-n-accordion-item-4001" >
+				<summary data-accordion-index="2" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4001" >
+					<h3> Comment suivre les échéances de ses contrats ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Centralisez les contrats dans un référentiel unique, extrayez leurs dates clés (effet, fin, préavis, jalons, révisions de prix), affectez un responsable par contrat et paramétrez des alertes en amont. Dans Lumen Juris, cette chaîne est automatique : le contrat signé entre dans la contrathèque, ses métadonnées sont extraites et l’échéancier — vue liste ou calendrier — se met à jour sans ressaisie.</p>								
+					</details>
+						<details id="e-n-accordion-item-4002" >
+				<summary data-accordion-index="3" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4002" >
+					<h3> Excel suffit-il pour gérer un portefeuille de contrats ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Excel fonctionne tant que le portefeuille est petit et que quelqu’un met le fichier à jour. Ses limites sont connues : ressaisie manuelle des dates, absence d’alertes fiables, aucune traçabilité, fichiers dupliqués et obsolètes. Un logiciel de suivi contractuel extrait les dates du contrat lui-même, alerte les bonnes personnes et conserve l’historique — ce qu’un tableur ne fera jamais seul.</p>								
+					</details>
+						<details id="e-n-accordion-item-4003" >
+				<summary data-accordion-index="4" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4003" >
+					<h3> Qui reçoit les alertes et à quel moment ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Chaque contrat a un responsable désigné : c’est lui qui reçoit l’alerte, par notification dans l’application, par e-mail et, si vous l’activez, dans son agenda Outlook ou Google. Le moment se paramètre par des seuils (30, 60, 90 jours avant l’échéance…), ajustés au préavis réel de chaque clause. Les relances se répètent jusqu’au traitement de l’alerte.</p>								
+					</details>
+						<details id="e-n-accordion-item-4004" >
+				<summary data-accordion-index="5" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4004" >
+					<h3> Les dates sont-elles vraiment extraites automatiquement ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Oui. Dès qu’un contrat rejoint la contrathèque, l’IA lit le document et en extrait les métadonnées contractuelles : date d’effet, date de fin, tacite reconduction, préavis, jalons, clauses de révision. Chaque alerte renvoie à la clause dont elle provient, pour vérification. Un contrôle humain reste recommandé sur les contrats atypiques : l’outil est un filet de sécurité, pas une décharge de responsabilité.</p>								
+					</details>
+						<details id="e-n-accordion-item-4005" >
+				<summary data-accordion-index="6" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4005" >
+					<h3> Peut-on synchroniser les échéances avec Outlook ou Google Agenda ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Oui. En plus des notifications dans l’application et des e-mails, les échéances contractuelles peuvent s’intégrer à votre agenda Outlook ou Google : vos préavis et renouvellements apparaissent là où vous organisez déjà vos semaines, sans changer vos habitudes de travail.</p>								
+					</details>
+						<details id="e-n-accordion-item-4006" >
+				<summary data-accordion-index="7" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4006" >
+					<h3> Une alerte Chatel est-elle prévue pour les contrats B2C ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Oui. Pour les contrats conclus avec des consommateurs, la loi Chatel (article L. 215-1 du Code de la consommation) impose d’informer le client de sa faculté de ne pas reconduire le contrat. Lumen Juris intègre une alerte dédiée qui se déclenche dans la fenêtre d’information légale, pour vous aider à respecter cette obligation — la qualification juridique du contrat restant de votre ressort.</p>								
+					</details>
+						<details id="e-n-accordion-item-4007" >
+				<summary data-accordion-index="8" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4007" >
+					<h3> Le suivi des contrats est-il gratuit ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Vous pouvez essayer gratuitement le suivi des contrats de Lumen Juris : importez quelques contrats signés, laissez l’outil extraire leurs échéances et jugez la pertinence des alertes sur votre propre portefeuille. L’essai est sans engagement et s’inscrit dans la plateforme complète : génération, révision, signature, suivi et contrathèque.</p>								
+					</details>
+				<p>La seule méthode fiable consiste à caler l’alerte sur le préavis de dénonciation réel de la clause, pas sur la date de fin du contrat. Lumen Juris extrait ces deux dates du document dès la signature et déclenche l’alerte en amont du préavis avec relances automatiques jusqu’au traitement. Vous arbitrez le renouvellement au lieu de le subir.</p><p>Centralisez les contrats dans un référentiel unique, extrayez leurs dates clés (effet, fin, préavis, jalons, révisions de prix), affectez un responsable par contrat et paramétrez des alertes en amont. Dans Lumen Juris, cette chaîne est automatique : le contrat signé entre dans la contrathèque, ses métadonnées sont extraites et l’échéancier — vue liste ou calendrier — se met à jour sans ressaisie.</p><p>Excel fonctionne tant que le portefeuille est petit et que quelqu’un met le fichier à jour. Ses limites sont connues : ressaisie manuelle des dates, absence d’alertes fiables, aucune traçabilité, fichiers dupliqués et obsolètes. Un logiciel de suivi contractuel extrait les dates du contrat lui-même, alerte les bonnes personnes et conserve l’historique — ce qu’un tableur ne fera jamais seul.</p><p>Chaque contrat a un responsable désigné : c’est lui qui reçoit l’alerte, par notification dans l’application, par e-mail et, si vous l’activez, dans son agenda Outlook ou Google. Le moment se paramètre par des seuils (30, 60, 90 jours avant l’échéance…), ajustés au préavis réel de chaque clause. Les relances se répètent jusqu’au traitement de l’alerte.</p><p>Oui. Dès qu’un contrat rejoint la contrathèque, l’IA lit le document et en extrait les métadonnées contractuelles : date d’effet, date de fin, tacite reconduction, préavis, jalons, clauses de révision. Chaque alerte renvoie à la clause dont elle provient, pour vérification. Un contrôle humain reste recommandé sur les contrats atypiques : l’outil est un filet de sécurité, pas une décharge de responsabilité.</p><p>Oui. En plus des notifications dans l’application et des e-mails, les échéances contractuelles peuvent s’intégrer à votre agenda Outlook ou Google : vos préavis et renouvellements apparaissent là où vous organisez déjà vos semaines, sans changer vos habitudes de travail.</p><p>Oui. Pour les contrats conclus avec des consommateurs, la loi Chatel (article L. 215-1 du Code de la consommation) impose d’informer le client de sa faculté de ne pas reconduire le contrat. Lumen Juris intègre une alerte dédiée qui se déclenche dans la fenêtre d’information légale, pour vous aider à respecter cette obligation — la qualification juridique du contrat restant de votre ressort.</p><p>Vous pouvez essayer gratuitement le suivi des contrats de Lumen Juris : importez quelques contrats signés, laissez l’outil extraire leurs échéances et jugez la pertinence des alertes sur votre propre portefeuille. L’essai est sans engagement et s’inscrit dans la plateforme complète : génération, révision, signature, suivi et contrathèque.</p>			<h2>Reprenez la main sur vos échéances contractuelles</h2>		<p>Essayez gratuitement le suivi des contrats de Lumen Juris : vos échéances extraites automatiquement, vos alertes envoyées à temps, votre portefeuille piloté d’un seul endroit — au sein du cycle complet, de la génération par IA à la contrathèque. La vigilance reste la vôtre ; les oublis, eux, disparaissent.</p>								<a href="https://www.lumenjuris.com/contactez-nous/">
+									Demandez une demo
+					</a>

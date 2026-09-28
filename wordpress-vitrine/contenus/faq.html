@@ -1,0 +1,163 @@
+<!-- wp:html -->
+<style>
+.lj-faq{max-width:820px}
+.lj-faq details{border:1px solid #E5E7EB;border-radius:12px;background:#fff;margin:0 0 12px}
+.lj-faq details[open]{border-color:#A4BFDF;box-shadow:0 6px 18px rgba(27,42,74,.07)}
+.lj-faq summary{cursor:pointer;list-style:none;padding:16px 46px 16px 18px;font-weight:600;
+ line-height:1.5;position:relative;border-radius:12px}
+.lj-faq summary::-webkit-details-marker{display:none}
+.lj-faq summary::after{content:'';position:absolute;right:20px;top:calc(50% - 4px);
+ width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+ transform:rotate(45deg);transition:transform .2s ease}
+.lj-faq details[open] summary::after{transform:rotate(225deg);top:calc(50% - 1px)}
+.lj-faq summary:focus-visible{outline:3px solid #1B2A4A;outline-offset:2px}
+.lj-faq .lj-a{padding:0 18px 18px;line-height:1.7}
+.lj-faq .lj-a p{margin:0 0 10px}
+.lj-faq .lj-a p:last-child{margin-bottom:0}
+</style>
+
+<div class="lj-faq">
+
+<details>
+<summary>Les contrats importés restent-ils confidentiels ?</summary>
+<div class="lj-a"><p>Oui. Vos documents sont hébergés en France, chez o2switch, à Clermont-Ferrand, et ne sont ni revendus ni transmis à des tiers à des fins commerciales. Pour produire une analyse, les extraits nécessaires sont transmis à un fournisseur de modèles d’intelligence artificielle, engagé à ne pas les réutiliser pour entraîner ses modèles. Aucun membre de l’équipe ne consulte vos documents, sauf à votre demande expresse dans un ticket de support, pour un diagnostic technique précis, ou sur réquisition légale ; cet accès est alors journalisé. Vous pouvez supprimer vos documents à tout moment, la purge intervenant sous trente jours au maximum.</p></div>
+</details>
+
+<details>
+<summary>Lumen Juris remplace-t-il un avocat ?</summary>
+<div class="lj-a"><p>Non. Lumen Juris est un outil d’assistance à l’analyse et à la rédaction. Il aide à repérer des points de vigilance et à structurer une première analyse, mais il ne fournit pas une consultation juridique personnalisée et ne remplace pas le jugement d’un professionnel du droit. Pour toute situation impliquant un contentieux, une stratégie juridique, des délais procéduraux ou des enjeux significatifs, l’intervention d’un avocat ou d’un juriste qualifié demeure nécessaire.</p></div>
+</details>
+
+<details>
+<summary>Quelles sources juridiques sont utilisées ?</summary>
+<div class="lj-a"><p>Lumen Juris interroge les données juridiques publiques de l’État français, principalement Légifrance, dont l’API est mise à disposition par la DILA via le portail PISTE. Ces requêtes portent sur des mots-clés et des références, et non sur le texte de vos documents. Lorsque des références pertinentes sont trouvées, elles sont affichées avec l’analyse afin que vous puissiez les vérifier. La jurisprudence ouverte est également mobilisée selon les sujets, mais son intervention n’est pas systématique pour chaque analyse : ne considérez comme sourcé que ce qui est effectivement accompagné d’une référence à l’écran.</p></div>
+</details>
+
+<details>
+<summary>Les résultats sont-ils toujours fiables ?</summary>
+<div class="lj-a"><p>Non, et il serait malhonnête de le prétendre. Lumen Juris associe l’intelligence artificielle à des sources juridiques françaises, ce qui permet de rattacher ses suggestions à des textes vérifiables. Mais comme tout outil fondé sur l’intelligence artificielle, il peut produire des erreurs, des omissions ou des approximations, et aucune détection ne peut être garantie exhaustive. Chaque résultat doit être contrôlé par un professionnel compétent avant utilisation, signature ou prise de décision. C’est précisément pourquoi les références sont affichées : pour rendre ce contrôle rapide.</p></div>
+</details>
+
+<details>
+<summary>Les documents servent-ils à entraîner une intelligence artificielle ?</summary>
+<div class="lj-a"><p>Les documents importés ne sont pas utilisés par Lumen Juris pour entraîner ses propres modèles sans votre consentement explicite, et nos fournisseurs de modèles sont contractuellement engagés à ne pas les réutiliser à cette fin. Les extraits transmis pour produire une analyse le sont uniquement pour cette exécution. Si vous souhaitez connaître le détail des engagements de nos sous-traitants, la liste nominative à jour, leur mission et leur localisation vous sont communiquées sur demande à rgpd@lumenjuris.com.</p></div>
+</details>
+
+<details>
+<summary>Quels formats de fichiers sont acceptés ?</summary>
+<div class="lj-a"><p>Les documents peuvent être importés au format PDF ou Word. Un document texte bien structuré donne de meilleurs résultats qu’un fichier issu d’une numérisation : sur un PDF scanné, la reconnaissance de caractères peut introduire des erreurs de lecture qui se répercutent sur l’analyse. Si votre document provient d’un scan, vérifiez que le texte est sélectionnable avant de l’importer.</p></div>
+</details>
+
+<details>
+<summary>Puis-je modifier les suggestions proposées ?</summary>
+<div class="lj-a"><p>Oui. Les suggestions sont des propositions, jamais des modifications appliquées automatiquement : vous décidez de ce que vous retenez. Chaque clause reste modifiable, et vous pouvez demander à l’outil de reformuler une clause en précisant ce que vous souhaitez y voir figurer. Les contrats générés comportent par ailleurs des variables — parties, dates, montants — que vous complétez, enregistrez et réutilisez. Vous conservez en toutes circonstances la maîtrise du document final.</p></div>
+</details>
+
+<details>
+<summary>Puis-je supprimer mes documents ?</summary>
+<div class="lj-a"><p>Oui. Vous pouvez supprimer un document à tout moment depuis votre espace, ou demander la suppression de l’ensemble de vos contenus en écrivant à rgpd@lumenjuris.com. La suppression est immédiate dans l’environnement de production. Les sauvegardes suivent un cycle glissant de trente jours : vos contenus en disparaissent donc au plus tard à l’issue de ce délai. À la fin de la relation contractuelle, la purge est déclenchée automatiquement selon les mêmes délais.</p></div>
+</details>
+
+<details>
+<summary>Où les données sont-elles hébergées ?</summary>
+<div class="lj-a"><p>Le site vitrine, l’application, les documents que vous importez et les sauvegardes associées sont hébergés en France, chez o2switch, dont les serveurs se situent à Clermont-Ferrand. Vos données sont donc traitées sur le territoire national. Une exception mérite d’être signalée : les extraits soumis à l’analyse sont transmis à un fournisseur de modèles d’intelligence artificielle, dont le traitement peut avoir lieu en dehors de l’Union européenne, encadré par des clauses contractuelles types. Le détail figure sur notre page consacrée à la sécurité et à la confidentialité.</p></div>
+</details>
+
+<details>
+<summary>Quels types de contrats peuvent être analysés ?</summary>
+<div class="lj-a"><p>Lumen Juris est conçu pour les contrats d’affaires de droit français : contrats de prestation, contrats fournisseurs, contrats de travail et avenants, contrats commerciaux, conditions générales, accords de confidentialité. Il n’est pas conçu pour être universel. Les actes soumis à un formalisme particulier, les documents relevant d’un droit étranger, les contrats très spécialisés ou fortement négociés dépassent son périmètre : l’outil peut en donner une première lecture, mais son apport y est plus limité. En cas de doute sur la pertinence d’une analyse, faites relire le document par un professionnel du droit.</p></div>
+</details>
+
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Les contrats importés restent-ils confidentiels ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Vos documents sont hébergés en France, chez o2switch, à Clermont-Ferrand, et ne sont ni revendus ni transmis à des tiers à des fins commerciales. Pour produire une analyse, les extraits nécessaires sont transmis à un fournisseur de modèles d’intelligence artificielle, engagé à ne pas les réutiliser pour entraîner ses modèles. Aucun membre de l’équipe ne consulte vos documents, sauf à votre demande expresse dans un ticket de support, pour un diagnostic technique précis, ou sur réquisition légale ; cet accès est alors journalisé. Vous pouvez supprimer vos documents à tout moment, la purge intervenant sous trente jours au maximum."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Lumen Juris remplace-t-il un avocat ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. Lumen Juris est un outil d’assistance à l’analyse et à la rédaction. Il aide à repérer des points de vigilance et à structurer une première analyse, mais il ne fournit pas une consultation juridique personnalisée et ne remplace pas le jugement d’un professionnel du droit. Pour toute situation impliquant un contentieux, une stratégie juridique, des délais procéduraux ou des enjeux significatifs, l’intervention d’un avocat ou d’un juriste qualifié demeure nécessaire."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelles sources juridiques sont utilisées ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lumen Juris interroge les données juridiques publiques de l’État français, principalement Légifrance, dont l’API est mise à disposition par la DILA via le portail PISTE. Ces requêtes portent sur des mots-clés et des références, et non sur le texte de vos documents. Lorsque des références pertinentes sont trouvées, elles sont affichées avec l’analyse afin que vous puissiez les vérifier. La jurisprudence ouverte est également mobilisée selon les sujets, mais son intervention n’est pas systématique pour chaque analyse : ne considérez comme sourcé que ce qui est effectivement accompagné d’une référence à l’écran."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Les résultats sont-ils toujours fiables ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non, et il serait malhonnête de le prétendre. Lumen Juris associe l’intelligence artificielle à des sources juridiques françaises, ce qui permet de rattacher ses suggestions à des textes vérifiables. Mais comme tout outil fondé sur l’intelligence artificielle, il peut produire des erreurs, des omissions ou des approximations, et aucune détection ne peut être garantie exhaustive. Chaque résultat doit être contrôlé par un professionnel compétent avant utilisation, signature ou prise de décision. C’est précisément pourquoi les références sont affichées : pour rendre ce contrôle rapide."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Les documents servent-ils à entraîner une intelligence artificielle ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Les documents importés ne sont pas utilisés par Lumen Juris pour entraîner ses propres modèles sans votre consentement explicite, et nos fournisseurs de modèles sont contractuellement engagés à ne pas les réutiliser à cette fin. Les extraits transmis pour produire une analyse le sont uniquement pour cette exécution. Si vous souhaitez connaître le détail des engagements de nos sous-traitants, la liste nominative à jour, leur mission et leur localisation vous sont communiquées sur demande à rgpd@lumenjuris.com."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quels formats de fichiers sont acceptés ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Les documents peuvent être importés au format PDF ou Word. Un document texte bien structuré donne de meilleurs résultats qu’un fichier issu d’une numérisation : sur un PDF scanné, la reconnaissance de caractères peut introduire des erreurs de lecture qui se répercutent sur l’analyse. Si votre document provient d’un scan, vérifiez que le texte est sélectionnable avant de l’importer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Puis-je modifier les suggestions proposées ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Les suggestions sont des propositions, jamais des modifications appliquées automatiquement : vous décidez de ce que vous retenez. Chaque clause reste modifiable, et vous pouvez demander à l’outil de reformuler une clause en précisant ce que vous souhaitez y voir figurer. Les contrats générés comportent par ailleurs des variables — parties, dates, montants — que vous complétez, enregistrez et réutilisez. Vous conservez en toutes circonstances la maîtrise du document final."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Puis-je supprimer mes documents ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Vous pouvez supprimer un document à tout moment depuis votre espace, ou demander la suppression de l’ensemble de vos contenus en écrivant à rgpd@lumenjuris.com. La suppression est immédiate dans l’environnement de production. Les sauvegardes suivent un cycle glissant de trente jours : vos contenus en disparaissent donc au plus tard à l’issue de ce délai. À la fin de la relation contractuelle, la purge est déclenchée automatiquement selon les mêmes délais."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Où les données sont-elles hébergées ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le site vitrine, l’application, les documents que vous importez et les sauvegardes associées sont hébergés en France, chez o2switch, dont les serveurs se situent à Clermont-Ferrand. Vos données sont donc traitées sur le territoire national. Une exception mérite d’être signalée : les extraits soumis à l’analyse sont transmis à un fournisseur de modèles d’intelligence artificielle, dont le traitement peut avoir lieu en dehors de l’Union européenne, encadré par des clauses contractuelles types. Le détail figure sur notre page consacrée à la sécurité et à la confidentialité."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quels types de contrats peuvent être analysés ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lumen Juris est conçu pour les contrats d’affaires de droit français : contrats de prestation, contrats fournisseurs, contrats de travail et avenants, contrats commerciaux, conditions générales, accords de confidentialité. Il n’est pas conçu pour être universel. Les actes soumis à un formalisme particulier, les documents relevant d’un droit étranger, les contrats très spécialisés ou fortement négociés dépassent son périmètre : l’outil peut en donner une première lecture, mais son apport y est plus limité. En cas de doute sur la pertinence d’une analyse, faites relire le document par un professionnel du droit."
+   }
+  }
+ ]
+}
+</script>
+<!-- /wp:html -->

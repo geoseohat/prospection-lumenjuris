@@ -1,0 +1,268 @@
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Une IA peut-elle réviser un contrat de façon fiable ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, dans un cadre précis : l’IA de Lumen Juris analyse chaque clause à partir des sources publiques du droit français (Légifrance, jurisprudence) et justifie chaque alerte. Elle constitue une aide à la décision fiable pour préparer la revue, hiérarchiser les risques et proposer des reformulations. Aucun outil ne garantit toutefois une détection exhaustive : la validation finale relève du professionnel."}}, {"@type": "Question", "name": "Quelle différence entre analyse et révision contractuelle ?", "acceptedAnswer": {"@type": "Answer", "text": "L’analyse de contrat établit un diagnostic : clauses à risque détectées, score de conformité, explications. La révision contractuelle va plus loin : elle propose la correction, reformulations argumentées, insertion de clauses manquantes depuis votre bibliothèque, comparaison avec les versions antérieures, puis réinjecte le contrat corrigé dans son circuit : négociation, signature, contrathèque."}}, {"@type": "Question", "name": "L’IA remplace-t-elle la relecture par un avocat ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, et elle n’est pas conçue pour cela. La révision par IA prépare le travail : elle lit l’intégralité du document, signale les points de vigilance et documente chaque alerte. Le professionnel du droit garde l’appréciation juridique et la décision. L’outil fournit une aide à la décision, pas un conseil juridique : il fait gagner le temps de lecture, pas l’expertise."}}, {"@type": "Question", "name": "Mes contrats sont-ils utilisés pour entraîner l’IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Les documents que vous importez dans Lumen Juris ne servent jamais à entraîner nos modèles ni ceux de tiers. L’IA est entraînée sur les données publiques ouvertes du droit français, Légifrance, jurisprudence de la Cour de cassation et des cours d’appel, open data de l’État. Vos contrats sont hébergés en France et traités conformément au RGPD."}}, {"@type": "Question", "name": "Quels types de contrats et de clauses l’outil sait-il réviser ?", "acceptedAnswer": {"@type": "Answer", "text": "Les contrats d’affaires courants : prestation de services, NDA, contrats de travail, baux, partenariats, contrats fournisseurs. L’outil porte une attention particulière aux clauses sensibles, responsabilité, résiliation, non-concurrence, indemnisation, confidentialité, et aux déséquilibres significatifs au sens de l’article 1171 du Code civil, sans prétendre à l’exhaustivité sur des montages atypiques."}}, {"@type": "Question", "name": "Quels formats de fichiers puis-je importer ?", "acceptedAnswer": {"@type": "Answer", "text": "Les formats PDF et Word sont pris en charge à l’import. Vous pouvez aussi réviser un contrat rédigé directement dans Lumen Juris avec le générateur : le document passe alors de la rédaction à la révision sans export ni conversion, et conserve son historique dans la plateforme."}}, {"@type": "Question", "name": "Peut-on comparer deux versions d’un contrat ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. La révision confronte le document reçu à vos versions antérieures et met en évidence les écarts, clauses modifiées, ajoutées ou supprimées entre deux tours de négociation, à la manière d’un redlining automatisé. Vous voyez immédiatement ce que le cocontractant a changé, et l’analyse se concentre sur ces écarts."}}, {"@type": "Question", "name": "La révision de contrat par IA est-elle gratuite ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous pouvez essayer gratuitement la révision contractuelle de Lumen Juris : importez un contrat et découvrez l’analyse clause par clause, le score de conformité et les reformulations proposées. L’essai est sans engagement, il permet de juger la pertinence de l’outil sur vos propres documents avant toute décision."}}]}  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Lumen Juris, Révision contractuelle par IA", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "url": "https://www.lumenjuris.com/revision-contractuelle-ia/", "description": "Révision contractuelle par IA : analyse clause par clause, détection des clauses à risque, manquantes ou déséquilibrées, comparaison de versions, reformulations argumentées. Hébergement en France, RGPD, aucun entraînement sur vos documents.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Essai gratuit de la révision contractuelle"}, "publisher": {"@type": "Organization", "name": "Lumen Juris", "url": "https://www.lumenjuris.com/"}}  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.lumenjuris.com/"}, {"@type": "ListItem", "position": 2, "name": "Révision contractuelle par IA", "item": "https://www.lumenjuris.com/revision-contractuelle-ia/"}]}
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+
+/* ===== video : meme cadre que les images ===== */
+.elementor-widget-video{background:#fff;padding:8px;border-radius:16px;
+  border:1px solid rgba(27,42,74,.08);box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0}
+.elementor-widget-video iframe,.elementor-widget-video video{border-radius:10px}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+
+
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+ 
+ 
+(function(){
+  var svgScale='   ';
+  var svgCheck='   ';
+  var svgDoc='   ';
+  var css='.lj-badge{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#1C1C1C;font-family:Roboto,sans-serif;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(27,42,74,.22);white-space:nowrap;pointer-events:none}.lj-badge svg{width:15px;height:15px;flex:none}.elementor-element-lj9a102,.elementor-element-ljsec2m{position:relative}.elementor-element-lj9a102 .lj-b1{top:16px;right:-14px}.elementor-element-lj9a102 .lj-b2{bottom:20px;left:-14px}.elementor-element-ljsec2m .lj-b1{top:16px;left:-14px}.elementor-element-ljsec2m .lj-b2{bottom:20px;right:-14px}@media (max-width:767px){.elementor-element-lj9a102 .lj-b1,.elementor-element-ljsec2m .lj-b2{right:8px}.elementor-element-lj9a102 .lj-b2,.elementor-element-ljsec2m .lj-b1{left:8px}}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  
+  var chromeCss='.lj-chrome{display:flex;align-items:center;gap:10px;background:#F2F5FA;border-bottom:1px solid rgba(27,42,74,.10);border-radius:10px 10px 0 0;padding:9px 12px;line-height:1}.lj-chrome .lj-url{font:500 11.5px Roboto,sans-serif;color:#5E6B85;background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:99px;padding:4px 14px;letter-spacing:.2px}.lj-haschrome img,.lj-haschrome video{border-radius:0 0 10px 10px!important}';
+  var st2=document.createElement('style');st2.textContent=chromeCss;document.head.appendChild(st2);
+  function addChrome(sel){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-chrome'))return;
+    el.classList.add('lj-haschrome');
+    var bar=document.createElement('div');bar.className='lj-chrome';
+    bar.innerHTML='      app.lumenjuris.com ';
+    var media=el.querySelector('img,video,.elementor-video, .e-hosted-video, iframe');
+    el.insertBefore(bar, el.firstChild);
+  }
+
+  function add(sel,badges){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-badge'))return;
+    badges.forEach(function(b){
+      var s=document.createElement('span');
+      s.className='lj-badge '+b[0];s.innerHTML=b[1]+' '+b[2]+' ';
+      el.appendChild(s);
+    });
+  }
+  function init(){
+    addChrome('.elementor-element-lj9a102');addChrome('.elementor-element-196111d');addChrome('.elementor-element-ljsec2m');
+    add('.elementor-element-lj9a102',[['lj-b1',svgScale,'Score de conformité'],['lj-b2',svgDoc,'Clauses à risque']]);add('.elementor-element-ljsec2m',[['lj-b1',svgCheck,'Reformulations IA'],['lj-b2',svgCheck,'Conforme RGPD']]);
+    document.querySelectorAll('.elementor-element-ljfqa0 details').forEach(function(d){d.setAttribute('open','')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+Révision contractuelle par IA
+Détectez les risques, sécurisez vos contrats et renforcez les intérêts de votre entreprise
+Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.
+Notre IA est entraînée sur le droit français et branchée avec Légifrance.
+Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.
+Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.
+Comment fonctionne la révision de contrat par IA ?
+La  révision contractuelle par IA  de Lumen Juris lit votre contrat clause par clause et en dresse la revue complète : clauses à risque, clauses manquantes, déséquilibres, écarts avec vos versions antérieures. Importez un document PDF ou Word, ou révisez directement un contrat rédigé dans Lumen Juris, et obtenez en quelques minutes une  analyse de contrat par IA  argumentée avec des recommandations concrètes.
+Import PDF et Word  : déposez n’importe quel contrat existant, ou ouvrez un document rédigé dans Lumen Juris : la relecture de contrat en ligne démarre immédiatement.
+Analyse clause par clause  : chaque clause est évaluée : les passages à risque sont surlignés dans le texte, avec l’explication du problème détecté.
+Score et alertes hiérarchisées  : un score de conformité global, des alertes classées par gravité, et pour chacune une recommandation prête à l’emploi.
+Une révision intégrée au cycle de vie du contrat
+Un logiciel d’analyse contractuelle isolé s’arrête au diagnostic : il vous laisse seul avec une liste d’alertes. Lumen Juris va au bout du geste : la clause corrigée alimente votre bibliothèque de clauses, le contrat révisé part en négociation, puis en  signature électronique , et rejoint votre contrathèque avec son historique complet. Vous pouvez même repartir de zéro avec  notre générateur de contrats par IA  : génération, révision, signature : un seul outil juridique IA, aucune rupture, une piste d’audit continue.
+Comparaison de versions  : confrontez le contrat reçu à vos versions antérieures : les écarts sont identifiés, à la manière d’un redlining automatisé.
+Bibliothèque de clauses  : vos clauses de référence servent de politique interne : les reformulations proposées s’en inspirent, et chaque clause validée l’enrichit.
+De la révision à la signature  : le document corrigé part en signature et en contrathèque sans export ni ressaisie : le différenciateur face aux outils d’analyse isolés.
+Des reformulations argumentées, pas de simples alertes
+Détection de clauses à risque par IA : problème juridique expliqué et reformulation proposée
+Détecter une clause limitative de responsabilité déséquilibrée ne suffit pas : encore faut-il savoir quoi en faire. Pour chaque point de vigilance, clause abusive au sens de l’article  1171 du Code civil  (déséquilibre significatif), clause de résiliation asymétrique, non-concurrence excessive, indemnisation mal bornée : l’outil explique le risque en langage clair, cite les références utiles et propose une  reformulation argumentée , que vous copiez dans le document ou écartez en un clic. L’IA raisonne sur les sources publiques du droit français (Légifrance, jurisprudence) et reste une aide à la décision : elle éclaire votre revue contractuelle, elle ne se substitue pas à votre appréciation de professionnel.
+Analyse de la jurisprudence lors de la révision de contrat par IA : décisions de la Cour de cassation et des cours d'appel reliées à la clause
+La jurisprudence pertinente, reliée à chaque clause
+Une alerte sans autorité ne convainc personne, surtout pas un cocontractant. Pour chaque clause analysée, l’onglet Jurisprudence présente les  décisions pertinentes  issues de l’open data des décisions de justice : arrêts de la Cour de cassation et des cours d’appel, avec leur référence exacte, un résumé de la solution et son aboutissement. Chaque décision est qualifiée par rapport à votre position, favorable, nuancée, défavorable, pour éclairer l’arbitrage : maintenir la clause, la reformuler, ou en faire un point de négociation appuyé sur un précédent. La sélection est une aide à la recherche, pas une consultation juridique : la vérification des décisions citées reste, comme toujours, l’affaire du professionnel.
+Références exactes  : juridiction, date et numéro de pourvoi ou de rôle, pour retrouver la décision à la source.
+Tendance qualifiée  : chaque décision est étiquetée, favorable, nuancée, défavorable, par rapport à la clause analysée.
+Résumé et aboutissement  : la solution retenue en quelques lignes, dépliable pour aller au fond.
+Réviser un contrat automatiquement en 3 étapes
+PDF, Word, ou document rédigé dans Lumen Juris : la révision démarre sans paramétrage.
+L’IA révise clause par clause
+Clauses à risque, clauses manquantes, déséquilibres et écarts avec vos versions antérieures sont détectés, expliqués et hiérarchisés.
+Corrigez et poursuivez le cycle
+Appliquez les reformulations, enrichissez votre bibliothèque de clauses, puis envoyez le contrat en négociation et en signature.
+Que détecte la révision contractuelle par IA ?
+Un audit de contrat utile hiérarchise. Voici les quatre familles d’anomalies traitées par la revue contractuelle de Lumen Juris, et ce que l’outil vous propose pour chacune.
+La force d’une revue contractuelle tient moins à la puissance du modèle qu’à la référence contre laquelle il compare. C’est le rôle de votre  playbook contractuel  : la bibliothèque de clauses de Lumen Juris matérialise votre politique interne : vos formulations validées, vos positions de repli, vos seuils d’acceptation. À chaque révision, l’outil confronte le contrat reçu à ce référentiel et à vos versions antérieures : ce qui s’écarte de votre pratique ressort, ce qui s’y conforme passe. Résultat : un audit de contrat reproductible d’un dossier à l’autre, là où la relecture manuelle varie selon la fatigue et l’urgence. Et parce que la transparence des systèmes d’IA devient une exigence réglementaire européenne, chaque alerte est justifiée : vous voyez le texte extrait, l’explication et la source du raisonnement, jamais un verdict sans motivation.
+.lj-table-wrap{overflow-x:auto}
+.lj-cmp{width:100%;border-collapse:separate;border-spacing:0;background:#fff;
+  border:1px solid rgba(27,42,74,.10);border-radius:16px;overflow:hidden;
+  font-family:Roboto,sans-serif;font-size:14.5px;color:#39445A;line-height:1.55;min-width:640px}
+.lj-cmp th{background:#1B2A4A;color:#fff;font-family:'Roboto Slab',serif;font-weight:600;
+  padding:14px 16px;text-align:left;font-size:14px}
+.lj-cmp td{padding:13px 16px;border-top:1px solid rgba(27,42,74,.08);vertical-align:top}
+.lj-cmp tr td:first-child{font-weight:600;color:#1C1C1C;white-space:nowrap}
+ 
+  
+   Anomalie détectée  Exemple typique  Ce que propose l’outil   
+ 
+  Clause à risque 
+ Limitation de responsabilité déséquilibrée, pénalités asymétriques, résiliation unilatérale. 
+ Explication du risque, références utiles, reformulation argumentée prête à copier.  
+  Clause manquante 
+ Absence de clause de confidentialité, de résiliation ou de droit applicable. 
+ Suggestion d’insertion à partir de votre bibliothèque de clauses de référence.  
+  Déséquilibre significatif 
+ Stipulations créant un déséquilibre au sens de l’article 1171 du Code civil. 
+ Signalement motivé et proposition de rééquilibrage, à votre appréciation.  
+  Écart de version 
+ Modification glissée par le cocontractant entre deux tours de négociation. 
+ Comparaison avec vos versions antérieures : les écarts ressortent, façon redlining.
+Essayez la révision gratuitement
+Un outil juridique IA pensé pour votre pratique
+De la relecture de contrat en ligne ponctuelle à l’audit de contrat systématique, la révision s’adapte au volume et aux enjeux de chaque pratique, avec un principe constant : l’IA prépare, le professionnel décide.
+Une IA pour avocats qui prépare la revue : les clauses sensibles de chaque contrat reçu sont détectées et documentées avant votre relecture. Vous concentrez votre valeur là où elle compte : l’arbitrage.
+Juristes & directions juridiques
+Standardisez votre politique contractuelle : la bibliothèque de clauses sert de référentiel, les écarts sont détectés systématiquement, et chaque contrat révisé suit le même circuit jusqu’à la signature.
+Contrats fournisseurs, contrats de travail, prestations : les équipes non juristes obtiennent une première revue fiable et documentée, et n’escaladent au juridique que ce qui le mérite.
+Une IA souveraine qui n’apprend pas sur vos contrats
+Réviser un contrat, c’est exposer son contenu le plus sensible. Lumen Juris applique à la révision les mêmes engagements qu’au reste de la plateforme : documents hébergés en France, traitements conformes au RGPD, échanges chiffrés. Surtout,  vos contrats ne servent jamais à entraîner nos modèles , ni ceux de tiers. L’IA est nourrie par les données publiques ouvertes du droit français : Légifrance, jurisprudence de la Cour de cassation et des cours d’appel, open data de l’État. Cette transparence des sources rend l’outil auditable : vous savez sur quoi il raisonne, et l’ équipe Lumen Juris  l’opère en direct, en France.
+Hébergement en France  : vos contrats et leurs analyses restent sur le territoire.
+Aucun entraînement sur vos documents  : les modèles apprennent sur les sources publiques du droit, pas sur vos contrats.
+Conformité RGPD et chiffrement  : finalités limitées, échanges chiffrés, suppression maîtrisée.
+Révision de contrat par IA : vos questions
+Une IA peut-elle réviser un contrat de façon fiable ?
+Quelle différence entre analyse et révision contractuelle ?
+L’IA remplace-t-elle la relecture par un avocat ?
+Mes contrats sont-ils utilisés pour entraîner l’IA ?
+Quels types de contrats et de clauses l’outil sait-il réviser ?
+Quels formats de fichiers puis-je importer ?
+Peut-on comparer deux versions d’un contrat ?
+La révision de contrat par IA est-elle gratuite ?
+Oui, dans un cadre précis : l’IA de Lumen Juris analyse chaque clause à partir des sources publiques du droit français (Légifrance, jurisprudence) et justifie chaque alerte. Elle constitue une aide à la décision fiable pour préparer la revue, hiérarchiser les risques et proposer des reformulations. Aucun outil ne garantit toutefois une détection exhaustive : la validation finale relève du professionnel.
+L’analyse de contrat établit un diagnostic : clauses à risque détectées, score de conformité, explications. La révision contractuelle va plus loin : elle propose la correction, reformulations argumentées, insertion de clauses manquantes depuis votre bibliothèque, comparaison avec les versions antérieures, puis réinjecte le contrat corrigé dans son circuit : négociation, signature, contrathèque.
+Non, et elle n’est pas conçue pour cela. La révision par IA prépare le travail : elle lit l’intégralité du document, signale les points de vigilance et documente chaque alerte. Le professionnel du droit garde l’appréciation juridique et la décision. L’outil fournit une aide à la décision, pas un conseil juridique : il fait gagner le temps de lecture, pas l’expertise.
+Non. Les documents que vous importez dans Lumen Juris ne servent jamais à entraîner nos modèles ni ceux de tiers. L’IA est entraînée sur les données publiques ouvertes du droit français, Légifrance, jurisprudence de la Cour de cassation et des cours d’appel, open data de l’État. Vos contrats sont hébergés en France et traités conformément au RGPD.
+Les contrats d’affaires courants : prestation de services, NDA, contrats de travail, baux, partenariats, contrats fournisseurs. L’outil porte une attention particulière aux clauses sensibles, responsabilité, résiliation, non-concurrence, indemnisation, confidentialité, et aux déséquilibres significatifs au sens de l’article 1171 du Code civil, sans prétendre à l’exhaustivité sur des montages atypiques.
+Les formats PDF et Word sont pris en charge à l’import. Vous pouvez aussi réviser un contrat rédigé directement dans Lumen Juris avec le générateur : le document passe alors de la rédaction à la révision sans export ni conversion, et conserve son historique dans la plateforme.
+Oui. La révision confronte le document reçu à vos versions antérieures et met en évidence les écarts, clauses modifiées, ajoutées ou supprimées entre deux tours de négociation, à la manière d’un redlining automatisé. Vous voyez immédiatement ce que le cocontractant a changé, et l’analyse se concentre sur ces écarts.
+Vous pouvez essayer gratuitement la révision contractuelle de Lumen Juris : importez un contrat et découvrez l’analyse clause par clause, le score de conformité et les reformulations proposées. L’essai est sans engagement, il permet de juger la pertinence de l’outil sur vos propres documents avant toute décision.
+Révisez votre prochain contrat par IA
+Essayez gratuitement la révision contractuelle par IA de Lumen Juris : importez un contrat PDF ou Word, mesurez la pertinence de la détection de clauses à risque sur vos propres documents, et gardez le contrat dans son cycle complet, génération, révision, négociation, signature électronique, contrathèque. La relecture reste la vôtre ; le temps de lecture, lui, n’est plus perdu.

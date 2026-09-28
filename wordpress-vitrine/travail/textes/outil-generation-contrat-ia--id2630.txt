@@ -1,0 +1,201 @@
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+
+
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+ 
+ 
+(function(){
+  var svgScale='   ';
+  var svgCheck='   ';
+  var svgDoc='   ';
+  var css='.lj-badge{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#1C1C1C;font-family:Roboto,sans-serif;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(27,42,74,.22);white-space:nowrap;pointer-events:none}.lj-badge svg{width:15px;height:15px;flex:none}.elementor-element-lj9a102,.elementor-element-ljsec2m{position:relative}.elementor-element-lj9a102 .lj-b1{top:16px;right:-14px}.elementor-element-lj9a102 .lj-b2{bottom:20px;left:-14px}.elementor-element-ljsec2m .lj-b1{top:16px;left:-14px}.elementor-element-ljsec2m .lj-b2{bottom:20px;right:-14px}@media (max-width:767px){.elementor-element-lj9a102 .lj-b1,.elementor-element-ljsec2m .lj-b2{right:8px}.elementor-element-lj9a102 .lj-b2,.elementor-element-ljsec2m .lj-b1{left:8px}}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  function add(sel,badges){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-badge'))return;
+    badges.forEach(function(b){
+      var s=document.createElement('span');
+      s.className='lj-badge '+b[0];s.innerHTML=b[1]+' '+b[2]+' ';
+      el.appendChild(s);
+    });
+  }
+  function init(){
+    add('.elementor-element-lj9a102',[['lj-b1',svgScale,'Droit français'],['lj-b2',svgDoc,'Sources officielles']]);add('.elementor-element-ljsec2m',[['lj-b1',svgCheck,'Clauses vérifiées'],['lj-b2',svgCheck,'Conforme RGPD']]);
+    document.querySelectorAll('.elementor-element-ljfqa0 details').forEach(function(d){d.setAttribute('open','')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+IA spécialisée en droit français
+Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.
+Notre IA est entraînée sur le droit français et branchée avec Légifrance.
+Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.
+Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.
+
+Fonctionnement de notre outil IA de rédaction contractuelle
+Exprimez votre besoin : l’outil génère un questionnaire adapté à votre situation, puis rédige un contrat personnalisé à partir de vos réponses, en s’appuyant sur les sources officielles françaises et des sources juridiques fiables.
+Des questions adaptées à votre besoin  : l’IA génère les bonnes questions selon votre cas ; vos réponses servent de base au contrat, créé de zéro.
+Un contrat à variables  : le document est généré avec des champs à compléter ; vous les remplissez, sauvegardez et réutilisez.
+Des clauses modifiables par l’IA  : exprimez ce que vous voulez dans une clause : elle est reformulée et remplacée automatiquement.
+Des clauses personnalisées et sécurisées
+La génération de contrat par IA ne s’arrête pas à la rédaction : chaque clause est analysée pour en mesurer la conformité et revisitée à votre convenance.
+Personnalisation intelligente  : chaque clause s'adapte automatiquement au contexte de votre contrat (secteur, parties, enjeux).
+Score de conformité  : une évaluation globale du contrat, clause par clause.
+Alertes ciblées :  les formulations à risque sont surlignées dans le texte.
+Lorsque Lumen Juris analyse un contrat, chaque clause sensible est surlignée directement dans le document et détaillée dans un panneau latéral dédié.  
+ Ici, l'outil a identifié une clause d'absence de droit sur la clientèle dans un contrat d'apporteur d'affaires : il en explique la portée en langage clair. L'apporteur ne détient aucun droit de propriété sur les prospects présentés, mais cette absence de droit n'emporte pas renonciation aux commissions déjà acquises ni à l'indemnisation en cas de rupture fautive.  
+ Pour chaque point de vigilance, une recommandation de reformulation est proposée, que vous pouvez copier dans le document ou écarter en un clic. 
+  Les onglets « Jurisprudence » et « Questions » complètent l'analyse : décisions pertinentes pour appuyer la clause, et possibilité d'interroger l'IA sur ce passage précis. Le contrat reste ainsi entièrement sous votre contrôle.
+Décrivez votre situation : l’outil génère un questionnaire sur mesure, adapté à votre cas.
+Un contrat personnalisé est généré de zéro à partir de vos réponses, appuyé sur les sources juridiques officielles françaises.
+Complétez les variables, modifiez chaque clause en langage naturel avec l’IA, puis sauvegardez votre document.
+Qu’est-ce que la génération de contrat par IA ?
+Un contrat généré par IA est-il juridiquement valable ?
+Quels types de contrats peut-on générer avec l’IA ?
+Comment l’IA garantit-elle la conformité au droit français ?
+Mes données sont-elles confidentielles ?
+Combien de temps faut-il pour générer un contrat ?
+La génération de contrat par IA consiste à créer un contrat complet, de zéro, personnalisé pour votre situation. Concrètement, vous exprimez votre besoin et l’outil génère un questionnaire adapté à votre cas : vos réponses servent de base à la rédaction. Le contrat est ensuite généré en s’appuyant sur les sources gouvernementales françaises et des sources juridiques fiables, avec des variables à compléter (parties, dates, montants…) que vous pouvez enregistrer et réutiliser. Chaque clause reste modifiable : exprimez ce que vous voulez y trouver, et l’IA la reformule automatiquement.
+Oui. Un contrat généré par IA a exactement la même valeur juridique qu’un contrat rédigé à la main : ce qui compte, c’est que son contenu respecte le droit applicable et qu’il soit signé par des parties capables et consentantes. Nos modèles s’appuient sur la législation française en vigueur et citent leurs références légales, ce qui facilite la vérification. Pour les situations complexes ou à fort enjeu, l’outil assiste la rédaction mais ne remplace pas le conseil d’un professionnel du droit.
+Tous les types de contrats. L’outil ne se limite pas à une liste de modèles figés : le questionnaire est généré dynamiquement selon le besoin que vous exprimez. Contrats de travail (CDI, CDD…), prestation de services, apporteur d’affaires, confidentialité (NDA), bail, partenariat commercial, cession, sous-traitance… quelle que soit la nature du contrat, l’IA conçoit les questions adaptées puis rédige un document personnalisé, appuyé sur les sources juridiques pertinentes.
+Les contrats sont générés à partir des sources gouvernementales françaises et de sources juridiques fiables, et les clauses citent leurs références légales (Code civil, Code du travail, Code de commerce…). Les points sensibles sont signalés avec l’explication du risque encouru, par exemple la requalification d’un CDD insuffisamment motivé. Et si une clause ne vous convient pas, vous pouvez demander à l’IA de la reformuler : elle est remplacée automatiquement dans le document, en restant dans le cadre du droit applicable.
+Oui, la confidentialité est un engagement central. Vos documents et les informations que vous renseignez ne sont ni revendus, ni partagés, ni utilisés pour entraîner des modèles d’IA tiers. Les traitements sont conformes au RGPD et l’ensemble des données est hébergé en France. Vous gardez la maîtrise complète de vos contrats, de leur création à leur suppression.
+Quelques minutes, là où une rédaction manuelle prend souvent plusieurs heures. Vous répondez au questionnaire, l’IA génère le contrat personnalisé, puis vous complétez les variables et ajustez les clauses si besoin. Les documents et variables se sauvegardent pour être réutilisés : sur un volume régulier de contrats, nos utilisateurs peuvent gagner jusqu’à cinq heures par semaine.
+Pensé pour les juristes comme pour les entrepreneurs
+Générez des trames fiables en quelques minutes, sourcées sur les textes officiels, puis affinez chaque clause avec l’IA. Le temps gagné se compte en heures chaque semaine.
+Créez vos contrats de zéro sans expertise juridique : répondez aux questions, complétez les variables, exportez un document appuyé sur des sources fiables.
+CDD, avenants, prestations : des contrats à variables réutilisables, sauvegardés et modifiables par toute l’équipe.
+Prêt à rédiger votre premier contrat ?
+Découvrez l’outil sur un cas concret, sans engagement.

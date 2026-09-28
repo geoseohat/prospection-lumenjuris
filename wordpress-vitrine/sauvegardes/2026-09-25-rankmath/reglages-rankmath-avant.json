@@ -1,0 +1,388 @@
+{
+  "titles": {
+    "noindex_empty_taxonomies": true,
+    "title_separator": "-",
+    "capitalize_titles": false,
+    "twitter_card_type": "summary_large_image",
+    "knowledgegraph_type": "company",
+    "knowledgegraph_name": "Geoffrey Pin",
+    "website_name": "Logiciel IA analyse contrats - clauses à risque - Lumen Juris",
+    "local_business_type": "Organization",
+    "local_address_format": "{address} {locality}, {region} {postalcode}",
+    "opening_hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-17:00"
+      }
+    ],
+    "opening_hours_format": false,
+    "homepage_title": "%sitename% %page% %sep% %sitedesc%",
+    "homepage_description": "",
+    "homepage_custom_robots": false,
+    "disable_author_archives": false,
+    "url_author_base": "auteur",
+    "author_custom_robots": true,
+    "author_robots": [
+      "noindex"
+    ],
+    "author_archive_title": "%name% %sep% %sitename%",
+    "author_add_meta_box": true,
+    "disable_date_archives": true,
+    "date_archive_title": "%date% %page% %sep% %sitename%",
+    "search_title": "%search_query% %page% %sep% %sitename%",
+    "404_title": "Cette page n'existe pas !",
+    "date_archive_robots": [
+      "noindex"
+    ],
+    "noindex_search": true,
+    "noindex_archive_subpages": false,
+    "noindex_password_protected": false,
+    "pt_download_default_rich_snippet": "product",
+    "author_slack_enhanced_sharing": false,
+    "pt_post_title": "%title% %sep% %sitename%",
+    "pt_post_description": "%excerpt%",
+    "pt_post_robots": [
+      "index"
+    ],
+    "pt_post_custom_robots": false,
+    "pt_post_default_rich_snippet": "article",
+    "pt_post_default_article_type": "Article",
+    "pt_post_default_snippet_name": "%seo_title%",
+    "pt_post_default_snippet_desc": "%seo_description%",
+    "pt_post_slack_enhanced_sharing": false,
+    "pt_post_ls_use_fk": "titles",
+    "pt_post_add_meta_box": true,
+    "pt_post_bulk_editing": "editing",
+    "pt_post_link_suggestions": true,
+    "pt_post_primary_taxonomy": "category",
+    "pt_page_title": "%title% %sep% %sitename%",
+    "pt_page_description": "%excerpt%",
+    "pt_page_robots": [
+      "index"
+    ],
+    "pt_page_custom_robots": false,
+    "pt_page_default_rich_snippet": "article",
+    "pt_page_default_article_type": "Article",
+    "pt_page_default_snippet_name": "%seo_title%",
+    "pt_page_default_snippet_desc": "%seo_description%",
+    "pt_page_slack_enhanced_sharing": false,
+    "pt_page_ls_use_fk": "titles",
+    "pt_page_add_meta_box": true,
+    "pt_page_bulk_editing": "editing",
+    "pt_page_link_suggestions": true,
+    "pt_attachment_title": "%title% %sep% %sitename%",
+    "pt_attachment_description": "%excerpt%",
+    "pt_attachment_robots": [
+      "noindex"
+    ],
+    "pt_attachment_custom_robots": true,
+    "pt_attachment_default_rich_snippet": false,
+    "pt_attachment_default_article_type": "Article",
+    "pt_attachment_default_snippet_name": "%seo_title%",
+    "pt_attachment_default_snippet_desc": "%seo_description%",
+    "pt_attachment_slack_enhanced_sharing": false,
+    "pt_attachment_add_meta_box": true,
+    "pt_e-floating-buttons_title": "%title% %sep% %sitename%",
+    "pt_e-floating-buttons_description": "%excerpt%",
+    "pt_e-floating-buttons_robots": [
+      "index"
+    ],
+    "pt_e-floating-buttons_custom_robots": false,
+    "pt_e-floating-buttons_default_rich_snippet": "software",
+    "pt_e-floating-buttons_default_article_type": "Article",
+    "pt_e-floating-buttons_default_snippet_name": "%seo_title%",
+    "pt_e-floating-buttons_default_snippet_desc": "%seo_description%",
+    "pt_e-floating-buttons_slack_enhanced_sharing": false,
+    "pt_e-floating-buttons_ls_use_fk": "titles",
+    "pt_e-floating-buttons_add_meta_box": true,
+    "pt_e-floating-buttons_bulk_editing": "editing",
+    "pt_e-floating-buttons_link_suggestions": true,
+    "pt_elementor-hf_title": "%title% %sep% %sitename%",
+    "pt_elementor-hf_description": "%excerpt%",
+    "pt_elementor-hf_robots": [
+      "index"
+    ],
+    "pt_elementor-hf_custom_robots": false,
+    "pt_elementor-hf_default_rich_snippet": "",
+    "pt_elementor-hf_default_article_type": "Article",
+    "pt_elementor-hf_default_snippet_name": "%seo_title%",
+    "pt_elementor-hf_default_snippet_desc": "%seo_description%",
+    "pt_elementor-hf_slack_enhanced_sharing": false,
+    "pt_elementor-hf_ls_use_fk": "titles",
+    "pt_elementor-hf_add_meta_box": true,
+    "pt_elementor-hf_bulk_editing": "editing",
+    "pt_elementor-hf_link_suggestions": true,
+    "pt_product_title": "%title% %sep% %sitename%",
+    "pt_product_description": "%excerpt%",
+    "pt_product_robots": [
+      "index"
+    ],
+    "pt_product_custom_robots": false,
+    "pt_product_default_rich_snippet": "product",
+    "pt_product_default_article_type": "Article",
+    "pt_product_default_snippet_name": "%seo_title%",
+    "pt_product_default_snippet_desc": "%seo_description%",
+    "pt_product_slack_enhanced_sharing": false,
+    "pt_product_ls_use_fk": "titles",
+    "pt_product_add_meta_box": true,
+    "pt_product_bulk_editing": "editing",
+    "pt_product_link_suggestions": true,
+    "pt_product_primary_taxonomy": "product_cat",
+    "pt_web-story_title": "%title% %sep% %sitename%",
+    "pt_web-story_description": "%excerpt%",
+    "pt_web-story_robots": [
+      "index"
+    ],
+    "pt_web-story_custom_robots": false,
+    "pt_web-story_default_rich_snippet": "article",
+    "pt_web-story_default_article_type": "Article",
+    "pt_web-story_default_snippet_name": "%seo_title%",
+    "pt_web-story_default_snippet_desc": "%seo_description%",
+    "pt_web-story_slack_enhanced_sharing": false,
+    "pt_web-story_add_meta_box": false,
+    "tax_category_title": "%term% %sep% %sitename%",
+    "tax_category_robots": [
+      "index"
+    ],
+    "tax_category_add_meta_box": true,
+    "tax_category_custom_robots": false,
+    "tax_category_description": "%term_description%",
+    "tax_category_slack_enhanced_sharing": false,
+    "tax_post_tag_title": "%term% %sep% %sitename%",
+    "tax_post_tag_robots": [
+      "noindex"
+    ],
+    "tax_post_tag_add_meta_box": true,
+    "tax_post_tag_custom_robots": true,
+    "tax_post_tag_description": "%term_description%",
+    "tax_post_tag_slack_enhanced_sharing": false,
+    "remove_product_cat_snippet_data": true,
+    "remove_product_tag_snippet_data": true,
+    "local_seo": false,
+    "pt_download_slack_enhanced_sharing": false,
+    "knowledgegraph_logo": "https://www.lumenjuris.com/wp-content/uploads/2025/09/lumen-juris_final.svg",
+    "knowledgegraph_logo_id": "2296",
+    "tax_post_format_add_meta_box": true,
+    "robots_global": [
+      "index"
+    ],
+    "advanced_robots_global": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "url": "https://www.lumenjuris.com",
+    "phone_numbers": [
+      {
+        "type": "customer support",
+        "number": ""
+      }
+    ],
+    "additional_info": [
+      {
+        "type": "legalName",
+        "value": "Adonis Pesic"
+      }
+    ],
+    "maps_api_key": "adonislumenjuri",
+    "facebook_app_id": "Adonis Pesic",
+    "facebook_secret": "adonislumenjuri",
+    "author_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "date_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "noindex_paginated_pages": false,
+    "pt_post_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "pt_post_analyze_fields": "",
+    "pt_page_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "pt_page_analyze_fields": "",
+    "pt_e-floating-buttons_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "pt_e-floating-buttons_analyze_fields": "",
+    "pt_elementor-hf_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "pt_elementor-hf_analyze_fields": "",
+    "tax_category_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "remove_category_snippet_data": false,
+    "tax_post_tag_advanced_robots": {
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large"
+    },
+    "remove_post_tag_snippet_data": false
+  },
+  "general": {
+    "strip_category_base": false,
+    "attachment_redirect_urls": true,
+    "attachment_redirect_default": "https://www.lumenjuris.com",
+    "nofollow_external_links": false,
+    "nofollow_image_links": false,
+    "new_window_external_links": true,
+    "add_img_alt": false,
+    "img_alt_format": " %filename%",
+    "add_img_title": false,
+    "img_title_format": "%title% %count(title)%",
+    "breadcrumbs": true,
+    "breadcrumbs_separator": "|",
+    "breadcrumbs_home": true,
+    "breadcrumbs_home_label": "Logiciel Analyse contrat",
+    "breadcrumbs_archive_format": "Archives for %s",
+    "breadcrumbs_search_format": "Results for %s",
+    "breadcrumbs_404_label": "404 Error: page not found",
+    "breadcrumbs_ancestor_categories": false,
+    "breadcrumbs_blog_page": false,
+    "404_monitor_mode": "simple",
+    "404_monitor_limit": 100,
+    "404_monitor_ignore_query_parameters": true,
+    "redirections_header_code": "301",
+    "redirections_debug": false,
+    "console_email_reports": false,
+    "console_email_frequency": "monthly",
+    "wc_remove_product_base": false,
+    "wc_remove_category_base": false,
+    "wc_remove_category_parent_slugs": false,
+    "rss_before_content": "",
+    "rss_after_content": "",
+    "wc_remove_generator": true,
+    "remove_shop_snippet_data": true,
+    "frontend_seo_score": false,
+    "frontend_seo_score_post_types": [
+      "post"
+    ],
+    "frontend_seo_score_position": "top",
+    "setup_mode": "advanced",
+    "content_ai_post_types": [
+      "post",
+      "page",
+      "e-floating-buttons",
+      "elementor-hf"
+    ],
+    "content_ai_country": "all",
+    "content_ai_tone": "Formal",
+    "content_ai_audience": "General Audience",
+    "content_ai_language": "French",
+    "analytics_stats": true,
+    "toc_block_title": "Table of Contents",
+    "toc_block_list_style": "ul",
+    "llms_post_types": [
+      "post",
+      "page",
+      "e-floating-buttons",
+      "elementor-hf"
+    ],
+    "breadcrumbs_home_link": "https://www.lumenjuris.com",
+    "breadcrumbs_remove_post_title": false,
+    "breadcrumbs_hide_taxonomy_name": false,
+    "headless_support": false,
+    "frontend_seo_score_template": "circle",
+    "support_rank_math": true,
+    "redirections_fallback": "default",
+    "redirections_post_redirect": false,
+    "google_verify": "s8U2gq78C2aWmAMTNzjqrqrKW6bX9SAz_y75hca1Kxw"
+  },
+  "sitemap": {
+    "items_per_page": 200,
+    "include_images": true,
+    "include_featured_image": false,
+    "exclude_roles": [
+      "contributor",
+      "subscriber"
+    ],
+    "html_sitemap": true,
+    "html_sitemap_display": "shortcode",
+    "html_sitemap_sort": "published",
+    "html_sitemap_seo_titles": "titles",
+    "authors_sitemap": true,
+    "pt_post_sitemap": true,
+    "pt_page_sitemap": true,
+    "pt_attachment_sitemap": false,
+    "pt_e-floating-buttons_sitemap": false,
+    "pt_elementor-hf_sitemap": false,
+    "pt_product_sitemap": true,
+    "pt_web-story_sitemap": false,
+    "tax_category_sitemap": false,
+    "tax_post_tag_sitemap": false,
+    "exclude_posts": "",
+    "include_authors_without_posts": false
+  },
+  "instant_indexing": {
+    "bing_post_types": [
+      "post",
+      "page"
+    ],
+    "indexnow_api_key": "ec001ebfa1b748a8bc0e842c5e42ad28"
+  },
+  "modules": {
+    "ai-visibility": true,
+    "content-ai": true,
+    "404-monitor": false,
+    "acf": false,
+    "analytics": true,
+    "buddypress": false,
+    "image-seo": false,
+    "instant-indexing": true,
+    "link-counter": true,
+    "link-genius": false,
+    "llms-txt": false,
+    "local-seo": true,
+    "news-sitemap": false,
+    "podcast": false,
+    "redirections": true,
+    "rich-snippet": true,
+    "role-manager": true,
+    "seo-analysis": false,
+    "sitemap": true,
+    "video-sitemap": false,
+    "web-stories": false,
+    "woocommerce": false
+  },
+  "auto_update": true
+}

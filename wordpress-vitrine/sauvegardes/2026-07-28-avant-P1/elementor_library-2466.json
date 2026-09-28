@@ -1,0 +1,110 @@
+{
+  "id": 2466,
+  "date": "2025-09-18T20:49:37",
+  "date_gmt": "2025-09-18T20:49:37",
+  "guid": {
+    "rendered": "https://www.lumenjuris.com/?elementor_library=dessus-footer",
+    "raw": "https://www.lumenjuris.com/?elementor_library=dessus-footer"
+  },
+  "modified": "2025-09-18T20:49:37",
+  "modified_gmt": "2025-09-18T20:49:37",
+  "password": "",
+  "slug": "dessus-footer",
+  "status": "publish",
+  "type": "elementor_library",
+  "link": "https://www.lumenjuris.com/?elementor_library=dessus-footer",
+  "title": {
+    "raw": "dessus footer",
+    "rendered": "dessus footer"
+  },
+  "author": 1,
+  "featured_media": 0,
+  "template": "",
+  "meta": {
+    "inline_featured_image": false,
+    "_elementor_edit_mode": "builder",
+    "_elementor_template_type": "container",
+    "_elementor_data": "[{\"id\":\"17785653\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"row\",\"flex_gap\":{\"unit\":\"px\",\"size\":0,\"column\":\"0\",\"row\":\"0\",\"isLinked\":true},\"flex_justify_content\":\"center\",\"background_background\":\"classic\",\"background_color\":\"#84AA87\",\"padding\":{\"unit\":\"px\",\"top\":\"50\",\"right\":\"50\",\"bottom\":\"50\",\"left\":\"50\",\"isLinked\":true},\"width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"boxed_width\":{\"unit\":\"px\",\"size\":1600,\"sizes\":[]},\"flex_align_items\":\"center\",\"margin\":{\"unit\":\"px\",\"top\":\"20\",\"right\":\"0\",\"bottom\":\"0\",\"left\":\"0\",\"isLinked\":false},\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"16d45e9a\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"flex_justify_content\":\"flex-end\",\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"d3e2a1\",\"elType\":\"widget\",\"settings\":{\"image\":{\"id\":2463,\"url\":\"https:\\/\\/www.lumenjuris.com\\/wp-content\\/uploads\\/2025\\/09\\/fast.png\"},\"image_size\":\"thumbnail\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"image\"},{\"id\":\"5afd88dd\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p>Livraison gratuite d\\u00e8s 39 \\u20ac<\\/p>\",\"align\":\"center\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true},{\"id\":\"fdd3f5c\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"flex_justify_content\":\"flex-end\",\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"1e8c74b\",\"elType\":\"widget\",\"settings\":{\"image\":{\"id\":2464,\"url\":\"https:\\/\\/www.lumenjuris.com\\/wp-content\\/uploads\\/2025\\/09\\/credit-card.png\"},\"image_size\":\"thumbnail\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"image\"},{\"id\":\"6f94c18b\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p>Paiements s\\u00e9curis\\u00e9s<\\/p>\",\"align\":\"center\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true},{\"id\":\"647f427e\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"flex_justify_content\":\"flex-end\",\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"5261337a\",\"elType\":\"widget\",\"settings\":{\"image\":{\"id\":2465,\"url\":\"https:\\/\\/www.lumenjuris.com\\/wp-content\\/uploads\\/2025\\/09\\/leaf.png\"},\"image_size\":\"thumbnail\",\"align\":\"center\",\"width\":{\"unit\":\"%\",\"size\":16,\"sizes\":[]},\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"image\"},{\"id\":\"15421171\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p>Naturel et certifi\\u00e9 AB<\\/p>\",\"align\":\"center\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true}],\"isInner\":false}]",
+    "_elementor_page_settings": null
+  },
+  "permalink_template": "https://www.lumenjuris.com/?elementor_library=dessus-footer",
+  "generated_slug": "dessus-footer",
+  "class_list": [
+    "post-2466",
+    "elementor_library",
+    "type-elementor_library",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2466",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/types/elementor_library"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/users/1"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 1,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2466/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2467,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2466/revisions/2467"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/media?parent=2466"
+      }
+    ],
+    "wp:action-publish": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2466"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2466"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2466"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

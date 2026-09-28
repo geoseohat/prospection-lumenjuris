@@ -1,0 +1,197 @@
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+
+/* ===== video : meme cadre que les images ===== */
+.elementor-widget-video{background:#fff;padding:8px;border-radius:16px;
+  border:1px solid rgba(27,42,74,.08);box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0}
+.elementor-widget-video iframe,.elementor-widget-video video{border-radius:10px}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+
+
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+ 
+ 
+(function(){
+  var svgScale='   ';
+  var svgCheck='   ';
+  var svgDoc='   ';
+  var css='.lj-badge{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#1C1C1C;font-family:Roboto,sans-serif;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(27,42,74,.22);white-space:nowrap;pointer-events:none}.lj-badge svg{width:15px;height:15px;flex:none}.elementor-element-lj9a102,.elementor-element-ljsec2m{position:relative}.elementor-element-lj9a102 .lj-b1{top:16px;right:-14px}.elementor-element-lj9a102 .lj-b2{bottom:20px;left:-14px}.elementor-element-ljsec2m .lj-b1{top:16px;left:-14px}.elementor-element-ljsec2m .lj-b2{bottom:20px;right:-14px}@media (max-width:767px){.elementor-element-lj9a102 .lj-b1,.elementor-element-ljsec2m .lj-b2{right:8px}.elementor-element-lj9a102 .lj-b2,.elementor-element-ljsec2m .lj-b1{left:8px}}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  function add(sel,badges){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-badge'))return;
+    badges.forEach(function(b){
+      var s=document.createElement('span');
+      s.className='lj-badge '+b[0];s.innerHTML=b[1]+' '+b[2]+' ';
+      el.appendChild(s);
+    });
+  }
+  function init(){
+    add('.elementor-element-lj9a102',[['lj-b1',svgScale,'Valeur légale · eIDAS'],['lj-b2',svgDoc,'Art. 1367 Code civil']]);add('.elementor-element-ljsec2m',[['lj-b1',svgCheck,'Horodatage'],['lj-b2',svgCheck,'Conforme RGPD']]);
+    document.querySelectorAll('.elementor-element-ljfqa0 details').forEach(function(d){d.setAttribute('open','')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+Sécurité des données, hébergement en France, conformité RGPD
+Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.
+Notre IA est entraînée sur le droit français et branchée avec Légifrance.
+Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.
+Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.
+Lumen Juris traite des documents parmi les plus sensibles de votre organisation : contrats, clauses, données de vos cocontractants. Cette page décrit, sans effet d’annonce, les engagements que nous prenons envers les directions juridiques, avocats, juristes, DRH et directions administratives qui nous confient leurs documents, et la manière dont nous les tenons.
+Hébergement souverain des données juridiques sur des serveurs situés à Clermont-Ferrand, France
+Un hébergement souverain, en France
+Vos documents et vos données sont hébergés sur des serveurs situés à  Clermont-Ferrand, en France . Ils sont traités sur le territoire national : votre patrimoine contractuel n’est pas dispersé entre des juridictions dont les régimes de protection diffèrent. Ce choix d’implantation n’est pas un argument marketing : c’est une condition de la confiance que les professionnels du droit sont en droit d’exiger de leurs outils.
+Serveurs en France  : hébergement principal à Clermont-Ferrand, sur le territoire national.
+Droit applicable  : des données hébergées en France, dans le cadre du droit français et européen.
+Maîtrise opérationnelle  : une infrastructure administrée en direct par notre équipe.
+Confidentialité et sécurité de vos documents
+Un contrat confié à Lumen Juris reste votre contrat. Nous n’exploitons pas vos documents à des fins d’entraînement de modèles d’intelligence artificielle, et nous ne les transmettons ni ne les revendons à des tiers à des fins commerciales. Les échanges entre votre navigateur et nos serveurs sont chiffrés (HTTPS/TLS), et les données sont également  chiffrées au repos  sur nos serveurs.
+Chiffrement en transit  : toutes les communications sont protégées par HTTPS/TLS.
+Chiffrement au repos  : les données stockées sur nos serveurs sont chiffrées.
+Aucun entraînement sur vos documents  : vos contrats ne nourrissent aucun modèle d’IA, ni le nôtre ni celui d’un tiers.
+Suppression maîtrisée  : vous gardez la main sur vos documents, de leur dépôt à leur suppression.
+Sécurité et confidentialité des contrats : chiffrement des données en transit et au repos
+IA juridique nourrie par les sources publiques du droit français : Légifrance, jurisprudence, open data
+Une IA nourrie par les sources publiques du droit français
+La pertinence juridique de Lumen Juris ne repose pas sur des données opaques : nos modèles s’appuient sur les  données publiques ouvertes de l’État français , Légifrance pour les textes en vigueur, la jurisprudence de la Cour de cassation et des cours d’appel, et l’open data gouvernementale. Cette transparence sur les sources est la condition d’une IA juridique auditable : vous savez sur quoi raisonne l’outil.
+Légifrance  : codes, lois et règlements en vigueur.
+Jurisprudence ouverte  : décisions de la Cour de cassation et des cours d’appel.
+Open data public  : les données ouvertes de l’État, réutilisées dans leur cadre légal.
+Le RGPD n’est pas pour nous une case à cocher : c’est le cadre de travail quotidien d’un outil juridique. Un  référent à la protection des données  est désigné, un  registre des traitements  est tenu, et une procédure permet aux personnes concernées d’exercer leurs droits, accès, rectification, effacement, opposition. Nous limitons les traitements aux finalités du service et sélectionnons nos sous-traitants sur leurs garanties : la signature électronique avancée s’appuie par exemple sur notre intégration DocuSign, prestataire de services de confiance certifié au sens du règlement eIDAS. Le détail des traitements figure dans notre  politique de protection des données .
+Référent protection des données  désigné et joignable via notre  page contact .
+Registre des traitements  tenu et mis à jour.
+Droits des personnes  : procédure d’exercice des droits d’accès, de rectification, d’effacement et d’opposition.
+Sous-traitants encadrés  : prestataires sélectionnés pour leurs garanties, dont DocuSign (certifié eIDAS) pour la signature avancée.
+Conformité RGPD de Lumen Juris : droits des personnes, registre des traitements, référent désigné
+Une question sur la sécurité de vos données ?
+Notre équipe répond directement à vos questions de sécurité, d’hébergement et de conformité, sans jargon commercial.

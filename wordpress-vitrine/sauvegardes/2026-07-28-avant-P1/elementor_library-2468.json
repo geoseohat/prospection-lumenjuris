@@ -1,0 +1,110 @@
+{
+  "id": 2468,
+  "date": "2025-09-18T20:49:45",
+  "date_gmt": "2025-09-18T20:49:45",
+  "guid": {
+    "rendered": "https://www.lumenjuris.com/?elementor_library=footer",
+    "raw": "https://www.lumenjuris.com/?elementor_library=footer"
+  },
+  "modified": "2026-07-16T13:26:31",
+  "modified_gmt": "2026-07-16T13:26:31",
+  "password": "",
+  "slug": "footer",
+  "status": "publish",
+  "type": "elementor_library",
+  "link": "https://www.lumenjuris.com/?elementor_library=footer",
+  "title": {
+    "raw": "footer",
+    "rendered": "footer"
+  },
+  "author": 1,
+  "featured_media": 0,
+  "template": "",
+  "meta": {
+    "inline_featured_image": false,
+    "_elementor_edit_mode": "builder",
+    "_elementor_template_type": "container",
+    "_elementor_data": "[{\"id\":\"286f9375\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"row\",\"flex_gap\":{\"unit\":\"px\",\"size\":0,\"column\":\"0\",\"row\":\"0\",\"isLinked\":true},\"background_background\":\"classic\",\"background_color\":\"#84AA87\",\"padding\":{\"unit\":\"px\",\"top\":\"50\",\"right\":\"50\",\"bottom\":\"50\",\"left\":\"50\",\"isLinked\":true},\"flex_justify_content\":\"center\",\"width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"boxed_width\":{\"unit\":\"px\",\"size\":1210,\"sizes\":[]},\"flex_justify_content_tablet\":\"flex-start\",\"flex_align_items_tablet\":\"flex-start\",\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"536fde4d\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"13cd0306\",\"elType\":\"widget\",\"settings\":{\"title\":\"Aide\",\"header_size\":\"p\",\"align\":\"center\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":20,\"sizes\":[]},\"typography_font_weight\":\"700\",\"typography_text_transform\":\"none\",\"title_color\":\"#000000E3\",\"__globals__\":{\"typography_typography\":\"\"},\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"heading\"},{\"id\":\"59fa5b11\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p><a href=\\\"https://www.puriseve.com/mentions-legales/\\\">Mentions légales</a></p><p><a href=\\\"https://www.puriseve.com/conditions-generales-ventes-cgv/\\\">CGV - conditions générales de vente</a></p><p><a href=\\\"https://www.puriseve.com/politique-de-retour/\\\">Politique de retour</a></p><p><a href=\\\"https://www.puriseve.com/plan-de-site-html/\\\">Plan de site</a></p><p><a href=\\\"https://www.puriseve.com/faq-foire-aux-questions/\\\">FAQ</a></p>\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true},{\"id\":\"30e923e3\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"44ae730e\",\"elType\":\"widget\",\"settings\":{\"title\":\"A propos\",\"header_size\":\"p\",\"align\":\"center\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":20,\"sizes\":[]},\"typography_font_weight\":\"700\",\"typography_text_transform\":\"none\",\"title_color\":\"#000000E3\",\"__globals__\":{\"typography_typography\":\"\"},\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"heading\"},{\"id\":\"2dd360f4\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p><a href=\\\"https://www.puriseve.com/qui-sommes-nous/\\\">Qui sommes-nous ?</a></p><p><a href=\\\"https://www.puriseve.com/contactez-nous/\\\">Contact</a></p>\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true},{\"id\":\"3abc3a76\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"64f45106\",\"elType\":\"widget\",\"settings\":{\"title\":\"Nos produits\",\"header_size\":\"p\",\"align\":\"center\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":20,\"sizes\":[]},\"typography_font_weight\":\"700\",\"typography_text_transform\":\"none\",\"title_color\":\"#000000E3\",\"__globals__\":{\"typography_typography\":\"\"},\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"heading\"},{\"id\":\"6a08d811\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p><a href=\\\"https://www.puriseve.com/categorie-produit/poudre-de-fruits/\\\">Poudre de fruits</a></p>\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true},{\"id\":\"30b261af\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\",\"content_width\":\"full\",\"width\":{\"unit\":\"%\",\"size\":\"25\"},\"background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_slideshow_gallery\":[],\"background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_hover_slideshow_gallery\":[],\"background_overlay_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_slideshow_gallery\":[],\"background_overlay_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"background_overlay_hover_slideshow_gallery\":[]},\"elements\":[{\"id\":\"f3d1234\",\"elType\":\"widget\",\"settings\":{\"__dynamic__\":{\"image\":\"[elementor-tag id=\\\"\\\" name=\\\"site-logo\\\" settings=\\\"%7B%7D\\\"]\"},\"width\":{\"unit\":\"%\",\"size\":100,\"sizes\":[]},\"_flex_order\":\"start\",\"__should_import\":true,\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"theme-site-logo\"},{\"id\":\"37ade3bd\",\"elType\":\"widget\",\"settings\":{\"editor\":\"<p>Siège : 14 rue berthelot, Groslay 95410</p><p>Service client : +33 1 76 29 43 30 : du lundi au vendredi - 9h à 18h</p>\",\"typography_typography\":\"custom\",\"typography_font_family\":\"Raleway\",\"typography_font_size\":{\"unit\":\"px\",\"size\":16,\"sizes\":[]},\"typography_font_weight\":\"300\",\"_background_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_slideshow_gallery\":[],\"_background_hover_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_video_fallback\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"},\"_background_hover_slideshow_gallery\":[],\"_mask_image\":{\"url\":\"\",\"id\":\"\",\"size\":\"\"}},\"elements\":[],\"widgetType\":\"text-editor\"}],\"isInner\":true}],\"isInner\":false}]",
+    "_elementor_page_settings": null
+  },
+  "permalink_template": "https://www.lumenjuris.com/?elementor_library=footer",
+  "generated_slug": "footer",
+  "class_list": [
+    "post-2468",
+    "elementor_library",
+    "type-elementor_library",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2468",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/types/elementor_library"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/users/1"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 1,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2468/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2469,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2468/revisions/2469"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/media?parent=2468"
+      }
+    ],
+    "wp:action-publish": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2468"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2468"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/elementor_library/2468"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

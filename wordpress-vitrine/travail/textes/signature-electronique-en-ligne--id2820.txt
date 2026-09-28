@@ -1,0 +1,252 @@
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "La signature électronique a-t-elle une valeur légale en France ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L’article 1367 du Code civil reconnaît à la signature électronique la même valeur qu’une signature manuscrite, dès lors qu’elle identifie son auteur et garantit l’intégrité de l’acte. Le règlement européen eIDAS encadre les procédés admis. La force probante varie selon le niveau utilisé : seule la signature qualifiée bénéficie d’une présomption de fiabilité ; pour les niveaux simple et avancé, le juge apprécie les preuves produites, d’où l’importance du dossier de preuve horodaté."}}, {"@type": "Question", "name": "Quelle différence entre signature simple, avancée et qualifiée ?", "acceptedAnswer": {"@type": "Answer", "text": "Les trois niveaux du règlement eIDAS se distinguent par l’exigence d’identification du signataire. La signature simple repose sur une identification déclarative ; l’avancée exige un lien univoque avec le signataire et la détection de toute modification ; la qualifiée ajoute un certificat qualifié délivré après vérification d’identité, et bénéficie seule d’une présomption légale de fiabilité. Plus l’enjeu du document est élevé, plus le niveau recommandé monte."}}, {"@type": "Question", "name": "Peut-on signer un contrat en ligne gratuitement ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Dans Lumen Juris, la signature électronique simple est incluse gratuitement : vous signez votre contrat en ligne et l’envoyez à votre cocontractant pour signature à distance, avec horodatage et dossier de preuve. La signature avancée, adossée à un prestataire de confiance certifié eIDAS via notre intégration DocuSign, est proposée en option payante pour les documents à plus fort enjeu."}}, {"@type": "Question", "name": "Comment faire signer un document à distance à mon cocontractant ?", "acceptedAnswer": {"@type": "Answer", "text": "Préparez le document dans Lumen Juris, placez les zones de signature, signez, puis envoyez : votre cocontractant reçoit un lien sécurisé, consulte le contrat et signe depuis son ordinateur ou son mobile, sans créer de compte. Vous suivez l’avancement en temps réel et récupérez le document signé accompagné de son dossier de preuve horodaté."}}, {"@type": "Question", "name": "Quels documents juridiques peut-on signer électroniquement ?", "acceptedAnswer": {"@type": "Answer", "text": "La quasi-totalité des actes sous signature privée : contrats commerciaux, NDA, contrats de travail et avenants, baux, mandats, conventions d’honoraires, procès-verbaux. Quelques actes restent soumis à des formes particulières (actes authentiques notariés, certains actes du droit de la famille) : pour ceux-là, la signature électronique qualifiée ou l’intervention d’un officier public demeure nécessaire."}}, {"@type": "Question", "name": "Le dossier de preuve suffit-il en cas de litige ?", "acceptedAnswer": {"@type": "Answer", "text": "Le dossier de preuve, horodatage, empreinte du document, journal des événements, identité déclarée des signataires, constitue un faisceau d’indices solide que le juge apprécie souverainement. Il renforce considérablement votre position sans garantir l’issue d’un contentieux : aucun prestataire sérieux ne peut promettre un résultat judiciaire. Pour les enjeux élevés, privilégiez la signature avancée."}}, {"@type": "Question", "name": "Où sont hébergées les données et sont-elles conformes au RGPD ?", "acceptedAnswer": {"@type": "Answer", "text": "Les documents et données de Lumen Juris sont hébergés en France et traités conformément au RGPD. Vos contrats ne sont ni revendus ni utilisés pour entraîner des modèles d’IA tiers, et les échanges sont chiffrés. Pour la signature avancée, notre prestataire de services de confiance est certifié au sens du règlement eIDAS."}}, {"@type": "Question", "name": "Faut-il installer un logiciel de signature électronique ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. La signature en ligne de Lumen Juris fonctionne entièrement dans le navigateur, pour vous comme pour vos cocontractants. Vous préparez, signez et envoyez vos contrats depuis votre espace ; le signataire ouvre simplement un lien sécurisé. Aucune installation, aucun matériel spécifique : un ordinateur ou un smartphone suffit."}}]}  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Lumen Juris, Signature électronique en ligne", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "url": "https://www.lumenjuris.com/signature-electronique-en-ligne/", "description": "Signature électronique juridique en ligne intégrée au cycle de vie du contrat : signature simple gratuite, signature avancée via prestataire certifié eIDAS, horodatage et dossier de preuve, hébergement en France.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Signature électronique simple incluse gratuitement"}, "publisher": {"@type": "Organization", "name": "Lumen Juris", "url": "https://www.lumenjuris.com/"}}  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.lumenjuris.com/"}, {"@type": "ListItem", "position": 2, "name": "Signature électronique en ligne", "item": "https://www.lumenjuris.com/signature-electronique-en-ligne/"}]}
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+
+/* ===== video : meme cadre que les images ===== */
+.elementor-widget-video{background:#fff;padding:8px;border-radius:16px;
+  border:1px solid rgba(27,42,74,.08);box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0}
+.elementor-widget-video iframe,.elementor-widget-video video{border-radius:10px}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+
+
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+ 
+ 
+(function(){
+  var svgScale='   ';
+  var svgCheck='   ';
+  var svgDoc='   ';
+  var css='.lj-badge{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#1C1C1C;font-family:Roboto,sans-serif;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(27,42,74,.22);white-space:nowrap;pointer-events:none}.lj-badge svg{width:15px;height:15px;flex:none}.elementor-element-lj9a102,.elementor-element-ljsec2m{position:relative}.elementor-element-lj9a102 .lj-b1{top:16px;right:-14px}.elementor-element-lj9a102 .lj-b2{bottom:20px;left:-14px}.elementor-element-ljsec2m .lj-b1{top:16px;left:-14px}.elementor-element-ljsec2m .lj-b2{bottom:20px;right:-14px}@media (max-width:767px){.elementor-element-lj9a102 .lj-b1,.elementor-element-ljsec2m .lj-b2{right:8px}.elementor-element-lj9a102 .lj-b2,.elementor-element-ljsec2m .lj-b1{left:8px}}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  function add(sel,badges){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-badge'))return;
+    badges.forEach(function(b){
+      var s=document.createElement('span');
+      s.className='lj-badge '+b[0];s.innerHTML=b[1]+' '+b[2]+' ';
+      el.appendChild(s);
+    });
+  }
+  function init(){
+    add('.elementor-element-lj9a102',[['lj-b1',svgScale,'Valeur légale · eIDAS'],['lj-b2',svgDoc,'Art. 1367 Code civil']]);add('.elementor-element-ljsec2m',[['lj-b1',svgCheck,'Horodatage'],['lj-b2',svgCheck,'Conforme RGPD']]);
+    document.querySelectorAll('.elementor-element-ljfqa0 details').forEach(function(d){d.setAttribute('open','')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+Signature électronique en ligne
+Logiciel juridique CLM de signature en ligne
+En droit français, la signature électronique est reconnue depuis l’article  1367 du Code civil  : elle identifie son auteur et manifeste son consentement, au même titre qu’une signature manuscrite. Le règlement européen  eIDAS  (n° 910/2014) encadre trois niveaux, simple, avancée et qualifiée dont la force probante s’apprécie différemment devant le juge.   Lumen Juris propose la signature simple, incluse gratuitement, et la signature avancée via notre intégration avec un prestataire de services de confiance certifié eIDAS. Chaque signature est  horodatée  et accompagnée d’un  dossier de preuve  : identité déclarée des signataires, empreinte du document, journal des événements. En cas de litige, vous produisez un faisceau d’éléments techniques daté et traçable, sans garantie de résultat contentieux, aucune solution sérieuse ne pouvant promettre l’issue d’un procès.
+Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.
+Notre IA est entraînée sur le droit français et branchée avec Légifrance.
+Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.
+Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.
+Signature électronique juridique en ligne dans Lumen Juris : placement des zones de signature sur un contrat
+La  signature électronique juridique en ligne  de Lumen Juris s’utilise directement dans votre espace de travail : vous préparez le document, placez les zones de signature, signez, puis envoyez le contrat à votre cocontractant pour signature à distance. Aucun aller-retour d’impression ou de scan : tout le processus de signature en ligne se déroule dans un seul  outil juridique , de la rédaction à l’archivage.
+Préparez le document  : importez un contrat existant (PDF, Word) ou partez d’un document rédigé avec le générateur : il est prêt à signer sans ressaisie.
+Placez les zones et signez  : cliquez à l’endroit exact où chaque partie doit signer : votre signature, puis celle du cocontractant. Signez ensuite à la souris ou sur écran tactile.
+Envoyez et suivez  : votre cocontractant reçoit un lien pour signer le document à distance ; vous suivez l’avancement et récupérez le contrat signé avec son dossier de preuve horodaté.
+Une signature intégrée au cycle de vie de vos contrats
+Les outils de signature isolés traitent la signature comme une fin en soi. Lumen Juris l’inscrit dans un flux juridique complet : vous générez le contrat avec  notre générateur de contrats par IA , vous le fiabilisez avec  l’analyse des clauses à risque , vous le signez et le faites signer en ligne, puis il rejoint votre contrathèque. Un seul  logiciel juridique , zéro rupture d’outil, et une piste documentaire continue de la première version au document signé.
+Génération → signature sans transfert  : le contrat rédigé dans Lumen Juris part à la signature en un clic, sans export ni téléversement vers un autre logiciel de signature électronique.
+Relances et suivi centralisés  : vous voyez qui a signé, qui doit signer, et vous relancez le signataire sans quitter votre dossier.
+Contrathèque et preuve  : le document signé et son dossier de preuve sont archivés avec l’historique du contrat, prêts à être produits en cas de besoin.
+Créer sa signature électronique en ligne : tracé manuscrit ou saisie dans Lumen Juris
+Faire signer un document à distance en 3 étapes
+Importez votre document ou utilisez un contrat généré dans Lumen Juris : PDF et Word sont pris en charge.
+Définissez les signataires
+Placez les zones de signature pour vous et votre cocontractant, page par page ou sur toutes les pages d’un clic.
+Le cocontractant signe à distance depuis un simple lien. Vous suivez l’avancement, puis le contrat signé et son dossier de preuve rejoignent votre contrathèque.
+Signature simple, avancée ou qualifiée : laquelle choisir ?
+Le bon niveau de signature dépend de l’enjeu du document, pas de la technologie. Ce tableau résume les trois niveaux du règlement eIDAS et ce que Lumen Juris propose pour chacun.
+Un professionnel du droit ne choisit pas une e-signature comme un outil bureautique : il choisit un régime de preuve. Signer un NDA avec le même niveau qu’un compromis de vente n’a pas de sens, ni juridiquement, ni économiquement. La signature simple, gratuite dans Lumen Juris, couvre l’immense majorité des actes courants de la vie des affaires : sa validité est admise, et le dossier de preuve horodaté que nous générons pèse dans l’appréciation du juge. La signature avancée se justifie dès que l’enjeu financier ou le risque de contestation augmente : contrat de travail, bail, engagement significatif. Quant à la signature qualifiée, réservée à des actes spécifiques, elle suppose une vérification d’identité renforcée que peu de transactions exigent réellement. En cas de doute sur une clause avant signature, l’ analyse de contrat par IA  intégrée vous signale les risques, avant que le document ne parte à la signature.
+.lj-table-wrap{overflow-x:auto}
+.lj-cmp{width:100%;border-collapse:separate;border-spacing:0;background:#fff;
+  border:1px solid rgba(27,42,74,.10);border-radius:16px;overflow:hidden;
+  font-family:Roboto,sans-serif;font-size:14.5px;color:#39445A;line-height:1.55;min-width:640px}
+.lj-cmp th{background:#1B2A4A;color:#fff;font-family:'Roboto Slab',serif;font-weight:600;
+  padding:14px 16px;text-align:left;font-size:14px}
+.lj-cmp td{padding:13px 16px;border-top:1px solid rgba(27,42,74,.08);vertical-align:top}
+.lj-cmp tr td:first-child{font-weight:600;color:#1C1C1C;white-space:nowrap}
+.lj-badge-ok{display:inline-block;background:#EAF7EF;color:#2E7D32;border:1px solid #CDE9D6;
+  border-radius:99px;padding:3px 10px;font-size:12.5px;font-weight:600}
+.lj-badge-opt{display:inline-block;background:#FFF7ED;color:#B45309;border:1px solid #FCE4C4;
+  border-radius:99px;padding:3px 10px;font-size:12.5px;font-weight:600}
+.lj-badge-no{display:inline-block;background:#F3F4F6;color:#6B7280;border:1px solid #E5E7EB;
+  border-radius:99px;padding:3px 10px;font-size:12.5px;font-weight:600}
+ 
+  
+   Niveau eIDAS  Ce qu’il garantit  Cas d’usage recommandés  Dans Lumen Juris   
+ 
+  Signature simple 
+ Identification déclarative du signataire, intégrité du document scellée et horodatée. Force probante appréciée au cas par cas par le juge, appuyée sur le dossier de preuve. 
+ Contrats commerciaux courants, NDA, devis, mandats, documents internes. 
+  Incluse · gratuite   
+  Signature avancée 
+ Lien univoque avec le signataire, détection de toute modification ultérieure, vérification renforcée de l’identité (art. 26 eIDAS). 
+ Contrats de travail, baux, compromis, contrats à enjeu financier significatif. 
+  Option · via notre intégration DocuSign, prestataire certifié eIDAS   
+  Signature qualifiée 
+ Certificat qualifié délivré après vérification d’identité en face à face ou équivalent. Seul niveau bénéficiant d’une présomption légale de fiabilité (art. 1367 C. civ., al. 2). 
+ Actes à très fort enjeu : marchés publics, actes d’engagement, certains actes notariés. 
+  Non proposée à ce jour
+Essayez la signature gratuitement
+Une e-signature pensée pour les métiers du droit
+De la signature électronique du contrat de travail au NDA, du compromis préparatoire aux protocoles d’accord, chaque métier du droit a ses documents récurrents, et ses contraintes de preuve. Lumen Juris couvre les actes sous signature privée du quotidien : vous signez en ligne, votre cocontractant signe à distance, et le niveau de signature s’adapte à l’enjeu de chaque document plutôt qu’à une offre commerciale figée.
+Conventions d’honoraires, mandats, protocoles transactionnels : la signature électronique avocat supprime les allers-retours papier avec vos clients, tout en conservant un dossier de preuve daté pour chaque acte signé.
+Juristes & directions juridiques
+Contrats commerciaux, NDA, avenants, conditions générales : faites signer vos cocontractants à distance et gardez chaque version, chaque signature et chaque preuve dans la même contrathèque.
+Contrats de travail et avenants RH en signature avancée, promesses et compromis préparés en amont des actes authentiques : chaque document part signé plus vite, sans impression.
+Un logiciel de signature électronique sécurisé et souverain
+Faire signer un contrat en ligne, c’est confier à un tiers des données parmi les plus sensibles de l’entreprise : identité des parties, conditions financières, clauses confidentielles. Lumen Juris a été conçu comme un outil juridique français : vos documents sont hébergés en France, les traitements sont conformes au RGPD, et les échanges entre votre navigateur, vos signataires et nos serveurs sont chiffrés. Vos contrats ne sont ni revendus, ni exploités pour entraîner des modèles d’IA tiers.  Pour la signature avancée, nous nous appuyons sur un prestataire de services de confiance certifié au sens du règlement eIDAS, via notre intégration DocuSign : vous bénéficiez d’une infrastructure de confiance auditée, sans quitter votre espace Lumen Juris. Et parce qu’un logiciel de signature électronique ne vaut que par la preuve qu’il produit, chaque signature génère un dossier de preuve horodaté, conservé avec le contrat dans votre contrathèque. Vous retrouvez qui a signé quoi, quand, et dans quelle version : des années plus tard s’il le faut. L’ équipe Lumen Juris , juristes et ingénieurs français, développe et opère la plateforme en direct.
+Hébergement en France  : documents, signatures et dossiers de preuve restent sur le territoire.
+Conformité RGPD  : finalités limitées, pas d’exploitation de vos données à d’autres fins.
+Chiffrement des échanges  : communications protégées de bout en bout du dépôt du document à sa signature.
+Signature électronique en ligne : vos questions
+La signature électronique a-t-elle une valeur légale en France ?
+Quelle différence entre signature simple, avancée et qualifiée ?
+Peut-on signer un contrat en ligne gratuitement ?
+Comment faire signer un document à distance à mon cocontractant ?
+Quels documents juridiques peut-on signer électroniquement ?
+Le dossier de preuve suffit-il en cas de litige ?
+Où sont hébergées les données et sont-elles conformes au RGPD ?
+Faut-il installer un logiciel de signature électronique ?
+Oui. L’article 1367 du Code civil reconnaît à la signature électronique la même valeur qu’une signature manuscrite, dès lors qu’elle identifie son auteur et garantit l’intégrité de l’acte. Le règlement européen eIDAS encadre les procédés admis. La force probante varie selon le niveau utilisé : seule la signature qualifiée bénéficie d’une présomption de fiabilité ; pour les niveaux simple et avancé, le juge apprécie les preuves produites, d’où l’importance du dossier de preuve horodaté.
+Les trois niveaux du règlement eIDAS se distinguent par l’exigence d’identification du signataire. La signature simple repose sur une identification déclarative ; l’avancée exige un lien univoque avec le signataire et la détection de toute modification ; la qualifiée ajoute un certificat qualifié délivré après vérification d’identité, et bénéficie seule d’une présomption légale de fiabilité. Plus l’enjeu du document est élevé, plus le niveau recommandé monte.
+Oui. Dans Lumen Juris, la signature électronique simple est incluse gratuitement : vous signez votre contrat en ligne et l’envoyez à votre cocontractant pour signature à distance, avec horodatage et dossier de preuve. La signature avancée, adossée à un prestataire de confiance certifié eIDAS via notre intégration DocuSign, est proposée en option payante pour les documents à plus fort enjeu.
+Préparez le document dans Lumen Juris, placez les zones de signature, signez, puis envoyez : votre cocontractant reçoit un lien sécurisé, consulte le contrat et signe depuis son ordinateur ou son mobile, sans créer de compte. Vous suivez l’avancement en temps réel et récupérez le document signé accompagné de son dossier de preuve horodaté.
+La quasi-totalité des actes sous signature privée : contrats commerciaux, NDA, contrats de travail et avenants, baux, mandats, conventions d’honoraires, procès-verbaux. Quelques actes restent soumis à des formes particulières (actes authentiques notariés, certains actes du droit de la famille) : pour ceux-là, la signature électronique qualifiée ou l’intervention d’un officier public demeure nécessaire.
+Le dossier de preuve, horodatage, empreinte du document, journal des événements, identité déclarée des signataires, constitue un faisceau d’indices solide que le juge apprécie souverainement. Il renforce considérablement votre position sans garantir l’issue d’un contentieux : aucun prestataire sérieux ne peut promettre un résultat judiciaire. Pour les enjeux élevés, privilégiez la signature avancée.
+Les documents et données de Lumen Juris sont hébergés en France et traités conformément au RGPD. Vos contrats ne sont ni revendus ni utilisés pour entraîner des modèles d’IA tiers, et les échanges sont chiffrés. Pour la signature avancée, notre prestataire de services de confiance est certifié au sens du règlement eIDAS.
+Non. La signature en ligne de Lumen Juris fonctionne entièrement dans le navigateur, pour vous comme pour vos cocontractants. Vous préparez, signez et envoyez vos contrats depuis votre espace ; le signataire ouvre simplement un lien sécurisé. Aucune installation, aucun matériel spécifique : un ordinateur ou un smartphone suffit.
+Signez votre prochain contrat en ligne
+Essayer gratuitement la signature électronique en ligne de Lumen Juris, et découvrez le cycle de vie complet du contrat, de la génération par IA à la contrathèque.

@@ -1,0 +1,193 @@
+<style>
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:6px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous = CTA */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:#1B2A4A!important;color:#fff!important;box-shadow:0 6px 16px rgba(27,42,74,.22)}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:#24365C!important;transform:translateY(-1px);box-shadow:0 10px 22px rgba(27,42,74,.28)}
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+</style>					<style>
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+</style>
+					<h1>GénératEUR de contratS IA</h1>					<h2>IA spécialisée en droit français</h2>										<a href="https://calendly.com/meetingreunion/reunion">
+									Réservez une demo
+					</a>
+									<figure><img width="300" height="300" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/Role-dun-referent-RGPD-removebg-preview-300x300.png" alt="" /></figure><p>Conforme RGPD</p><p>Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.</p>					<figure><img width="300" height="194" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/logo-Marianne-removebg-preview-300x194.png" alt="" /></figure><p>IA française</p><p>Notre IA est entraînée sur le droit français et branchée avec Légifrance.</p>					<figure><img width="300" height="300" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/flag-1-300x300.png" alt="" /></figure><p>Hébergé en France</p><p>Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.</p>					<figure><img width="300" height="300" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/41UJVoRP1RL._AC_UF1000_1000_QL80_-removebg-preview-300x300.png" alt="" /></figure><p>Confidentialité</p><p>Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.</p>					<p>Essayez par vous même ...</p>		<!-- wp:html -->
+<p> </p>
+<!--ARCADE EMBED START-->
+<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" title="Créer et personnaliser un contrat de prestation de services informatiques" src="https://demo.arcade.software/QMssS18nFpPRocfEIIsC?embed&amp;embed_mobile=tab&amp;embed_desktop=inline&amp;show_copy_link=true" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<!--ARCADE EMBED END--><!-- /wp:html --><!-- wp:paragraph -->
+<p> </p>
+<!-- /wp:paragraph -->													<img width="800" height="608" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-151113.png" alt="" srcset="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-151113.png 858w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-151113-300x228.png 300w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-151113-768x584.png 768w" sizes="(max-width: 800px) 100vw, 800px" />																<h2>Fonctionnement de notre outil IA de rédaction contractuelle</h2>		<p>Exprimez votre besoin : l’outil génère un questionnaire adapté à votre situation, puis génère un contrat personnalisé à partir de vos réponses, en s’appuyant sur les sources officielles françaises et des sources juridiques fiables.</p>					<ul>
+							<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Des questions adaptées à votre besoin</strong> : l’IA génère les bonnes questions selon votre cas ; vos réponses servent de base au contrat, créé de zéro.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Un contrat à variables</strong> : le document est généré avec des champs à compléter ; vous les remplissez, sauvegardez et réutilisez.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<strong>Des clauses modifiables par l’IA</strong> : exprimez ce que vous voulez dans une clause : elle est reformulée et remplacée automatiquement.
+									</li>
+						</ul>
+							<h2>Des clauses personnalisées et sécurisées</h2>		<p>La génération de contrat par IA ne s’arrête pas à la rédaction : chaque clause est analysée pour en mesurer la conformité et revisitée à votre convenance.</p>					<ul>
+							<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<b>Personnalisation intelligente </b>: chaque clause s'adapte automatiquement au contexte de votre contrat (secteur, parties, enjeux).
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<b>Score de conformité </b>: une évaluation globale du contrat, clause par clause.
+									</li>
+								<li>
+							<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						
+										<b>Alertes ciblées :</b> les formulations à risque sont surlignées dans le texte.
+									</li>
+						</ul>
+																	<img width="800" height="383" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154057.png" alt="" srcset="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154057.png 943w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154057-300x144.png 300w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154057-768x368.png 768w" sizes="(max-width: 800px) 100vw, 800px" />																<h2>Analyse des risques</h2>															<img width="1507" height="822" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154443.png" alt="" srcset="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154443.png 1507w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154443-300x164.png 300w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154443-1024x559.png 1024w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-16-154443-768x419.png 768w" sizes="(max-width: 1507px) 100vw, 1507px" />													<p>Lorsque Lumen Juris analyse un contrat, chaque clause sensible est surlignée directement dans le document et détaillée dans un panneau latéral dédié. </p>
+<p>Ici, l'outil a identifié une clause d'absence de droit sur la clientèle dans un contrat d'apporteur d'affaires : il en explique la portée en langage clair. L'apporteur ne détient aucun droit de propriété sur les prospects présentés, mais cette absence de droit n'emporte pas renonciation aux commissions déjà acquises ni à l'indemnisation en cas de rupture fautive. </p>
+<p>Pour chaque point de vigilance, une recommandation de reformulation est proposée, que vous pouvez copier dans le document ou écarter en un clic.</p>
+<p> Les onglets « Jurisprudence » et « Questions » complètent l'analyse : décisions pertinentes pour appuyer la clause, et possibilité d'interroger l'IA sur ce passage précis. Le contrat reste ainsi entièrement sous votre contrôle.</p>			<h2>Votre contrat en 3 étapes</h2>					<h3>01</h3>					<h4>Exprimez votre besoin</h4>		<p>Décrivez votre situation : l’outil génère un questionnaire sur mesure, adapté à votre cas.</p>			<h3>02</h3>					<h4>L’IA conçoit le contrat</h4>		<p>Un contrat personnalisé est généré de zéro à partir de vos réponses, appuyé sur les sources juridiques officielles françaises.</p>			<h3>03</h3>					<h4>Ajustez et sauvegardez</h4>		<p>Complétez les variables, modifiez chaque clause en langage naturel avec l’IA, puis sauvegardez votre document.</p>			<h2>FAQ</h2>							
+						<details id="e-n-accordion-item-4000" open>
+				<summary data-accordion-index="1" tabindex="0" aria-expanded="true" aria-controls="e-n-accordion-item-4000" >
+					<h3> Qu’est-ce que la génération de contrat par IA ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>La génération de contrat par IA consiste à créer un contrat complet, de zéro, personnalisé pour votre situation. Concrètement, vous exprimez votre besoin et l’outil génère un questionnaire adapté à votre cas : vos réponses servent de base à la rédaction. Le contrat est ensuite généré en s’appuyant sur les sources gouvernementales françaises et des sources juridiques fiables, avec des variables à compléter (parties, dates, montants…) que vous pouvez enregistrer et réutiliser. Chaque clause reste modifiable : exprimez ce que vous voulez y trouver, et l’IA la reformule automatiquement.</p>								
+					</details>
+						<details id="e-n-accordion-item-4001" >
+				<summary data-accordion-index="2" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4001" >
+					<h3> Un contrat généré par IA est-il juridiquement valable ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Oui. Un contrat généré par IA a exactement la même valeur juridique qu’un contrat rédigé à la main : ce qui compte, c’est que son contenu respecte le droit applicable et qu’il soit signé par des parties capables et consentantes. Nos modèles s’appuient sur la législation française en vigueur et citent leurs références légales, ce qui facilite la vérification. Pour les situations complexes ou à fort enjeu, l’outil assiste la rédaction mais ne remplace pas le conseil d’un professionnel du droit.</p>								
+					</details>
+						<details id="e-n-accordion-item-4002" >
+				<summary data-accordion-index="3" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4002" >
+					<h3> Quels types de contrats peut-on générer avec l’IA ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Tous les types de contrats. L’outil ne se limite pas à une liste de modèles figés : le questionnaire est généré dynamiquement selon le besoin que vous exprimez. Contrats de travail (CDI, CDD…), prestation de services, apporteur d’affaires, confidentialité (NDA), bail, partenariat commercial, cession, sous-traitance… quelle que soit la nature du contrat, l’IA conçoit les questions adaptées puis rédige un document personnalisé, appuyé sur les sources juridiques pertinentes.</p>								
+					</details>
+						<details id="e-n-accordion-item-4003" >
+				<summary data-accordion-index="4" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4003" >
+					<h3> Comment l’IA garantit-elle la conformité au droit français ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Les contrats sont générés à partir des sources gouvernementales françaises et de sources juridiques fiables, et les clauses citent leurs références légales (Code civil, Code du travail, Code de commerce…). Les points sensibles sont signalés avec l’explication du risque encouru — par exemple la requalification d’un CDD insuffisamment motivé. Et si une clause ne vous convient pas, vous pouvez demander à l’IA de la reformuler : elle est remplacée automatiquement dans le document, en restant dans le cadre du droit applicable.</p>								
+					</details>
+						<details id="e-n-accordion-item-4004" >
+				<summary data-accordion-index="5" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4004" >
+					<h3> Mes données sont-elles confidentielles ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Oui, la confidentialité est un engagement central. Vos documents et les informations que vous renseignez ne sont ni revendus, ni partagés, ni utilisés pour entraîner des modèles d’IA tiers. Les traitements sont conformes au RGPD et l’ensemble des données est hébergé en France. Vous gardez la maîtrise complète de vos contrats, de leur création à leur suppression.</p>								
+					</details>
+						<details id="e-n-accordion-item-4005" >
+				<summary data-accordion-index="6" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-4005" >
+					<h3> Combien de temps faut-il pour générer un contrat ? </h3>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+			<svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+						</summary>
+									<p>Quelques minutes, là où une rédaction manuelle prend souvent plusieurs heures. Vous répondez au questionnaire, l’IA génère le contrat personnalisé, puis vous complétez les variables et ajustez les clauses si besoin. Les documents et variables se sauvegardent pour être réutilisés : sur un volume régulier de contrats, nos utilisateurs peuvent gagner jusqu’à cinq heures par semaine.</p>								
+					</details>
+				<p>La génération de contrat par IA consiste à créer un contrat complet, de zéro, personnalisé pour votre situation. Concrètement, vous exprimez votre besoin et l’outil génère un questionnaire adapté à votre cas : vos réponses servent de base à la rédaction. Le contrat est ensuite généré en s’appuyant sur les sources gouvernementales françaises et des sources juridiques fiables, avec des variables à compléter (parties, dates, montants…) que vous pouvez enregistrer et réutiliser. Chaque clause reste modifiable : exprimez ce que vous voulez y trouver, et l’IA la reformule automatiquement.</p><p>Oui. Un contrat généré par IA a exactement la même valeur juridique qu’un contrat rédigé à la main : ce qui compte, c’est que son contenu respecte le droit applicable et qu’il soit signé par des parties capables et consentantes. Nos modèles s’appuient sur la législation française en vigueur et citent leurs références légales, ce qui facilite la vérification. Pour les situations complexes ou à fort enjeu, l’outil assiste la rédaction mais ne remplace pas le conseil d’un professionnel du droit.</p><p>Tous les types de contrats. L’outil ne se limite pas à une liste de modèles figés : le questionnaire est généré dynamiquement selon le besoin que vous exprimez. Contrats de travail (CDI, CDD…), prestation de services, apporteur d’affaires, confidentialité (NDA), bail, partenariat commercial, cession, sous-traitance… quelle que soit la nature du contrat, l’IA conçoit les questions adaptées puis rédige un document personnalisé, appuyé sur les sources juridiques pertinentes.</p><p>Les contrats sont générés à partir des sources gouvernementales françaises et de sources juridiques fiables, et les clauses citent leurs références légales (Code civil, Code du travail, Code de commerce…). Les points sensibles sont signalés avec l’explication du risque encouru — par exemple la requalification d’un CDD insuffisamment motivé. Et si une clause ne vous convient pas, vous pouvez demander à l’IA de la reformuler : elle est remplacée automatiquement dans le document, en restant dans le cadre du droit applicable.</p><p>Oui, la confidentialité est un engagement central. Vos documents et les informations que vous renseignez ne sont ni revendus, ni partagés, ni utilisés pour entraîner des modèles d’IA tiers. Les traitements sont conformes au RGPD et l’ensemble des données est hébergé en France. Vous gardez la maîtrise complète de vos contrats, de leur création à leur suppression.</p><p>Quelques minutes, là où une rédaction manuelle prend souvent plusieurs heures. Vous répondez au questionnaire, l’IA génère le contrat personnalisé, puis vous complétez les variables et ajustez les clauses si besoin. Les documents et variables se sauvegardent pour être réutilisés : sur un volume régulier de contrats, nos utilisateurs peuvent gagner jusqu’à cinq heures par semaine.</p>			<h2>Pensé pour les juristes comme pour les entrepreneurs</h2>							
+			<svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg>			
+							<h3>Juristes &amp; avocats</h3>		<p>Générez des trames fiables en quelques minutes, sourcées sur les textes officiels, puis affinez chaque clause avec l’IA. Le temps gagné se compte en heures chaque semaine.</p>					
+			<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M320 336c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h416c25.6 0 48-22.4 48-48V288H320v48zm144-208h-80V80c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h512v-80c0-25.6-22.4-48-48-48zm-144 0H192V96h128v32z"></path></svg>			
+							<h3>Entrepreneurs &amp; dirigeants</h3>		<p>Créez vos contrats de zéro sans expertise juridique : répondez aux questions, complétez les variables, exportez un document appuyé sur des sources fiables.</p>					
+			<svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path></svg>			
+							<h3>Équipes RH &amp; administratives</h3>		<p>CDD, avenants, prestations : des contrats à variables réutilisables, sauvegardés et modifiables par toute l’équipe.</p>			<h2>Prêt à rédiger votre premier contrat ?</h2>		<p>Découvrez l’outil sur un cas concret, sans engagement.</p>								<a href="https://www.lumenjuris.com/contactez-nous/">
+									Demandez une demo
+					</a>

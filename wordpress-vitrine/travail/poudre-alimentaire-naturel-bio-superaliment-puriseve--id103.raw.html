@@ -1,0 +1,155 @@
+<style>
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+</style>					<style>
+/* ===== typo unifiee (sans toucher aux textes) ===== */
+.elementor-103 .elementor-heading-title{font-family:'Roboto Slab',serif}
+.elementor-103 .elementor-widget-text-editor{
+  font-family:Roboto,sans-serif;color:#39445A;line-height:1.75}
+/* ===== hero : degrade anime ===== */
+.elementor-element-ca28a21{
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:visible}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+/* ===== maquette hero : inclinaison legere ===== */
+.elementor-element-ljheromock{filter:drop-shadow(0 22px 36px rgba(27,42,74,.20))}
+/* ===== autres images : cadre + ombre uniforme ===== */
+.elementor-103 .elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0;
+  transition:transform .4s ease,box-shadow .4s ease}
+.elementor-103 .elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-103 .elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto}
+/* ===== cartes chiffres (3 stats) ===== */
+.elementor-element-42270bfa,.elementor-element-c5e39c3,.elementor-element-21a32998{
+  position:relative;overflow:hidden;background:#fff;
+  border:1px solid rgba(27,42,74,.08);border-radius:16px;
+  box-shadow:0 10px 26px rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-42270bfa:before,.elementor-element-c5e39c3:before,.elementor-element-21a32998:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-42270bfa:hover,.elementor-element-c5e39c3:hover,.elementor-element-21a32998:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+/* ===== temoignages : cartes ===== */
+.elementor-element-1feb54a3,.elementor-element-43748e4c,.elementor-element-55a8b6f5{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:16px;
+  box-shadow:0 10px 26px rgba(27,42,74,.06);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-1feb54a3:hover,.elementor-element-43748e4c:hover,.elementor-element-55a8b6f5:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.13)}
+/* ===== logos partenaires : taille contenue ===== */
+.elementor-element-7696da1 .swiper-slide img,
+.elementor-element-7696da1 img{
+  max-height:56px!important;width:auto!important;object-fit:contain;
+  margin:0 auto;filter:grayscale(25%);opacity:.9}
+.elementor-element-7696da1 .swiper-slide{display:flex;align-items:center;justify-content:center}
+/* ===== filets sous les titres de section ===== */
+.elementor-element-26e8d97 .elementor-heading-title:after,
+.elementor-element-51e898d .elementor-heading-title:after,
+.elementor-element-4209ae08 .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin:14px auto 0;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-df2a86c .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-ca28a21{animation:none}
+  .elementor-element-ljheromock{transform:none}
+}
+@media (max-width:767px){
+  .elementor-element-ljheromock{filter:drop-shadow(0 22px 36px rgba(27,42,74,.20))}
+}
+</style><style>
+@media (min-width:768px){
+.elementor-element-ca28a21{--flex-direction:row;--align-items:center;--gap:40px;--flex-wrap:wrap}
+.elementor-element-cefee8c{--width:calc(58% - 26px);width:calc(58% - 26px);order:1;margin-top:0}
+.elementor-element-d88cc5b{--width:calc(42% - 26px);width:calc(42% - 26px);order:2}
+}
+@media (max-width:767px){
+.elementor-element-ca28a21{--flex-direction:column}
+.elementor-element-d88cc5b{order:1}
+.elementor-element-cefee8c{order:2;margin-top:24px}
+}
+</style><style>.elementor-103 .elementor-button,.elementor-103 .elementor-button:hover{text-decoration:none!important}</style><style>.elementor-element-ljhdrcss,.elementor-element-ljhomecss{position:absolute;width:0;height:0;overflow:hidden;margin:0;padding:0}</style><style>/*ljpartners*/
+.elementor-element-08ed687{--width:100%;width:100%;order:3;margin-top:30px;padding:0 0 6px}
+</style><style>
+#lj-hero-mock{max-height:540px;overflow:hidden;border-radius:18px;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);
+  mask-image:linear-gradient(to bottom,#000 78%,transparent)}
+</style>										<h1>Logiciel CLM + analyse contractuelle</h1>					<h1>Gagnez du temps, réduisez vos risques et sécurisez vos contrats</h1>										<a href="https://calendly.com/meetingreunion/reunion">
+				<svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"></path></svg>			
+									Réservez une démo
+					</a>
+									<h3>5 heures gagnées / semaine</h3>							
+			<svg aria-hidden="true" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"></path></svg>			
+							<h3>Hébergé en France</h3>							
+			<svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 256A128 128 0 1 0 96 128a128 128 0 0 0 128 128zm96 64a63.08 63.08 0 0 1 8.1-30.5c-4.8-.5-9.5-1.5-14.5-1.5h-16.7a174.08 174.08 0 0 1-145.8 0h-16.7A134.43 134.43 0 0 0 0 422.4V464a48 48 0 0 0 48 48h280.9a63.54 63.54 0 0 1-8.9-32zm288-32h-32v-80a80 80 0 0 0-160 0v80h-32a32 32 0 0 0-32 32v160a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V320a32 32 0 0 0-32-32zM496 432a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm32-144h-64v-80a32 32 0 0 1 64 0z"></path></svg>			
+							<h3>IA + Légifrance = conforme</h3>							
+			<svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg>			
+							<h2>Outil d'assistance juridique pensé pour les professionnels du droit</h2>		<p>Téléversez votre contrat (PDF/Word). Notre détecteur analyse les clauses, identifie les risques, suggère des alternatives conformes et répond à vos questions via un chat juridique. </p><p>L’outil combine Légifrance et l’intelligence artificielle pour proposer des recommandations fiables et conformes.</p>													<img width="800" height="690" src="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-08-162925.png" alt="" srcset="https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-08-162925.png 1006w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-08-162925-300x259.png 300w, https://www.lumenjuris.com/wp-content/uploads/2026/07/Capture-decran-2026-07-08-162925-768x663.png 768w" sizes="(max-width: 800px) 100vw, 800px" />																<h2>100 % français, notre logiciel IA s’appuie sur Légifrance</h2>					<h2>Nos témoignages</h2>					<h3>Thomas Dupoint</h3><p>Avocat en droit immobilier</p>							
+				<i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i>				Noté 5 sur 5
+				<p>Produit de qualité : je gagne un temps fou à repasser sur tous mes contrats.</p>			<h3>Antoine Duplessis</h3><p>Dirigeant d’une société de conseil juridique CSE</p>							
+				<i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i>				Noté 5 sur 5
+				<p>Je jongle entre plein de documents et je ne sais jamais s'ils sont conformes. Grâce à l’outil, tout est conforme et je suis plus serein avec mes clients.</p>			<h3>Christine Leveque</h3><p>Acheteuse</p>							
+				<i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i><i aria-hidden="true">&#9733;</i>				Noté 5 sur 5
+				<p>Gain de temps énorme avec toutes mes factures fournisseurs.</p>			<h3>FAQ</h3>					<h3>Comment ça marche ?</h3>		<ol><li data-start="2175" data-end="2234">Déposez votre document au format PDF ou Word</li><li data-start="2175" data-end="2234">Donnez des précisions sur l'analyse que vous souhaitez </li><li data-start="2175" data-end="2234">Révisez votre contrat automatiquement : surlignage, suggestions, alternatives types et clauses manquantes</li><li data-start="2175" data-end="2234">Discutez avec le chat juridique : questions-réponses sur les clauses détectées et les risques</li><li data-start="2175" data-end="2234">Téléchargez votre rapport d’audit (synthèse + actions)</li><li data-start="2175" data-end="2234">Appuyez-vous sur nos modèles juridiques</li></ol>			<h3>Est-ce que l'outil est vraiment fiable ? </h3>		<p>Oui, notre objectif est de délivrer l'information la plus fiable et pertinente juridiquement. </p><p>L’analyse est adossée à des sources officielles  : l’outil interroge Légifrance via API, récupère les textes pertinents (codes, articles, jurisprudences), puis alimente l’IA avec ces références. </p><p>Résultat : des alertes sourcées (article cité), des hallucinations écartées et des surlignages directement reliés aux bases légales.</p>			<h3>Combien de temps je gagne vraiment ?</h3>		<p>Selon la taille/qualité des documents et la maturité de votre processus, nos équipes ont constaté entre 30 et 60 % de temps gagné sur la revue initiale.</p><p>On note 5 h/semaine en moyenne par professionnel.</p><p>L’outil automatise la première passe (repérage des clauses sensibles, check de conformité, synthèse). </p><p>Le juriste confirme, ajuste et évite les temps de lecture interminables.</p>			<h3>Pourquoi cet outil de révision des contrats ?</h3>		<ul><li data-start="869" data-end="1003"><p data-start="871" data-end="1003">Vision claire des risques : détection automatique des clauses litigieuses (responsabilité, résiliation, pénalités, DPA/RGPD…).</p></li><li data-start="1004" data-end="1102"><p data-start="1006" data-end="1102">Révision plus rapide : suggestions de reformulation et modèles internes pour standardiser.</p></li><li data-start="1103" data-end="1198"><p data-start="1105" data-end="1198">Conformité facilitée : comparaison aux standards internes / bonnes pratiques du marché.</p></li><li data-start="1199" data-end="1295"><p data-start="1201" data-end="1295">Moins d’allers-retours : chat juridique intégré pour clarifier une clause en 1 question.</p></li><li data-start="1296" data-end="1381"><p data-start="1298" data-end="1381">Traçabilité : historique des versions, commentaires, export du rapport d’audit.</p></li></ul>			<h3>L’outil est-il conforme au RGPD ?</h3>		<p data-start="871" data-end="1003">Le <strong data-start="6072" data-end="6086">traitement</strong> vise une <strong data-start="6096" data-end="6117">finalité légitime</strong> (analyse juridique). Les <strong data-start="6143" data-end="6161">réglages d’API</strong> et <strong data-start="6165" data-end="6182">l’hébergement</strong> doivent être configurés pour <strong data-start="6212" data-end="6225">minimiser</strong> et <strong data-start="6229" data-end="6242">sécuriser</strong> les données (logs, durée de conservation, accès).</p>			<h3>En quoi l’outil est-il différent ?</h3>		<p><strong data-start="3412" data-end="3462">Le logiciel raisonne avec des sources juridiques injectées</strong> (Légifrance) et un <strong data-start="3482" data-end="3500">prompt enrichi</strong>. Ce n’est pas une réponse “générique” : c’est une <strong data-start="3551" data-end="3585">analyse appuyée par des textes de lois français.</strong></p>			<h3>L'outil détecte-t-il les clauses interdites ou abusives ?</h3>		<p>Il signale les clauses potentiellement illicites/abusives au regard des textes récupérés et explique pourquoi (avec la base légale identifiée). </p><p>Il signale également les clauses qui affaiblissent vos intérêts et vous permet de consolider vos positions grâce à des recommandations précises qui s'appuient sur la législation française.</p>			<h3>L’outil peut-il proposer une reformulation de clause ?</h3>		<p>Oui, il suggère des formulations cohérentes avec les textes de référence identifiés (à valider par un juriste).</p>

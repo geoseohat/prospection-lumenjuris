@@ -1,0 +1,132 @@
+{
+  "id": 622,
+  "date": "2025-04-04T14:16:46",
+  "date_gmt": "2025-04-04T14:16:46",
+  "guid": {
+    "rendered": "https://www.puriseve.com/?page_id=622",
+    "raw": "https://www.puriseve.com/?page_id=622"
+  },
+  "modified": "2025-09-18T18:55:44",
+  "modified_gmt": "2025-09-18T18:55:44",
+  "password": "",
+  "slug": "plan-de-site-html",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lumenjuris.com/plan-de-site-html/",
+  "title": {
+    "raw": "Plan de site html",
+    "rendered": "Plan de site html"
+  },
+  "content": {
+    "raw": "",
+    "rendered": "\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"622\" class=\"elementor elementor-622\">\n\t\t\t\t<div class=\"elementor-element elementor-element-7f64a2f8 e-flex e-con-boxed e-con e-parent\" data-id=\"7f64a2f8\" data-element_type=\"container\" data-e-type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-a49cecb elementor-widget elementor-widget-sitemap\" data-id=\"a49cecb\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"sitemap.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t \t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-522e8bd e-flex e-con-boxed e-con e-parent\" data-id=\"522e8bd\" data-element_type=\"container\" data-e-type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-a8f5ea2 elementor-widget elementor-widget-wp-widget-pages\" data-id=\"a8f5ea2\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"wp-widget-pages.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h5>Pages</h5><nav aria-label=\"Pages\">\n\t\t\t<ul>\n\t\t\t\t<li class=\"page_item page-item-2568\"><a href=\"https://www.lumenjuris.com/conditions-generales-dutilisation/\">Conditions générales d&rsquo;utilisation</a></li>\n<li class=\"page_item page-item-20\"><a href=\"https://www.lumenjuris.com/conditions-generales-ventes-cgv/\">Conditions générales de vente</a></li>\n<li class=\"page_item page-item-688\"><a href=\"https://www.lumenjuris.com/contactez-nous/\">Contactez-nous</a></li>\n<li class=\"page_item page-item-2630\"><a href=\"https://www.lumenjuris.com/outil-generation-contrat-ia/\">Générateur de contrats par IA &#8211; Logiciel juridique français</a></li>\n<li class=\"page_item page-item-103\"><a href=\"https://www.lumenjuris.com/\">Logiciel CLM et analyse contrats de clauses à risque</a></li>\n<li class=\"page_item page-item-2866\"><a href=\"https://www.lumenjuris.com/negociation-de-contrat/\">Logiciel IA négociation de contrats en ligne &#8211; Spécialisé en droit français</a></li>\n<li class=\"page_item page-item-2842\"><a href=\"https://www.lumenjuris.com/revision-contractuelle-ia/\">Logiciel revue contractuelle par IA &#8211; Outil juridique français</a></li>\n<li class=\"page_item page-item-2852\"><a href=\"https://www.lumenjuris.com/suivi-contrats-alertes/\">Logiciel suivi et alerte des contrats</a></li>\n<li class=\"page_item page-item-8\"><a href=\"https://www.lumenjuris.com/mentions-legales/\">Mentions légales</a></li>\n<li class=\"page_item page-item-2832\"><a href=\"https://www.lumenjuris.com/nos-engagements/\">Nos engagements &#8211; Sécurité, hébergement en France et RGPD</a></li>\n<li class=\"page_item page-item-2889\"><a href=\"https://www.lumenjuris.com/nos-tarifs/\">Nos tarifs &#8211; Logiciel juridique CLM français</a></li>\n<li class=\"page_item page-item-622\"><a href=\"https://www.lumenjuris.com/plan-de-site-html/\">Plan de site html</a></li>\n<li class=\"page_item page-item-3\"><a href=\"https://www.lumenjuris.com/politique-de-confidentialite/\">Politique de confidentialité</a></li>\n<li class=\"page_item page-item-2562\"><a href=\"https://www.lumenjuris.com/politique-de-cookies-ue/\">Politique de cookies (UE)</a></li>\n<li class=\"page_item page-item-287\"><a href=\"https://www.lumenjuris.com/politique-de-protection-des-donnees/\">Politique de protection des données</a></li>\n<li class=\"page_item page-item-281\"><a href=\"https://www.lumenjuris.com/politique-des-cookies/\">Politique des cookies</a></li>\n<li class=\"page_item page-item-607\"><a href=\"https://www.lumenjuris.com/qui-sommes-nous/\">Qui sommes-nous ?</a></li>\n<li class=\"page_item page-item-2820\"><a href=\"https://www.lumenjuris.com/signature-electronique-en-ligne/\">Signature électronique juridique en ligne &#8211; Logiciel juridique français</a></li>\n\t\t\t</ul>\n\n\t\t\t</nav>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-bbcbf9f e-flex e-con-boxed e-con e-parent\" data-id=\"bbcbf9f\" data-element_type=\"container\" data-e-type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t",
+    "protected": false,
+    "block_version": 0
+  },
+  "excerpt": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "inline_featured_image": false,
+    "footnotes": "",
+    "_elementor_edit_mode": "builder",
+    "_elementor_template_type": "wp-page",
+    "_elementor_data": "[{\"id\":\"7f64a2f8\",\"elType\":\"container\",\"settings\":[],\"elements\":[{\"id\":\"a49cecb\",\"elType\":\"widget\",\"settings\":{\"sitemap_items\":[{\"sitemap_title\":\"Pages\",\"_id\":\"8df05a0\",\"sitemap_hierarchical\":\"\"},{\"sitemap_type_selector\":\"taxonomy\",\"sitemap_title\":\"Categories\",\"_id\":\"f1fb25b\"}],\"sitemap_exclude\":[\"manual_selection\"],\"sitemap_exclude_ids\":[\"19\",\"18\",\"17\",\"16\"]},\"elements\":[],\"widgetType\":\"sitemap\"}],\"isInner\":false},{\"id\":\"522e8bd\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\"},\"elements\":[{\"id\":\"a8f5ea2\",\"elType\":\"widget\",\"settings\":[],\"elements\":[],\"widgetType\":\"wp-widget-pages\"}],\"isInner\":false},{\"id\":\"bbcbf9f\",\"elType\":\"container\",\"settings\":{\"flex_direction\":\"column\"},\"elements\":[{\"id\":\"adf9db4\",\"elType\":\"widget\",\"settings\":[],\"elements\":[],\"widgetType\":\"wp-widget-recent-posts\"}],\"isInner\":false}]",
+    "_elementor_page_settings": null
+  },
+  "permalink_template": "https://www.lumenjuris.com/%pagename%/",
+  "generated_slug": "plan-de-site-html",
+  "class_list": [
+    "post-622",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages/622",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/comments?post=622"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 4,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages/622/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2532,
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages/622/revisions/2532"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/media?parent=622"
+      }
+    ],
+    "wp:action-publish": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages/622"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages/622"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "https://www.lumenjuris.com/wp-json/wp/v2/pages/622"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

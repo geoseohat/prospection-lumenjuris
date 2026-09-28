@@ -1,0 +1,262 @@
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Comment négocier un contrat efficacement ?", "acceptedAnswer": {"@type": "Answer", "text": "Préparez vos positions avant d’ouvrir les pourparlers : clauses non négociables, positions de repli, limites chiffrées. Négociez ensuite clause par clause plutôt que globalement, tracez chaque concession par écrit et validez en interne avant tout envoi. Un outil comme Lumen Juris structure cette méthode : playbook, commentaires par clause, suivi des modifications et historique horodaté des échanges."}}, {"@type": "Question", "name": "Peut-on rompre des négociations sans risque ?", "acceptedAnswer": {"@type": "Answer", "text": "La rupture des pourparlers est libre en droit français (article 1112 du Code civil), mais elle doit rester de bonne foi : une rupture brutale de négociations avancées, après avoir laissé croire à la conclusion du contrat, peut engager la responsabilité de son auteur. La chronologie des échanges est alors déterminante, d’où l’intérêt de négociations tracées et horodatées. Pour les situations à enjeu, consultez un professionnel."}}, {"@type": "Question", "name": "Comment suivre les versions d’un contrat en cours de négociation ?", "acceptedAnswer": {"@type": "Answer", "text": "Travaillez sur un document unique plutôt que sur des pièces jointes qui se croisent, et utilisez un comparateur de versions : chaque écart entre deux versions, ajout, suppression, clause concernée, auteur, date, doit être visible d’un coup d’œil. Dans Lumen Juris, le redlining est automatique et l’historique complet reste attaché au contrat jusqu’à la contrathèque."}}, {"@type": "Question", "name": "Le cocontractant doit-il créer un compte pour négocier ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Votre cocontractant reçoit un lien sécurisé et participe à la négociation depuis son navigateur : lecture du contrat, commentaires, propositions de modification. Aucune création de compte ni installation n’est requise de son côté. Ses amendements entrent dans le même circuit de suivi des modifications et de validation interne que les vôtres."}}, {"@type": "Question", "name": "Quelles clauses se négocient le plus souvent ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans les contrats d’affaires, l’essentiel des pourparlers porte sur la responsabilité (plafonds et exclusions), la propriété intellectuelle, la résiliation et ses préavis, les pénalités et niveaux de service, et le prix avec ses mécanismes d’indexation. Ce sont aussi les clauses pour lesquelles disposer de positions de repli écrites, issues d’un playbook contractuel, fait gagner le plus de temps."}}, {"@type": "Question", "name": "Les échanges de négociation sont-ils confidentiels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Dans Lumen Juris, les versions, commentaires et concessions sont chiffrés, hébergés en France et accessibles aux seules parties à la négociation. Les documents ne servent jamais à entraîner des modèles d’IA. Pour la confidentialité juridique des pourparlers eux-mêmes, un NDA reste la bonne pratique, vous pouvez le générer et le faire signer dans la même plateforme."}}, {"@type": "Question", "name": "Comment fonctionne la validation interne avant envoi ?", "acceptedAnswer": {"@type": "Answer", "text": "Avant qu’une version amendée ne parte chez la partie adverse, elle passe par votre circuit d’approbation : le responsable désigné, juridique, direction, relit les modifications, les accepte ou les refuse. Rien ne sort sans validation, et l’historique conserve qui a approuvé quoi. Les opérationnels avancent, le juridique garde le contrôle."}}, {"@type": "Question", "name": "La négociation de contrat en ligne est-elle gratuite ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous pouvez essayer gratuitement la négociation dans Lumen Juris : importez ou générez un contrat, invitez votre cocontractant par lien sécurisé et testez les commentaires par clause, le suivi des modifications et la comparaison de versions sur un cas réel. L’essai est sans engagement, au sein de la plateforme complète, de la génération à la signature."}}]}  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Lumen Juris, Négociation de contrat en ligne", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "url": "https://www.lumenjuris.com/negociation-de-contrat/", "description": "Logiciel de négociation contractuelle : commentaires par clause, suivi des modifications, comparaison de versions, positions de repli du playbook, validation interne, accès cocontractant par lien sécurisé. Hébergement en France, RGPD.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Essai gratuit de la négociation de contrat"}, "publisher": {"@type": "Organization", "name": "Lumen Juris", "url": "https://www.lumenjuris.com/"}}  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.lumenjuris.com/"}, {"@type": "ListItem", "position": 2, "name": "Négociation de contrat", "item": "https://www.lumenjuris.com/negociation-de-contrat/"}]}
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+
+/* ===== video : meme cadre que les images ===== */
+.elementor-widget-video{background:#fff;padding:8px;border-radius:16px;
+  border:1px solid rgba(27,42,74,.08);box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0}
+.elementor-widget-video iframe,.elementor-widget-video video{border-radius:10px}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+
+
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+ 
+ 
+(function(){
+  var svgScale='   ';
+  var svgCheck='   ';
+  var svgDoc='   ';
+  var css='.lj-badge{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#1C1C1C;font-family:Roboto,sans-serif;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(27,42,74,.22);white-space:nowrap;pointer-events:none}.lj-badge svg{width:15px;height:15px;flex:none}.elementor-element-lj9a102,.elementor-element-ljsec2m{position:relative}.elementor-element-lj9a102 .lj-b1{top:16px;right:-14px}.elementor-element-lj9a102 .lj-b2{bottom:20px;left:-14px}.elementor-element-ljsec2m .lj-b1{top:16px;left:-14px}.elementor-element-ljsec2m .lj-b2{bottom:20px;right:-14px}@media (max-width:767px){.elementor-element-lj9a102 .lj-b1,.elementor-element-ljsec2m .lj-b2{right:8px}.elementor-element-lj9a102 .lj-b2,.elementor-element-ljsec2m .lj-b1{left:8px}}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  
+  var chromeCss='.lj-chrome{display:flex;align-items:center;gap:10px;background:#F2F5FA;border-bottom:1px solid rgba(27,42,74,.10);border-radius:10px 10px 0 0;padding:9px 12px;line-height:1}.lj-chrome .lj-url{font:500 11.5px Roboto,sans-serif;color:#5E6B85;background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:99px;padding:4px 14px;letter-spacing:.2px}.lj-haschrome img,.lj-haschrome video{border-radius:0 0 10px 10px!important}';
+  var st2=document.createElement('style');st2.textContent=chromeCss;document.head.appendChild(st2);
+  function addChrome(sel){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-chrome'))return;
+    el.classList.add('lj-haschrome');
+    var bar=document.createElement('div');bar.className='lj-chrome';
+    bar.innerHTML='      app.lumenjuris.com ';
+    var media=el.querySelector('img,video,.elementor-video, .e-hosted-video, iframe');
+    el.insertBefore(bar, el.firstChild);
+  }
+
+  function add(sel,badges){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-badge'))return;
+    badges.forEach(function(b){
+      var s=document.createElement('span');
+      s.className='lj-badge '+b[0];s.innerHTML=b[1]+' '+b[2]+' ';
+      el.appendChild(s);
+    });
+  }
+  function init(){
+    addChrome('.elementor-element-lj9a102');addChrome('.elementor-element-196111d');addChrome('.elementor-element-ljsec2m');
+    add('.elementor-element-lj9a102',[['lj-b1',svgScale,'Commentaires par clause'],['lj-b2',svgDoc,'Concessions tracées']]);add('.elementor-element-ljsec2m',[['lj-b1',svgCheck,'Versions comparées'],['lj-b2',svgCheck,'Conforme RGPD']]);
+    document.querySelectorAll('.elementor-element-ljfqa0 details').forEach(function(d){d.setAttribute('open','')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+Négociation de contrat en ligne
+Commentez, amendez et tracez chaque version, jusqu’à la signature
+Nos outils et processus internes sont mis à jour régulièrement selon le RGPD.
+Notre IA est entraînée sur le droit français et branchée avec Légifrance.
+Hébergement 100 % français, le serveur est situé à Clermont-Ferrand.
+Aucune donnée client n'est partagée ni utilisée pour améliorer notre outil.
+Comment négocier un contrat efficacement ?
+Une  négociation de contrat  réussie tient à trois disciplines : préparer ses positions avant d’ouvrir les pourparlers, tracer chaque concession, et savoir à tout moment quelle est la dernière version. C’est précisément ce que structure Lumen Juris : vous  négociez le contrat en ligne , clause par clause, avec vos positions de repli sous la main, un fil de commentaires par clause et un historique horodaté des échanges, au lieu d’un fil d’e-mails et de pièces jointes Word qui se contredisent.
+Commentaires par clause  : chaque discussion est attachée à la clause qu’elle concerne : plus de remarques orphelines perdues dans un e-mail.
+Positions de repli du playbook  : votre bibliothèque de clauses fournit les formulations de repli validées : vous concédez ce qui était prévu, pas ce qui vous échappe.
+Validation interne avant envoi  : le contrat amendé passe par votre circuit d’approbation interne avant de partir chez la partie adverse.
+Fini les versions Word qui se croisent par e-mail
+Le vrai concurrent d’un logiciel de négociation contractuelle n’est pas un autre logiciel : c’est « Contrat_v7_final_VDEF2.docx ». Versions qui se croisent, concessions oubliées, dernière version incertaine, pièce jointe modifiée sans suivi des modifications : chaque aller-retour par e-mail dégrade la traçabilité. Dans Lumen Juris, le  comparateur de versions  montre chaque écart, ajouts, suppressions, clause concernée, auteur, horodatage, sur le contrat issu de  la génération par IA  et vérifié par  la révision contractuelle . La version finale part en  signature électronique  sans ressaisie.
+Redlining lisible  : ajouts et suppressions tracés dans le document, écart par écart, avec leur auteur et leur date.
+Une seule version de référence  : tout le monde travaille sur le même document : la « dernière version » n’est plus un sujet de débat.
+Piste d’audit complète  : l’historique des échanges et des concessions est conservé avec le contrat, jusque dans la contrathèque.
+Votre cocontractant négocie via un lien sécurisé, sans compte
+Une négociation contractuelle B2B implique toujours une partie qui n’utilise pas votre outil. Lumen Juris ne lui impose rien : votre cocontractant reçoit un lien sécurisé, ouvre le contrat dans son navigateur, commente et propose ses modifications, sans créer de compte, sans installer quoi que ce soit. Ses amendements entrent dans le même circuit que les vôtres : suivi des modifications, fil de commentaires par clause, validation interne avant acceptation. Chaque échange est horodaté et conservé : si les pourparlers tournent court, vous disposez d’une chronologie documentée des discussions : précieuse au regard de la bonne foi précontractuelle exigée par l’article 1112 du Code civil.
+Négocier un contrat en ligne en 3 étapes
+Le contrat généré et révisé embarque vos positions de repli issues du playbook, validées en interne avant l’envoi.
+Commentaires par clause, suivi des modifications, comparaison de versions : chaque concession est tracée et horodatée.
+La version acceptée part en signature électronique sans ressaisie, puis rejoint la contrathèque avec tout son historique.
+Quelles clauses se négocient le plus, et avec quels appuis ?
+Certaines clauses concentrent l’essentiel des pourparlers. Pour chacune, le playbook fournit la position de repli, et l’historique trace ce qui a été concédé.
+Le droit français laisse les pourparlers libres : l’article  1112 du Code civil  consacre la liberté d’initiative, de déroulement et de rupture des négociations, sous l’exigence de bonne foi. La contrepartie est connue : une  rupture abusive des négociations  engage la responsabilité de son auteur, et la jurisprudence apprécie la faute au vu de l’avancement des discussions et des engagements laissés entendre. D’où l’intérêt d’une négociation tracée : lettre d’intention, NDA, term sheet, versions successives et concessions horodatées constituent une chronologie objective des échanges. Lumen Juris ne vous dira jamais quoi concéder, l’outil n’est pas un conseil stratégique, mais il garantit que chaque étape des pourparlers laisse une trace exploitable.
+.lj-table-wrap{overflow-x:auto}
+.lj-cmp{width:100%;border-collapse:separate;border-spacing:0;background:#fff;
+  border:1px solid rgba(27,42,74,.10);border-radius:16px;overflow:hidden;
+  font-family:Roboto,sans-serif;font-size:14.5px;color:#39445A;line-height:1.55;min-width:640px}
+.lj-cmp th{background:#1B2A4A;color:#fff;font-family:'Roboto Slab',serif;font-weight:600;
+  padding:14px 16px;text-align:left;font-size:14px}
+.lj-cmp td{padding:13px 16px;border-top:1px solid rgba(27,42,74,.08);vertical-align:top}
+.lj-cmp tr td:first-child{font-weight:600;color:#1C1C1C;white-space:nowrap}
+ 
+  
+   Clause négociée  Enjeu typique  L’appui dans Lumen Juris   
+ 
+  Responsabilité 
+ Plafonds, exclusions, dommages indirects : le point d’équilibre financier du contrat. 
+ Position de repli du playbook et alerte de la révision si le plafond proposé s’écarte de votre pratique.  
+  Propriété intellectuelle 
+ Titularité des livrables, licences, développements spécifiques. 
+ Clauses de référence de votre bibliothèque, commentaires par clause pour isoler la discussion.  
+  Résiliation 
+ Préavis, cas de résiliation anticipée, conséquences financières. 
+ Comparaison de versions : toute modification du préavis ressort immédiatement.  
+  Pénalités et SLA 
+ Montants, plafonnement, conditions de déclenchement. 
+ Historique des concessions : qui a accepté quoi, quand : la chronologie fait foi en interne.  
+  Prix et indexation 
+ Révision, clause d’échelle mobile, conditions de paiement. 
+ La version signée bascule dans le suivi des échéances pour appliquer l’indexation à la bonne date.
+Essayez la négociation gratuitement
+Un outil de collaboration juridique pour chaque équipe
+La négociation contractuelle B2B mobilise le juridique, le commercial et la direction : chacun intervient dans le même document, avec des rôles clairs et un historique commun.
+Négociez pour vos clients avec une chronologie opposable : versions, commentaires et concessions horodatés, utiles jusqu’au précontentieux en cas de rupture des pourparlers.
+Juristes & directions juridiques
+Encadrez les négociations menées par les opérationnels : positions de repli imposées par le playbook, validation interne obligatoire avant tout envoi à la partie adverse.
+Avancez sans attendre le juridique sur chaque virgule : les clauses négociables et les limites sont connues d’avance, le reste escalade automatiquement.
+Des pourparlers confidentiels, hébergés en France
+Une négociation expose vos marges, vos limites et vos intentions : sa confidentialité n’est pas négociable. Les échanges menés dans Lumen Juris, commentaires, versions, concessions, sont chiffrés, hébergés en France et traités conformément au RGPD. Vos documents et vos discussions ne servent jamais à entraîner des modèles d’IA, ni les nôtres ni ceux de tiers. Et lorsque la négociation aboutit, le contrat signé et son historique complet rejoignent la contrathèque, où  le suivi des échéances  prend le relais : préavis, reconductions et révisions de prix issus de la version négociée sont surveillés automatiquement.
+Hébergement en France  : versions, commentaires et historiques restent sur le territoire.
+Confidentialité des échanges  : chiffrement, accès limités aux parties à la négociation.
+Aucun entraînement sur vos documents  : vos pourparlers ne nourrissent aucun modèle d’IA.
+Négociation de contrat : vos questions
+Comment négocier un contrat efficacement ?
+Peut-on rompre des négociations sans risque ?
+Comment suivre les versions d’un contrat en cours de négociation ?
+Le cocontractant doit-il créer un compte pour négocier ?
+Quelles clauses se négocient le plus souvent ?
+Les échanges de négociation sont-ils confidentiels ?
+Comment fonctionne la validation interne avant envoi ?
+La négociation de contrat en ligne est-elle gratuite ?
+Préparez vos positions avant d’ouvrir les pourparlers : clauses non négociables, positions de repli, limites chiffrées. Négociez ensuite clause par clause plutôt que globalement, tracez chaque concession par écrit et validez en interne avant tout envoi. Un outil comme Lumen Juris structure cette méthode : playbook, commentaires par clause, suivi des modifications et historique horodaté des échanges.
+La rupture des pourparlers est libre en droit français (article 1112 du Code civil), mais elle doit rester de bonne foi : une rupture brutale de négociations avancées, après avoir laissé croire à la conclusion du contrat, peut engager la responsabilité de son auteur. La chronologie des échanges est alors déterminante, d’où l’intérêt de négociations tracées et horodatées. Pour les situations à enjeu, consultez un professionnel.
+Travaillez sur un document unique plutôt que sur des pièces jointes qui se croisent, et utilisez un comparateur de versions : chaque écart entre deux versions, ajout, suppression, clause concernée, auteur, date, doit être visible d’un coup d’œil. Dans Lumen Juris, le redlining est automatique et l’historique complet reste attaché au contrat jusqu’à la contrathèque.
+Non. Votre cocontractant reçoit un lien sécurisé et participe à la négociation depuis son navigateur : lecture du contrat, commentaires, propositions de modification. Aucune création de compte ni installation n’est requise de son côté. Ses amendements entrent dans le même circuit de suivi des modifications et de validation interne que les vôtres.
+Dans les contrats d’affaires, l’essentiel des pourparlers porte sur la responsabilité (plafonds et exclusions), la propriété intellectuelle, la résiliation et ses préavis, les pénalités et niveaux de service, et le prix avec ses mécanismes d’indexation. Ce sont aussi les clauses pour lesquelles disposer de positions de repli écrites, issues d’un playbook contractuel, fait gagner le plus de temps.
+Oui. Dans Lumen Juris, les versions, commentaires et concessions sont chiffrés, hébergés en France et accessibles aux seules parties à la négociation. Les documents ne servent jamais à entraîner des modèles d’IA. Pour la confidentialité juridique des pourparlers eux-mêmes, un NDA reste la bonne pratique, vous pouvez le générer et le faire signer dans la même plateforme.
+Avant qu’une version amendée ne parte chez la partie adverse, elle passe par votre circuit d’approbation : le responsable désigné, juridique, direction, relit les modifications, les accepte ou les refuse. Rien ne sort sans validation, et l’historique conserve qui a approuvé quoi. Les opérationnels avancent, le juridique garde le contrôle.
+Vous pouvez essayer gratuitement la négociation dans Lumen Juris : importez ou générez un contrat, invitez votre cocontractant par lien sécurisé et testez les commentaires par clause, le suivi des modifications et la comparaison de versions sur un cas réel. L’essai est sans engagement, au sein de la plateforme complète, de la génération à la signature.
+Menez votre prochaine négociation de contrat en ligne
+Essayez gratuitement la négociation de contrat dans Lumen Juris : commentaires par clause, versions comparées, concessions tracées, et la version finale qui part en signature sans ressaisie. Le rapport de force reste votre affaire ; la traçabilité devient la nôtre.

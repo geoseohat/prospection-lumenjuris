@@ -1,0 +1,58 @@
+{
+  "modeles": {
+    "pacte-d-associes": {
+      "fichiers": {
+        "docx": {
+          "id": 2953,
+          "url": "https://www.lumenjuris.com/wp-content/uploads/2026/09/modele-pacte-d-associes-lumen-juris-2.docx",
+          "taille": "43 Ko",
+          "empreinte": "a4c60fa0c8443b9b0d05ad0a42c05aae204f874f78f73c0663ff915d82062183"
+        },
+        "pdf": {
+          "id": 2954,
+          "url": "https://www.lumenjuris.com/wp-content/uploads/2026/09/modele-pacte-d-associes-lumen-juris-2.pdf",
+          "taille": "58 Ko",
+          "empreinte": "a4c60fa0c8443b9b0d05ad0a42c05aae204f874f78f73c0663ff915d82062183"
+        }
+      },
+      "statut": "draft",
+      "id": 2931,
+      "lien": "https://www.lumenjuris.com/?page_id=2931",
+      "image": {
+        "id": 2936,
+        "url": "https://www.lumenjuris.com/wp-content/uploads/2026/09/modele-pacte-d-associes-lumen-juris.png",
+        "taille": "284 Ko",
+        "empreinte": "30f0215b5aa93df06c41118a071a5858a402c39eeb704b3b8558edb07700836f"
+      }
+    },
+    "conditions-generales-de-vente": {
+      "fichiers": {
+        "docx": {
+          "id": 2958,
+          "url": "https://www.lumenjuris.com/wp-content/uploads/2026/09/modele-conditions-generales-de-vente-lumen-juris.docx",
+          "taille": "43 Ko",
+          "empreinte": "b27b2bc9b6345b8c064b3723f4bc04993ab2f25b31d4d5640b8a8ffe77071bca"
+        },
+        "pdf": {
+          "id": 2959,
+          "url": "https://www.lumenjuris.com/wp-content/uploads/2026/09/modele-conditions-generales-de-vente-lumen-juris.pdf",
+          "taille": "58 Ko",
+          "empreinte": "b27b2bc9b6345b8c064b3723f4bc04993ab2f25b31d4d5640b8a8ffe77071bca"
+        }
+      },
+      "image": {
+        "id": 2960,
+        "url": "https://www.lumenjuris.com/wp-content/uploads/2026/09/modele-conditions-generales-de-vente-lumen-juris.png",
+        "taille": "293 Ko",
+        "empreinte": "33b55ebd956697f954398d765815a348eb01f6859ed986eb0f499c6d74a37b48"
+      },
+      "statut": "publish",
+      "id": 2962,
+      "lien": "https://www.lumenjuris.com/outil-generation-contrat-ia/modele-contrat/conditions-generales-de-vente/"
+    }
+  },
+  "bibliotheque": {
+    "id": 2930,
+    "statut": "publish"
+  }
+}

@@ -1,0 +1,342 @@
+/* ===== header : hauteurs homogenes, CTA pro, logo equilibre ===== */
+.site-header{padding-top:18px;padding-bottom:18px}
+.site-header .header-inner{align-items:center}
+.site-header .site-branding .site-logo img{width:190px!important;max-width:190px!important;display:block}
+.site-header .site-navigation ul.menu{align-items:center;gap:16px}
+.site-header .site-navigation ul.menu > li{margin:0!important}
+.site-header .site-navigation ul.menu li a{padding:0 16px}
+.site-header .site-navigation ul.menu li{display:flex;align-items:center}
+.site-header .site-navigation ul.menu li a{
+  display:inline-flex;align-items:center;height:36px;padding:0 20px;line-height:1;
+  border-radius:10px;color:#1C1C1C;font-weight:600;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.site-header .site-navigation ul.menu li a:hover{background:rgba(27,42,74,.07)}
+/* Contactez-nous : lien souligne */
+.site-header .site-navigation ul.menu li.menu-item-2397 a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current-menu-item a,
+.site-header .site-navigation ul.menu li.menu-item-2397.current_page_item a{
+  background:none!important;color:#1C1C1C!important;box-shadow:none!important;
+  text-decoration:underline!important;text-underline-offset:6px;text-decoration-thickness:2px}
+.site-header .site-navigation ul.menu li.menu-item-2397 a:hover{
+  background:rgba(27,42,74,.07)!important;transform:none;box-shadow:none!important}
+
+/* ===== sous-menu : chevron moderne + carte ===== */
+.site-header .site-navigation ul.menu li.menu-item-has-children > ul.sub-menu{
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .3s}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover > ul.sub-menu,
+.site-header .site-navigation ul.menu li.menu-item-has-children:focus-within > ul.sub-menu{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
+
+.site-header .site-navigation ul.menu li.menu-item-has-children{position:relative;padding-inline-end:0!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children:after{content:none!important}
+.site-header .site-navigation ul.menu li.menu-item-has-children a:after{
+  content:'';width:7px;height:7px;flex:none;margin-left:9px;margin-top:-3px;
+  border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg);transition:transform .25s ease}
+.site-header .site-navigation ul.menu li.menu-item-has-children:hover a:after{
+  transform:rotate(225deg);margin-top:3px}
+.site-header .site-navigation ul.menu li.menu-item-has-children ul.sub-menu a:after{content:none}
+.site-header .site-navigation ul.menu li ul.sub-menu{
+  min-width:max-content!important;left:0;top:100%!important;
+  border-top:12px solid transparent!important;background:#fff!important;
+  background-clip:padding-box;border-left:1px solid rgba(27,42,74,.08);
+  border-right:1px solid rgba(27,42,74,.08);border-bottom:1px solid rgba(27,42,74,.08);
+  border-radius:14px;filter:drop-shadow(0 16px 30px rgba(27,42,74,.18));
+  padding:8px!important;overflow:visible}
+.site-header .site-navigation ul.menu li ul.sub-menu li{
+  border:none!important;display:block;width:100%}
+.site-header .site-navigation ul.menu li ul.sub-menu li a{
+  display:flex;width:100%;height:auto;padding:11px 16px;border-radius:9px;
+  white-space:nowrap;font-weight:500;color:#1C1C1C;background:none}
+.site-header .site-navigation ul.menu li ul.sub-menu li a:hover{
+  background:rgba(164,191,223,.20)}
+
+@media (max-width:1024px){
+  .site-header .site-branding .site-logo img{width:160px!important;max-width:160px!important}
+}
+/* ===== hero : degrade anime + emplacement photo (bas droite) ===== */
+.elementor-element-76a66a7{
+  position:relative;
+  background:linear-gradient(120deg,#F2F6FC 0%,#C9DAEE 35%,#A4BFDF 65%,#E4EDF8 100%) !important;
+  background-size:220% 220% !important;
+  animation:ljHeroGrad 14s ease-in-out infinite;overflow:hidden}
+@keyframes ljHeroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.elementor-element-76a66a7:after{
+  content:'';position:absolute;right:0;bottom:0;width:min(430px,38%);height:92%;
+  background-image:var(--lj-hero-photo,none);background-repeat:no-repeat;
+  background-position:bottom right;background-size:contain;opacity:.16;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 55%,transparent);
+  mask-image:linear-gradient(to left,#000 55%,transparent)}
+.elementor-element-76a66a7>*{position:relative;z-index:1}
+.elementor-element-76a66a7 .elementor-widget-heading{animation:ljHeroFloat 7s ease-in-out infinite}
+@keyframes ljHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ===== titres de section : filet degrade ===== */
+.elementor-element-lj9a104 .elementor-heading-title:after,
+.elementor-element-ljsec2h .elementor-heading-title:after,
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{
+  content:'';display:block;width:56px;height:4px;border-radius:99px;
+  margin-top:14px;background:linear-gradient(90deg,#A4BFDF,#1B2A4A)}
+.elementor-element-ljstph .elementor-heading-title:after,
+.elementor-element-ljfaqh .elementor-heading-title:after,
+.elementor-element-ljtmoh .elementor-heading-title:after,
+.elementor-element-b2faa5a .elementor-heading-title:after{margin-left:auto;margin-right:auto}
+
+/* ===== video : meme cadre que les images ===== */
+.elementor-widget-video{background:#fff;padding:8px;border-radius:16px;
+  border:1px solid rgba(27,42,74,.08);box-shadow:0 16px 40px rgba(27,42,74,.18);line-height:0}
+.elementor-widget-video iframe,.elementor-widget-video video{border-radius:10px}
+/* ===== images : cadre + ombre legere UNIFORME (toutes les images de la page) ===== */
+.elementor-widget-image{
+  background:#fff;padding:8px;border-radius:16px;border:1px solid rgba(27,42,74,.08);
+  box-shadow:0 16px 40px rgba(27,42,74,.18);
+  transition:transform .4s ease,box-shadow .4s ease;line-height:0}
+.elementor-widget-image:hover{
+  transform:translateY(-4px);box-shadow:0 24px 52px rgba(27,42,74,.24)}
+.elementor-widget-image img{
+  border-radius:10px!important;display:block;width:100%;height:auto;
+  padding:0!important;border:none!important;box-shadow:none!important}
+
+/* ===== cartes : liseret + survol ===== */
+.elementor-element-ljstp0,.elementor-element-ljstp1,.elementor-element-ljstp2,
+.elementor-element-ljprf0,.elementor-element-ljprf1,.elementor-element-ljprf2,
+.elementor-element-6bcda23,.elementor-element-d9dc1ae,.elementor-element-a72abd9,.elementor-element-b6425e2{
+  position:relative;overflow:hidden;border:1px solid rgba(27,42,74,.08);
+  transition:transform .35s ease,box-shadow .35s ease}
+.elementor-element-ljstp0:before,.elementor-element-ljstp1:before,.elementor-element-ljstp2:before,
+.elementor-element-ljprf0:before,.elementor-element-ljprf1:before,.elementor-element-ljprf2:before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#A4BFDF,#1B2A4A);opacity:.9}
+.elementor-element-ljstp0:hover,.elementor-element-ljstp1:hover,.elementor-element-ljstp2:hover,
+.elementor-element-ljprf0:hover,.elementor-element-ljprf1:hover,.elementor-element-ljprf2:hover,
+.elementor-element-6bcda23:hover,.elementor-element-d9dc1ae:hover,.elementor-element-a72abd9:hover,.elementor-element-b6425e2:hover{
+  transform:translateY(-6px);box-shadow:0 22px 44px rgba(27,42,74,.14)}
+
+/* ===== numeros d'etapes ===== */
+.elementor-element-ljstn0 .elementor-heading-title,
+.elementor-element-ljstn1 .elementor-heading-title,
+.elementor-element-ljstn2 .elementor-heading-title{
+  color:#1B2A4A;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #1B2A4A;opacity:.55}
+
+/* ===== FAQ ===== */
+.elementor-element-ljfqa0 details{
+  background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;
+  box-shadow:0 6px 16px rgba(27,42,74,.05);transition:box-shadow .3s ease;overflow:hidden}
+.elementor-element-ljfqa0 details[open]{box-shadow:0 18px 40px rgba(27,42,74,.13)}
+.elementor-element-ljfqa0 summary{cursor:pointer}
+
+/* ===== boutons : fleche en pastille ===== */
+.elementor-button{transition:transform .3s ease,box-shadow .3s ease}
+.elementor-button:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(27,42,74,.25)}
+
+
+@media (prefers-reduced-motion: reduce){
+  .elementor-element-76a66a7,.elementor-element-76a66a7 .elementor-widget-heading{animation:none}
+}
+ 
+ 
+(function(){
+  var svgScale='   ';
+  var svgCheck='   ';
+  var svgDoc='   ';
+  var css='.lj-badge{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#1C1C1C;font-family:Roboto,sans-serif;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(27,42,74,.22);white-space:nowrap;pointer-events:none}.lj-badge svg{width:15px;height:15px;flex:none}.elementor-element-lj9a102,.elementor-element-ljsec2m{position:relative}.elementor-element-lj9a102 .lj-b1{top:16px;right:-14px}.elementor-element-lj9a102 .lj-b2{bottom:20px;left:-14px}.elementor-element-ljsec2m .lj-b1{top:16px;left:-14px}.elementor-element-ljsec2m .lj-b2{bottom:20px;right:-14px}@media (max-width:767px){.elementor-element-lj9a102 .lj-b1,.elementor-element-ljsec2m .lj-b2{right:8px}.elementor-element-lj9a102 .lj-b2,.elementor-element-ljsec2m .lj-b1{left:8px}}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  function add(sel,badges){
+    var el=document.querySelector(sel);
+    if(!el||el.querySelector('.lj-badge'))return;
+    badges.forEach(function(b){
+      var s=document.createElement('span');
+      s.className='lj-badge '+b[0];s.innerHTML=b[1]+' '+b[2]+' ';
+      el.appendChild(s);
+    });
+  }
+  function init(){
+    add('.elementor-element-lj9a102',[['lj-b1',svgScale,'Valeur légale · eIDAS'],['lj-b2',svgDoc,'Art. 1367 Code civil']]);add('.elementor-element-ljsec2m',[['lj-b1',svgCheck,'Horodatage'],['lj-b2',svgCheck,'Conforme RGPD']]);
+    document.querySelectorAll('.elementor-element-ljfqa0 details').forEach(function(d){d.setAttribute('open','')});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+Des offres claires, sans engagement, hébergées en France
+.lj-pricing { --lj-primary: #1B2A4A; --lj-ink: #111827; --lj-muted: #6b7280; --lj-border: #e5e7eb; font-family: inherit; color: var(--lj-ink); max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+    .lj-pricing * { box-sizing: border-box; margin: 0; }
+    .lj-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+    .lj-head h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.5px; }
+    .lj-head p { margin-top: 4px; color: var(--lj-muted); }
+    .lj-toggle { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--lj-border); background: #fff; border-radius: 9999px; padding: 4px; font-size: 14px; }
+    .lj-toggle button { border: 0; background: transparent; color: var(--lj-muted); border-radius: 9999px; padding: 6px 16px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font: inherit; transition: background .15s, color .15s; }
+    .lj-toggle button.lj-active { background: var(--lj-primary); color: #f9fafb; }
+    .lj-toggle .lj-badge-off { border-radius: 9999px; padding: 2px 8px; font-size: 10px; font-weight: 600; background: rgba(16,185,129,.1); color: #059669; }
+    .lj-toggle button.lj-active .lj-badge-off { background: rgba(107,114,128,.5); color: #f3f4f6; }
+    .lj-grid { display: grid; gap: 24px; margin-top: 32px; grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .lj-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .lj-grid { grid-template-columns: repeat(4, 1fr); } }
+    .lj-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--lj-border); border-radius: 16px; background: #fff; padding: 24px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+    .lj-card.lj-highlight { border-color: var(--lj-primary); box-shadow: 0 10px 15px -3px rgba(0,0,0,.1); outline: 2px solid rgba(27,42,74,.30); }
+    @media (min-width: 1024px) { .lj-card.lj-highlight { transform: translateY(-8px) scale(1.02); } }
+    .lj-popular { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--lj-primary); color: #f9fafb; font-size: 12px; font-weight: 600; border-radius: 9999px; padding: 4px 12px; white-space: nowrap; }
+    .lj-card h3 { font-size: 18px; font-weight: 600; }
+    .lj-tagline { margin-top: 4px; font-size: 14px; color: var(--lj-muted); }
+    .lj-price { margin-top: 24px; display: flex; align-items: baseline; gap: 4px; }
+    .lj-price strong { font-size: 36px; font-weight: 700; letter-spacing: -1px; }
+    .lj-price span { font-size: 14px; color: var(--lj-muted); }
+    .lj-price-note { margin-top: 4px; font-size: 12px; color: var(--lj-muted); }
+    .lj-cta { margin-top: 24px; display: block; text-align: center; border-radius: 8px; padding: 10px 16px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid rgba(27,42,74,.45); color: var(--lj-ink); background: #fff; transition: background .15s; }
+    .lj-cta:hover { background: #f3f4f6; }
+    .lj-cta.lj-cta-primary { background: var(--lj-primary); border-color: var(--lj-primary); color: #f9fafb; }
+    .lj-cta.lj-cta-primary:hover { background: #24365C; }
+    .lj-features { margin-top: 24px; list-style: none; padding: 0; font-size: 14px; display: flex; flex-direction: column; gap: 12px; }
+    .lj-features .lj-sub { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--lj-muted); }
+    .lj-features li:not(.lj-sub) { display: flex; align-items: flex-start; gap: 8px; color: rgba(17,24,39,.8); }
+    .lj-features li:not(.lj-sub) > span { flex: 1; line-height: 1.5; }
+    .lj-features li strong { font-weight: 600; color: var(--lj-ink); }
+    .lj-features svg { flex-shrink: 0; margin-top: 2px; width: 16px; height: 16px; color: #059669; }
+    .lj-card.lj-highlight .lj-features svg { color: var(--lj-primary); }
+    .lj-faq { margin-top: 40px; display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .lj-faq { grid-template-columns: repeat(2, 1fr); } }
+    .lj-faq-item { border: 1px solid var(--lj-border); border-radius: 12px; background: #fff; padding: 20px; }
+    .lj-faq-item .lj-q { font-weight: 500; }
+    .lj-faq-item .lj-a { margin-top: 4px; font-size: 14px; color: var(--lj-muted); }
+
+    /* harmonisation charte + correctifs */
+    .lj-pricing h2, .lj-pricing h3 { font-family: 'Roboto Slab', serif; color: var(--lj-ink); }
+    .lj-pricing a { text-decoration: none !important; }
+    .lj-price [data-lj-price] { font-size: inherit !important; color: inherit !important; font-weight: inherit; }
+    .lj-price > span:last-child { font-size: 14px; color: var(--lj-muted); }
+   
+
+   
+     
+       Accédez à nos outils 
+       Choisissez l'offre adaptée à votre équipe. Changez ou annulez à tout moment. 
+     
+     
+       Mensuel 
+       Annuel  -20%  
+     
+   
+
+   
+     
+     
+       Free 
+       Indépendants & TPE 
+        0 €  HT / utilisateur / mois  
+       Gratuit, sans engagement 
+       Commencer gratuitement 
+       
+             Génération de contrats  illimitée  (export avec filigrane)  
+             Signature électronique simple  illimitée   
+              3 analyses  de contrat par IA / mois  
+             Négociation collaborative incluse  
+             Veille juridique incluse  
+             Contrathèque : 5 contrats suivis  
+       
+     
+
+     
+     
+       Starter 
+       PME sans direction juridique 
+         39  €  HT / utilisateur / mois  
+       Facturé annuellement 
+       Choisir Starter 
+       
+         Tout le Free, plus : 
+             Export des contrats  sans filigrane   
+              30 analyses  de contrat par IA / mois  
+             Contrats et modèles illimités  
+             Suivi des échéances illimité + alertes (préavis, loi Chatel)  
+             Tableau de bord des renouvellements  
+       
+     
+
+     
+     
+       ✦ Le plus populaire 
+       Pro 
+       PME structurée & ETI 
+         99  €  HT / utilisateur / mois  
+       Facturé annuellement 
+       Choisir Pro 
+       
+         Tout le Starter, plus : 
+             Analyses de contrat par IA  illimitées   
+             Jurisprudence reliée aux clauses analysées  
+             Workflows d’approbation interne  
+             10 signatures avancées eIDAS / mois (via DocuSign)  
+             Intégrations standards  
+       
+     
+
+     
+     
+       Enterprise 
+       ETI de plus de 250 salariés 
+        Sur devis  
+       Tarification adaptée à votre organisation 
+       Nous contacter 
+       
+         Tout le Pro, plus : 
+             RBAC avancé & espaces de travail multiples  
+             Signatures avancées en volume (sur mesure)  
+             API & intégrations métier sur mesure  
+             Module d’audit & conformité RGPD renforcé  
+             SSO (authentification unique)  
+             SLA, support dédié & accompagnement  
+       
+     
+   
+
+   
+     
+       Puis-je changer d'offre à tout moment ? 
+       Oui. Le changement est effectif immédiatement et la facturation est ajustée au prorata. 
+     
+     
+       Mes données sont-elles hébergées en France ? 
+       Oui, l'ensemble des données est hébergé en France et conforme au RGPD. 
+     
+     
+       Proposez-vous une période d'essai ? 
+       14 jours d'essai gratuits sur l'offre Pro, sans carte bancaire requise. 
+     
+     
+       Comment fonctionne la facturation annuelle ? 
+       Vous économisez 20 % en réglant l'année en une fois. Une facture est émise automatiquement. 
+     
+  
+     
+       La génération de contrats est-elle vraiment gratuite ? 
+       Oui, illimitée sur toutes les formules. En Free, l'export PDF/Word porte un filigrane Lumen Juris ; dès Starter, vos documents s'exportent sans filigrane. 
+     
+     
+       Pourquoi l'analyse par IA est-elle limitée en Free ? 
+       C'est la fonctionnalité la plus coûteuse à opérer (modèles d'IA, jurisprudence). Le Free inclut 3 analyses par mois pour l'évaluer sur vos propres contrats ; Starter passe à 30, Pro les rend illimitées. 
+     
+   
+
+   
+    (function () {
+      var root = document.currentScript.closest(".lj-pricing");
+      var buttons = root.querySelectorAll("[data-lj-interval]");
+      function setInterval_(interval) {
+        buttons.forEach(function (b) {
+          b.classList.toggle("lj-active", b.getAttribute("data-lj-interval") === interval);
+        });
+        root.querySelectorAll("[data-lj-price]").forEach(function (el) {
+          el.textContent = interval === "year" ? el.getAttribute("data-yearly") : el.getAttribute("data-monthly");
+        });
+        root.querySelectorAll("[data-lj-note]").forEach(function (el) {
+          el.textContent = interval === "year" ? "Facturé annuellement" : "Facturé mensuellement";
+        });
+      }
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function () { setInterval_(b.getAttribute("data-lj-interval")); });
+      });
+    })();

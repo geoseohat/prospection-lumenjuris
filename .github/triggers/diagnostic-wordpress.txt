@@ -1,2 +1,3 @@
 diagnostic-1
 diagnostic-2
+diagnostic-3

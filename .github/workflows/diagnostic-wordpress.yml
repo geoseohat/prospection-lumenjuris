@@ -32,3 +32,15 @@ jobs:
           else
             echo "AUTH_OK=false"
           fi
+
+      - name: Diagnostiquer le POST media sans fichier
+        shell: bash
+        run: |
+          echo "===== POST MEDIA ====="
+          curl -sS --max-redirs 0 -X POST \
+            -u "admin:$WP_APP_PASSWORD" \
+            -H 'Content-Type: application/pdf' \
+            -H 'Content-Disposition: attachment; filename="diagnostic.pdf"' \
+            -D - -o /tmp/post-media-body.txt \
+            "$WP_SITE/wp-json/wp/v2/media" | grep -iE '^(HTTP/|location:|server:)' || true
+          echo "BODY_PREVIEW=$(head -c 180 /tmp/post-media-body.txt | tr '\n' ' ')"

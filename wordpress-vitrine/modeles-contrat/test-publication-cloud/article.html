@@ -1,0 +1,25 @@
+<h2 id="definition">À quoi sert cette page de test ?</h2>
+<p>Cette page est temporaire. Elle sert uniquement à vérifier que Lumen Juris peut construire et publier une page depuis le cloud, sans ordinateur local.</p>
+
+<h2 id="comparatif">Ce que le test vérifie</h2>
+<div class="lj-table-wrap">
+<table class="lj-table">
+<thead><tr><th scope="col">Élément</th><th scope="col">Vérification attendue</th></tr></thead>
+<tbody>
+<tr><th scope="row">Construction</th><td>Les fichiers du modèle sont générés dans le cloud.</td></tr>
+<tr><th scope="row">WordPress</th><td>La page est publiée sur www.lumenjuris.com.</td></tr>
+<tr><th scope="row">Disponibilité</th><td>La page répond en HTTP 200.</td></tr>
+<tr><th scope="row">Micro-données</th><td>Le balisage généré par le système est présent.</td></tr>
+<tr><th scope="row">Plan du site</th><td>L'adresse apparaît dans le sitemap WordPress.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="perimetre">Périmètre du test</h2>
+<p>Le test concerne uniquement le site vitrine <strong>www.lumenjuris.com</strong>. Il ne modifie pas l'application <strong>app.lumenjuris.com</strong> et ne change aucun réglage global du site.</p>
+
+<h2 id="erreurs">Que se passe-t-il en cas d'erreur ?</h2>
+<p>Si WordPress renvoie une erreur ou si une vérification échoue, le test est considéré comme non concluant et la routine doit être corrigée avant toute publication quotidienne.</p>
+
+<h2 id="relecture">Après le test</h2>
+<p>Une fois la chaîne cloud validée, cette page temporaire doit être retirée du site public.</p>

@@ -158,7 +158,7 @@ Chaque Partie reste propriétaire des éléments, savoir-faire, méthodes, outil
 
 Sous réserve du paiement intégral du prix, le Prestataire cède au Client, à titre exclusif, les droits patrimoniaux d'auteur sur les Livrables créés spécifiquement dans le cadre du contrat, à savoir :
 
-- le droit de reproduction, sur tout support papier, numérique ou électronique, connu à ce jour ;
+- le droit de reproduction, sur tout support papier, numérique ou électronique ;
 - le droit de représentation, par tout moyen de communication au public, notamment par internet, réseaux sociaux, présentation publique et publication imprimée ;
 - le droit d'adaptation, de modification, de traduction et d'intégration dans d'autres œuvres ;
 - [le droit d'exploitation commerciale des Livrables et de leurs reproductions].

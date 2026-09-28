@@ -21,6 +21,7 @@ import base64
 import hashlib
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -44,7 +45,7 @@ BIBLIO_SLUG = "modele-contrat"
 BIBLIO_URL = f"{PARENT_URL}{BIBLIO_SLUG}/"
 BIBLIO_TITRE = "Modèles juridiques gratuits"
 ORG = {"@id": f"{SITE}/#organization"}
-EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+EDGE = os.environ.get("NAVIGATEUR_PDF") or r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
         "septembre", "octobre", "novembre", "décembre"]
 

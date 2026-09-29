@@ -1,0 +1,187 @@
+# CONTRAT DE TRAVAIL À DURÉE DÉTERMINÉE (CDD)
+
+> Modèle gratuit Lumen Juris pour un emploi salarié de droit privé en France. Les passages entre crochets [ ] sont à compléter ou à choisir. Supprimez les options et notes de rédaction inutiles avant signature. Vérifiez la convention ou l'accord de branche applicable.
+
+ENTRE LES SOUSSIGNÉS :
+
+[Dénomination sociale / Nom de l'employeur], [forme juridique] au capital de [montant] euros, dont le siège social est situé [adresse], immatriculé(e) sous le numéro SIREN [numéro], représenté(e) par [Prénom Nom], agissant en qualité de [fonction], dûment habilité(e),
+
+ci-après « l'Employeur »,
+
+ET :
+
+[Madame / Monsieur] [Prénom Nom], né(e) le [date] à [ville et pays], demeurant [adresse complète], de nationalité [nationalité], numéro de sécurité sociale [numéro, si disponible],
+
+ci-après « le Salarié »,
+
+Il a été convenu ce qui suit :
+
+## ARTICLE 1 – ENGAGEMENT ET MOTIF DU RECOURS AU CDD
+
+L'Employeur engage le Salarié à compter du [date] à [heure], sous réserve de l'accomplissement des formalités préalables à l'embauche.
+
+Le présent contrat est conclu exclusivement pour le motif précis suivant :
+
+> Choisissez une seule option autorisée et supprimez les autres. Le motif doit correspondre à la réalité et être décrit avec précision.
+
+- [Remplacement de Madame / Monsieur [Prénom Nom], occupant l'emploi de [qualification], absent(e) en raison de [cause de l'absence].]
+- [Accroissement temporaire de l'activité résultant de [description factuelle et datée de la hausse temporaire].]
+- [Emploi à caractère saisonnier correspondant à [description des tâches et de la saison].]
+- [Emploi pour lequel il est d'usage constant de ne pas recourir au CDI, dans le secteur de [secteur autorisé], pour les raisons suivantes : [justification précise].]
+- [Autre cas légal : [fondement et description précise].]
+
+Le présent contrat n'a ni pour objet ni pour effet de pourvoir durablement un emploi lié à l'activité normale et permanente de l'entreprise.
+
+## ARTICLE 2 – DURÉE ET TERME
+
+> Choisissez soit le terme précis, soit le terme non précis lorsque la loi l'autorise.
+
+### 2.1 Option A – CDD à terme précis
+
+Le contrat est conclu du [date de début] au [date de fin] inclus. Il cessera de plein droit à cette dernière date, sous réserve des règles légales applicables.
+
+### 2.2 Option B – CDD sans terme précis
+
+Le contrat est conclu à compter du [date de début] pour une durée minimale de [durée]. Il prendra fin au retour de [Prénom Nom de la personne remplacée] / à la réalisation de l'objet suivant : [événement objectif autorisé], sous réserve des règles légales applicables.
+
+> Un CDD sans terme précis n'est permis que dans certains cas légaux. Sa durée minimale doit être inscrite dans le contrat.
+
+### 2.3 Renouvellement
+
+> À conserver seulement pour un CDD à terme précis et après vérification de la règle de branche.
+
+Le contrat pourra être renouvelé dans les conditions prévues par la convention ou l'accord de branche applicable et par le Code du travail. Chaque renouvellement fera l'objet d'un avenant présenté au Salarié avant l'échéance du terme initial.
+
+La durée totale du contrat, renouvellements compris, ne pourra pas dépasser la durée autorisée pour son motif.
+
+## ARTICLE 3 – FONCTIONS ET QUALIFICATION
+
+Le Salarié est engagé en qualité de [emploi], avec la qualification de [qualification], statut [ouvrier / employé / technicien / agent de maîtrise / cadre], niveau [niveau], échelon [échelon], coefficient [coefficient].
+
+Ses missions principales sont les suivantes :
+
+- [mission 1] ;
+- [mission 2] ;
+- [mission 3].
+
+Le Salarié exercera ses fonctions sous l'autorité de [fonction du responsable]. Ces missions peuvent évoluer dans le respect de sa qualification et du motif temporaire du contrat.
+
+> Si le poste figure sur la liste des postes présentant des risques particuliers pour la santé ou la sécurité, mentionnez-le ici et appliquez les mesures renforcées prévues par la loi.
+
+## ARTICLE 4 – LIEU DE TRAVAIL
+
+Le lieu habituel de travail est fixé à [adresse].
+
+[Option : Le Salarié pourra effectuer des déplacements professionnels dans le secteur suivant : [zone], nécessités par ses fonctions.]
+
+Toute modification dépassant un simple changement des conditions de travail sera soumise aux règles légales et conventionnelles applicables.
+
+## ARTICLE 5 – CONVENTION COLLECTIVE
+
+La convention collective applicable est : [intitulé exact et identifiant de la convention collective].
+
+Le Salarié pourra en prendre connaissance selon les modalités suivantes : [intranet / service des ressources humaines / lieu de consultation].
+
+## ARTICLE 6 – PÉRIODE D'ESSAI
+
+> Supprimez cet article si aucune période d'essai n'est prévue. Une période d'essai ne se présume pas.
+
+Le contrat comporte une période d'essai de [nombre] [jours / semaines], du [date] au [date].
+
+Cette durée ne peut pas dépasser la durée prévue par la convention collective ni, à défaut de règle plus favorable, un jour par semaine de contrat dans la limite de deux semaines lorsque la durée initialement prévue est au plus égale à six mois, et d'un mois dans les autres cas. En l'absence de terme précis, elle est calculée sur la durée minimale.
+
+Pendant la période d'essai, chaque partie peut rompre le contrat dans le respect des délais de prévenance applicables.
+
+## ARTICLE 7 – DURÉE DU TRAVAIL ET HORAIRES
+
+Le Salarié est employé à temps complet pour une durée de [35] heures par semaine, selon l'horaire collectif applicable dans l'entreprise.
+
+Les horaires habituels sont : [jours et plages horaires / renvoi à l'horaire collectif].
+
+Les heures supplémentaires ne peuvent être accomplies qu'à la demande ou avec l'accord préalable de l'Employeur et donnent lieu aux contreparties prévues par la loi et la convention collective.
+
+> Ce modèle n'est pas adapté au temps partiel, qui exige des mentions particulières.
+
+## ARTICLE 8 – RÉMUNÉRATION
+
+En contrepartie de son travail, le Salarié percevra une rémunération mensuelle brute de [montant] euros pour [nombre] heures par mois, versée le [date ou règle de versement] par [virement / autre moyen].
+
+S'ajoutent, le cas échéant :
+
+- [prime ou part variable : montant ou méthode de calcul] ;
+- [avantage en nature : nature et valeur] ;
+- [remboursement des frais professionnels selon la politique applicable].
+
+La rémunération du Salarié ne peut être inférieure à celle que percevrait, après période d'essai, un salarié en CDI de qualification équivalente occupant les mêmes fonctions dans l'entreprise, sous réserve des règles légales et conventionnelles.
+
+## ARTICLE 9 – CONGÉS PAYÉS
+
+Le Salarié bénéficie des congés payés dans les conditions légales et conventionnelles.
+
+Si les congés acquis ne sont pas pris avant la fin du contrat, une indemnité compensatrice de congés payés est versée conformément aux règles applicables.
+
+## ARTICLE 10 – PROTECTION SOCIALE
+
+Le Salarié sera affilié aux régimes obligatoires applicables dans l'entreprise.
+
+Caisse de retraite complémentaire : [nom et adresse].
+
+Organisme de prévoyance : [nom et adresse, s'il y a lieu].
+
+Organisme de complémentaire santé : [nom et adresse], sous réserve des cas de dispense prévus par les textes.
+
+## ARTICLE 11 – OBLIGATIONS PROFESSIONNELLES ET CONFIDENTIALITÉ
+
+Le Salarié s'engage à respecter les instructions de l'Employeur, le règlement intérieur lorsqu'il existe, ainsi que les règles de santé et de sécurité.
+
+Il conserve confidentielles les informations non publiques dont il prend connaissance dans le cadre de ses fonctions, notamment celles relatives à [clients / procédés / données / stratégie], pendant le contrat et après sa fin, sans empêcher l'exercice de ses droits ni les signalements protégés par la loi.
+
+Le Salarié restitue à la fin du contrat les documents, matériels et accès appartenant à l'Employeur.
+
+## ARTICLE 12 – FIN DU CONTRAT ET INDEMNITÉ
+
+Le contrat cesse de plein droit à son terme, sans formalité de licenciement, sauf poursuite de la relation de travail ou règle particulière applicable.
+
+Lorsqu'elle est due, l'indemnité de fin de contrat est calculée au taux légal ou conventionnel applicable sur la rémunération totale brute versée pendant le contrat. Le taux légal de principe est de 10 %, sous réserve d'un taux conventionnel de 6 % assorti des contreparties prévues et des cas légaux dans lesquels aucune indemnité n'est due.
+
+À la fin du contrat, l'Employeur remettra au Salarié son certificat de travail, son reçu pour solde de tout compte et l'attestation destinée à France Travail, ainsi que les autres documents exigés.
+
+## ARTICLE 13 – RUPTURE ANTICIPÉE
+
+Après la période d'essai, le contrat ne peut être rompu avant son terme que dans les cas autorisés par la loi, notamment :
+
+- accord écrit des parties ;
+- faute grave ;
+- force majeure ;
+- inaptitude constatée par le médecin du travail ;
+- justification par le Salarié d'une embauche en CDI, avec respect du préavis applicable.
+
+Toute rupture anticipée injustifiée peut entraîner les conséquences indemnitaires prévues par le Code du travail.
+
+## ARTICLE 14 – DONNÉES PERSONNELLES
+
+Les données personnelles du Salarié sont traitées pour la gestion de la relation de travail et le respect des obligations légales de l'Employeur. Le Salarié est informé des finalités, destinataires, durées de conservation et droits applicables par [notice d'information / politique interne remise en annexe].
+
+## ARTICLE 15 – DISPOSITIONS FINALES
+
+Le présent contrat est soumis au droit français et à la convention collective mentionnée à l'article 5.
+
+Le Salarié reconnaît avoir reçu un exemplaire du contrat et les informations qui doivent lui être communiquées au titre de la relation de travail.
+
+Fait à [ville], le [date], en deux exemplaires originaux, dont un remis à chaque partie.
+
+Pour l'Employeur
+[Prénom Nom, fonction]
+Signature précédée de la mention « Lu et approuvé »
+
+Le Salarié
+[Prénom Nom]
+Signature précédée de la mention « Lu et approuvé »
+
+## ANNEXES
+
+- [fiche de poste] ;
+- [notice relative à la protection sociale] ;
+- [notice d'information sur les données personnelles] ;
+- [règlement intérieur, le cas échéant] ;
+- [autre document].

@@ -1,0 +1,117 @@
+{
+  "slug": "contrat-de-travail-cdd",
+  "nom": "Contrat de travail CDD",
+  "nom_court": "contrat de travail CDD",
+  "categorie": "Droit du travail",
+  "mot_cle": "modèle contrat de travail CDD",
+  "mots_cles_secondaires": [
+    "contrat CDD",
+    "modèle CDD",
+    "contrat de travail CDD gratuit",
+    "exemple contrat CDD",
+    "CDD remplacement salarié",
+    "CDD accroissement temporaire activité"
+  ],
+  "titre_h1": "Modèle de contrat de travail CDD gratuit (Word et PDF)",
+  "titre_seo": "Modèle contrat de travail CDD gratuit 2026 | Lumen Juris",
+  "meta_description": "Téléchargez un modèle de contrat de travail CDD conforme au droit français : motif, durée, poste, salaire, période d'essai et fin du contrat.",
+  "chapo": "Ce modèle permet de formaliser un CDD de droit privé en France. Il prévoit le motif précis du recours, le terme ou la durée minimale, le poste, la rémunération, la période d'essai éventuelle et les règles de fin du contrat.",
+  "gratuit": true,
+  "fichier_base": "modele-contrat-de-travail-cdd-lumen-juris",
+  "date_publication": "2026-09-29",
+  "date_mise_a_jour": "2026-09-29",
+  "relecture": {
+    "nom": "L'équipe juridique de Lumen Juris",
+    "fonction": "Rédaction et relecture des modèles de contrat",
+    "presentation": "Les modèles de contrat publiés par Lumen Juris sont rédigés par notre équipe juridique afin de faciliter leur adaptation au droit français en vigueur. Le motif du CDD, la convention collective et la situation concrète doivent être vérifiés avant signature.",
+    "url_profil": "https://www.lumenjuris.com/qui-sommes-nous/",
+    "domaines": [
+      "Droit du travail",
+      "Droit des contrats"
+    ],
+    "valide": false,
+    "date_validation": null
+  },
+  "etapes": [
+    [
+      "Choisissez un motif légal",
+      "Identifiez la raison temporaire autorisant le CDD et décrivez-la précisément, sans utiliser le contrat pour occuper durablement un emploi permanent."
+    ],
+    [
+      "Fixez le terme du contrat",
+      "Indiquez une date de fin ou, lorsque la loi l'autorise, un événement de fin et une durée minimale."
+    ],
+    [
+      "Complétez le poste et la rémunération",
+      "Renseignez l'emploi, la qualification, la classification, le lieu de travail, le salaire et ses différentes composantes."
+    ],
+    [
+      "Vérifiez les règles applicables",
+      "Contrôlez la durée maximale, le renouvellement, la période d'essai et les dispositions de la convention ou de l'accord de branche."
+    ],
+    [
+      "Signez et remettez le contrat",
+      "Supprimez les options inutiles, faites signer les parties et remettez un exemplaire au salarié au plus tard dans les deux jours ouvrables suivant l'embauche."
+    ]
+  ],
+  "faq": [
+    [
+      "Dans quels cas peut-on conclure un CDD ?",
+      "Un CDD ne peut servir qu'à exécuter une tâche précise et temporaire dans un cas autorisé par la loi, notamment le remplacement d'un salarié, l'accroissement temporaire de l'activité ou certains emplois saisonniers ou d'usage. Il ne doit pas pourvoir durablement un emploi lié à l'activité normale et permanente de l'entreprise."
+    ],
+    [
+      "Le CDD doit-il obligatoirement être écrit ?",
+      "Oui. Le CDD doit être établi par écrit et définir précisément son motif. À défaut d'écrit ou de motif précis, il peut être réputé conclu pour une durée indéterminée."
+    ],
+    [
+      "Quand faut-il remettre le CDD au salarié ?",
+      "Le contrat doit être transmis au salarié au plus tard dans les deux jours ouvrables suivant l'embauche. Le seul retard de transmission n'entraîne pas automatiquement la requalification, mais peut ouvrir droit à une indemnité."
+    ],
+    [
+      "Quelles mentions doivent figurer dans un CDD ?",
+      "Le contrat doit notamment préciser son motif, son terme ou sa durée minimale, le poste et la qualification, la convention collective, la rémunération, la période d'essai éventuelle et les organismes de retraite complémentaire et de prévoyance. En cas de remplacement, il mentionne aussi le nom et la qualification de la personne remplacée."
+    ],
+    [
+      "Quelle période d'essai peut-on prévoir ?",
+      "Sauf règle plus favorable, elle est calculée à raison d'un jour par semaine, dans la limite de deux semaines si la durée initiale du CDD ne dépasse pas six mois et d'un mois dans les autres cas. Sans terme précis, le calcul se fait sur la durée minimale."
+    ],
+    [
+      "Un CDD peut-il être renouvelé ?",
+      "Oui lorsque le contrat comporte un terme précis. La convention ou l'accord de branche peut fixer le nombre de renouvellements et leur durée. À défaut de règle de branche, le renouvellement est possible deux fois, dans la limite de la durée totale autorisée."
+    ],
+    [
+      "L'indemnité de fin de contrat est-elle toujours due ?",
+      "Non. Lorsqu'elle est due, elle est en principe égale à 10 % de la rémunération totale brute. Un accord collectif peut la ramener à 6 % avec des contreparties de formation. La loi prévoit plusieurs exceptions, notamment pour certains contrats saisonniers ou d'usage et dans certaines situations de refus d'un CDI."
+    ],
+    [
+      "Peut-on rompre un CDD avant son terme ?",
+      "Hors période d'essai, la rupture anticipée est limitée à l'accord des parties, la faute grave, la force majeure, l'inaptitude constatée par le médecin du travail ou l'embauche du salarié en CDI, sous réserve des règles de preuve et de préavis applicables."
+    ]
+  ],
+  "sources": [
+    [
+      "Code du travail, articles L. 1242-1 à L. 1242-6 (principe et cas de recours au CDD)",
+      "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"
+    ],
+    [
+      "Code du travail, articles L. 1242-7 à L. 1242-9 (terme et durée du contrat)",
+      "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"
+    ],
+    [
+      "Code du travail, articles L. 1242-10 à L. 1242-13 (période d'essai, forme, mentions et transmission)",
+      "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"
+    ],
+    [
+      "Code du travail, articles L. 1243-1 à L. 1243-13-1 (rupture, échéance, indemnité et renouvellement)",
+      "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"
+    ],
+    [
+      "Code du travail, articles L. 1245-1 et L. 1245-2 (requalification en CDI)",
+      "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072050"
+    ]
+  ],
+  "personnaliser": {
+    "doc": "contrat-travail-cdd",
+    "accroche": "Répondez à quelques questions pour adapter le CDD à son motif, sa durée, au poste et à la rémunération prévus."
+  }
+}

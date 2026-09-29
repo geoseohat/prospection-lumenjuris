@@ -9,8 +9,8 @@
 #
 # Suggestions (retirez le # devant celles que vous voulez publier) :
 [x] 2026-09-25 conditions générales de vente -> https://www.lumenjuris.com/outil-generation-contrat-ia/modele-contrat/conditions-generales-de-vente/
-contrat de prestation de services
-contrat de travail CDI
+[x] 2026-09-29 contrat de prestation de services -> doublon : modèle déjà présent
+[x] 2026-09-29 contrat de travail CDI -> doublon : modèle déjà présent
 contrat de travail CDD
 accord de confidentialité (NDA)
 statuts SAS

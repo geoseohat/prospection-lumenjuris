@@ -30,14 +30,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Installer les dépendances
-        run: |
-          python -m pip install --upgrade pip
-          pip install python-docx playwright
-          python -m playwright install chromium --with-deps
-          NAVIGATEUR_PDF=$(find /home/runner/.cache/ms-playwright -type f -name chrome-headless-shell | head -n 1)
-          echo "NAVIGATEUR_PDF=$NAVIGATEUR_PDF" >> "$GITHUB_ENV"
-
       - name: Lire le modèle à publier
         id: slug
         working-directory: wordpress-vitrine
@@ -53,25 +45,10 @@ jobs:
           fi
           echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
 
-      - name: Construire le modèle
+      - name: Publier la page WordPress
         if: steps.slug.outputs.slug != ''
         working-directory: wordpress-vitrine
-        run: python outils/modeles_contrat.py construire "${{ steps.slug.outputs.slug }}"
-
-      - name: Publier sur WordPress
-        if: steps.slug.outputs.slug != ''
-        working-directory: wordpress-vitrine
-        shell: bash
-        run: |
-          set +e
-          python outils/modeles_contrat.py publier "${{ steps.slug.outputs.slug }}" --en-ligne --sans-relecture 2>&1 | tee /tmp/publication.log
-          CODE=${PIPESTATUS[0]}
-          if [ "$CODE" -ne 0 ] && grep -q "429" /tmp/publication.log; then
-            sleep 120
-            python outils/modeles_contrat.py publier "${{ steps.slug.outputs.slug }}" --en-ligne --sans-relecture
-            exit $?
-          fi
-          exit "$CODE"
+        run: python outils/publier_modele_html.py "${{ steps.slug.outputs.slug }}"
 
       - name: Vérifier la page et le plan du site
         if: steps.slug.outputs.slug != ''
@@ -122,7 +99,7 @@ jobs:
 
           journal = base / 'journal-routine.txt'
           with journal.open('a', encoding='utf-8') as f:
-              f.write(f"{date.today().isoformat()} | {nom} | {url} | page en ligne, HTTP 200, micro-données présentes, plan du site : page présente\n")
+              f.write(f"{date.today().isoformat()} | {nom} | {url} | page HTML en ligne, sans upload Word/PDF/image\n")
 
           (base / 'a-publier.txt').write_text('', encoding='utf-8')
           PY

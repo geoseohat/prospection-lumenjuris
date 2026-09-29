@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """Publie une page modèle WordPress sans envoyer de Word, PDF ou image."""
+import json
 import re
 import sys
-from pathlib import Path
+import urllib.error
+import urllib.parse
+import urllib.request
 
 import modeles_contrat as mc
 
@@ -10,8 +13,32 @@ import modeles_contrat as mc
 def contenu_page(slug, etat):
     contenu = mc.page_modele(slug, etat, publics_seulement=True)
     # Aucun fichier n'est envoyé à WordPress : on retire le menu Télécharger.
-    contenu = re.sub(r'<details class="lj-dl">.*?</details>', '', contenu, flags=re.S)
-    return contenu
+    return re.sub(r'<details class="lj-dl">.*?</details>', '', contenu, flags=re.S)
+
+
+def post_json(chemin, donnees):
+    """POST JSON en conservant le POST si o2switch renvoie une redirection 307/308."""
+    url = f"{mc.SITE}/wp-json/{chemin}"
+    corps = json.dumps(donnees).encode("utf-8")
+    headers = {
+        "Authorization": f"Basic {mc.wp_api.TOKEN}",
+        "User-Agent": mc.wp_api.UA,
+        "Content-Type": "application/json",
+    }
+    for _ in range(4):
+        req = urllib.request.Request(url, data=corps, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as err:
+            if err.code not in (307, 308):
+                raise
+            cible = err.headers.get("Location")
+            if not cible:
+                raise
+            url = urllib.parse.urljoin(url, cible)
+            print(f"  redirection WordPress {err.code} -> {url}")
+    raise RuntimeError("Trop de redirections WordPress")
 
 
 def publier(slug, en_ligne=True):
@@ -25,15 +52,9 @@ def publier(slug, en_ligne=True):
 
     etat = mc.lire_etat()
     em = etat["modeles"].setdefault(slug, {})
-
-    # La bibliothèque existe déjà : aucune reconstruction, aucun média envoyé.
     parent_id = etat.get("bibliotheque", {}).get("id")
     if not parent_id:
-        pages = mc.api("wp/v2/pages?slug=modele-contrat&per_page=1&context=edit")
-        if not pages:
-            sys.exit("Bibliothèque modele-contrat introuvable.")
-        parent_id = pages[0]["id"]
-        etat.setdefault("bibliotheque", {})["id"] = parent_id
+        sys.exit("Bibliothèque modele-contrat absente de etat.json.")
 
     statut = "publish" if en_ligne else em.get("statut", "draft")
     donnees = {
@@ -43,12 +64,20 @@ def publier(slug, en_ligne=True):
         "status": statut,
         "content": contenu_page(slug, etat),
     }
-    p = mc.ecrire_page(em.get("id"), donnees, slug)
+    chemin = f"wp/v2/pages/{em['id']}" if em.get("id") else "wp/v2/pages"
+    p = post_json(chemin, donnees)
     em.update(id=p["id"], statut=p["status"], lien=p["link"])
     mc.ecrire_etat(etat)
 
     try:
-        mc.meta_seo(p["id"], f["titre_seo"], f["meta_description"], f["mot_cle"], f["nom"])
+        meta = {
+            "rank_math_title": f["titre_seo"],
+            "rank_math_description": f["meta_description"],
+            "rank_math_focus_keyword": f["mot_cle"],
+            "rank_math_rich_snippet": "off",
+            "rank_math_breadcrumb_title": f["nom"],
+        }
+        post_json("rankmath/v1/updateMeta", {"objectType": "post", "objectID": p["id"], "meta": meta})
     except Exception as err:
         print(f"  SEO Rank Math non bloquant : {err}")
 
